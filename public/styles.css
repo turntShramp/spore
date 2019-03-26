@@ -1,0 +1,25 @@
+/* .list-group-item {
+  line-height: 2.5;
+} */
+.box {
+  border: solid 1px black;
+}
+
+.b {
+  background: blue;
+}
+.r {
+  background: red;
+}
+.g {
+  background: green;
+}
+
+
+
+
+
+
+.navbar {
+  color: white;
+}
