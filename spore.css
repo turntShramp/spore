@@ -1,0 +1,58 @@
+
+
+.strong{
+    font-weight: bold;
+
+}
+
+.menu{
+    text-align: center;
+    font-size: 12pt;
+   
+
+}
+
+body{
+    background-color: beige;
+    width: 350px;
+    padding: 15px 10px 10px 20px;
+}
+
+h1{
+
+    text-align: center;
+    color:tan;
+}
+
+h4{
+    text-align: center;
+    color:black;
+
+}
+
+
+p{
+
+    text-align: center;
+    color:black;
+}
+
+
+.row{
+
+    text-align: center;
+    color:black;
+}
+
+
+
+
+#colortest{
+color: rgba(206, 9, 9);
+color: brown;
+color: beige;
+color: tan;
+color: rgb(100, 42, 36);
+color: rgb(128, 128, 128);
+}
+
