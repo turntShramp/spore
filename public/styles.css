@@ -1,10 +1,11 @@
 /* .list-group-item {
   line-height: 2.5;
 } */
+
+/* TOOLS */
 .box {
   border: solid 1px black;
 }
-
 .b {
   background: blue;
 }
@@ -16,7 +17,18 @@
 }
 
 
+/* NAVBAR */
 .navbar {
   background-color:  #fff1ea !important;
   color: #ec6f75b1 !important;
+}
+
+/* GUIDE */
+
+/* SEARCH BODY */
+.searchBody {
+  padding: 0 10px;
+}
+.divider {
+  margin: 0 30px;
 }
