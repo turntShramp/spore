@@ -1,8 +1,12 @@
-/* .list-group-item {
-  line-height: 2.5;
-} */
+
 /* REFERENCES
 ==================================================*/
+/* 
+#fffbf9 (white)
+#ec6f75b1 (pink)
+#6feccbb1 (green)
+#rgb(167, 166, 166);
+*/
 
 /* TOOLS
 ==================================================*/
@@ -32,7 +36,7 @@ body {
   margin-bottom: 20px;
   padding-top: 5px;
   background-color:  #fffbf9 !important;
-  color: #ec6f75b1 !important;
+  color: #6feccbb1 !important;
   display: flex;
 }
 .navbar_icon {
@@ -42,9 +46,7 @@ body {
 
 /* GUIDE
 ==================================================*/
-
-/* SEARCH BODY
-==================================================*/
+/* SEARCH */
 .search_body {
   padding: 0 10px;
   background: #fffbf9;
@@ -53,6 +55,8 @@ body {
   margin: 0 30px;
 }
 .selection {
+  margin-left: 30px;
+  margin-right: 30px;
   display: flex;
 }
 .title {
@@ -72,7 +76,7 @@ h7 {
 }
 /* SLIDER */
 #slider {
-  background-color:  #ec6f75b1 !important;
+  background-color:  #6feccbb1 !important;
   color: #fffbf9 !important;
   display: flex;
   margin-top: 5px;
@@ -80,17 +84,26 @@ h7 {
 .slider_icon_up {
   flex: 50;
   text-align: right;
+  font-size: 20px;
 }
 .slider_icon_down {
   flex: 50;
   text-align: left;
+  font-size: 20px;
 }
 
-/* RESULTS BODY
-==================================================*/
+/* RESULTS */
+.window{
+  /* waiting for slider */
+}
 .results_body {
   padding: 0 10px;
   background: #fffbf9;
+}
+.shroom_selection {
+  margin-left: 30px;
+  margin-right: 30px;
+  display: flex;
 }
 .divider {
   margin: 0 30px;
@@ -118,6 +131,14 @@ h7 {
 }
 /* FOOTER
 ==================================================*/
+.page-footer {
+  background-color: #6feccbb1;
+  color: black !important;
+}
+.footer-bottom {
+  background-color: #6feccbb1;
+  color: #6feccbb1;
+}
 
 
 /* TEST
