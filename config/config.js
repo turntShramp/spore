@@ -1,4 +1,5 @@
 const fs = require('fs');
+require('dotenv');
 
 module.exports = {
   development: {
