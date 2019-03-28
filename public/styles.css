@@ -1,8 +1,11 @@
 /* .list-group-item {
   line-height: 2.5;
 } */
+/* REFERENCES
+==================================================*/
 
-/* TOOLS */
+/* TOOLS
+==================================================*/
 .box {
   border: solid 1px black;
 }
@@ -16,19 +19,111 @@
   background: green;
 }
 
-
-/* NAVBAR */
-.navbar {
-  background-color:  #fff1ea !important;
-  color: #ec6f75b1 !important;
+/* GLOBAL 
+==================================================*/
+body {
+  background: #fffbf9;
 }
 
-/* GUIDE */
+/* NAVBAR
+==================================================*/
+.navbar {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding-top: 5px;
+  background-color:  #fffbf9 !important;
+  color: #ec6f75b1 !important;
+  display: flex;
+}
+.navbar_icon {
+  flex: 20;
+  text-align: center;
+}
 
-/* SEARCH BODY */
-.searchBody {
+/* GUIDE
+==================================================*/
+
+/* SEARCH BODY
+==================================================*/
+.search_body {
   padding: 0 10px;
+  background: #fffbf9;
 }
 .divider {
   margin: 0 30px;
 }
+.selection {
+  display: flex;
+}
+.title {
+  flex: 0 0 auto;
+  margin-right: 7px;
+}
+.text {
+  flex: 99;
+  padding-top: 10px;
+}
+.arrow {
+  padding-top: 6px;
+  flex: 1;
+}
+h7 {
+  color: rgb(167, 166, 166);
+}
+/* SLIDER */
+#slider {
+  background-color:  #ec6f75b1 !important;
+  color: #fffbf9 !important;
+  display: flex;
+  margin-top: 5px;
+}
+.slider_icon_up {
+  flex: 50;
+  text-align: right;
+}
+.slider_icon_down {
+  flex: 50;
+  text-align: left;
+}
+
+/* RESULTS BODY
+==================================================*/
+.results_body {
+  padding: 0 10px;
+  background: #fffbf9;
+}
+.divider {
+  margin: 0 30px;
+}
+.mushroom {
+  display: flex;
+}
+.shroom_photo {
+  margin-top: 5px;
+}
+.shroom_title {
+  flex: 0 0 auto;
+  padding-left: 10px;
+  padding-top: 20px;
+}
+.space {
+  flex: 99;
+}
+.shroom_arrow {
+  padding-top: 24px;
+  flex: 1;
+}
+h7 {
+  color: rgb(167, 166, 166);
+}
+/* FOOTER
+==================================================*/
+
+
+/* TEST
+==================================================*/
+
+
+
+/* MEDIA QUERIES
+==================================================*/
