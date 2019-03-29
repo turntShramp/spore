@@ -13,6 +13,9 @@
 .box {
   border: solid 1px black;
 }
+.boxgreen {
+  border: solid 1px green;
+}
 .b {
   background: blue;
 }
@@ -26,7 +29,7 @@
 /* GLOBAL 
 ==================================================*/
 body {
-  background: #fffbf9;
+  background: transparent;
 }
 
 /* NAVBAR
@@ -35,12 +38,16 @@ body {
   margin-top: 20px;
   margin-bottom: 20px;
   padding-top: 5px;
-  background-color:  #fffbf9 !important;
-  color: #6feccbb1 !important;
+  background-color:  transparent !important;
+  color: black !important;
   display: flex;
 }
 .navbar_icon {
-  flex: 20;
+  flex: 25;
+  text-align: center;
+}
+.navbar_arrow {
+  flex: 12.5;
   text-align: center;
 }
 
@@ -49,7 +56,7 @@ body {
 /* SEARCH */
 .search_body {
   padding: 0 10px;
-  background: #fffbf9;
+  background: transparent;
 }
 .divider {
   margin: 0 30px;
@@ -76,10 +83,11 @@ h7 {
 }
 /* SLIDER */
 #slider {
-  background-color:  #6feccbb1 !important;
-  color: #fffbf9 !important;
+  background-color:  black !important;
+  color: white !important;
   display: flex;
   margin-top: 5px;
+
 }
 .slider_icon_up {
   flex: 50;
@@ -94,11 +102,11 @@ h7 {
 
 /* RESULTS */
 .window{
-  /* waiting for slider */
+  background-color: white;
 }
 .results_body {
   padding: 0 10px;
-  background: #fffbf9;
+  background: white;
 }
 .shroom_selection {
   margin-left: 30px;
@@ -132,12 +140,24 @@ h7 {
 /* FOOTER
 ==================================================*/
 .page-footer {
-  background-color: #6feccbb1;
+  background-color: black;
   color: black !important;
+  padding-top: 0;
 }
 .footer-bottom {
   background-color: #6feccbb1;
   color: #6feccbb1;
+}
+
+/* CANVAS
+==================================================*/
+.background {
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  height: 100%;
 }
 
 
