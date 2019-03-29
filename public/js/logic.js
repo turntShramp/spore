@@ -9,7 +9,22 @@ window.onload = function() {
       connectParticles: false,
       responsive: null
     });
-  };
+};
+
+// this doesn't wokr
+const canvasFunction = function() {
+    let htmlCanvas = $("#canvas");
+    function resizeCanvas() {
+        htmlCanvas.width = window.innerWidth;
+        htmlCanvas.height = window.innerHeight;
+    };
+    function initialize() {
+       window.addEventListener('resize', resizeCanvas, false);
+       resizeCanvas();
+    };
+   initialize();
+};
+canvasFunction();
 
 
 

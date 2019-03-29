@@ -156,8 +156,7 @@ h7 {
   display: block;
   top: 0;
   left: 0;
-  z-index: 3;
-  height: 100%;
+  z-index: 0;
 }
 
 
