@@ -1,7 +1,7 @@
 {
   "development": {
     "username": "root",
-    "password": "superroot",
+    "password": "root",
     "database": "spore_devDB",
     "host": "localhost",
     "dialect": "mysql"

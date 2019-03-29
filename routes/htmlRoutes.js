@@ -1,7 +1,13 @@
 const db = require("../models");
 const path = require("path");
+const authController = require("../controllers/authcontroller.js")
 
 module.exports = function(app) {
+
+  app.get("/signup", authController.signup)
+
+  app.get("/signin", authController.signin)
+
   // Load index(home) page
   app.get("/", function(req, res) {
     res.sendFile(path.join(__dirname, "../public/index.html"));
