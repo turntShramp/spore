@@ -1,45 +1,56 @@
 // PARTICLES
 window.onload = function() {
-    Particles.init({
-      selector: '.background',
-      maxParticles: 1000,
-      sizeVariations: 1,
-      speed: .50,
-      color: '#838383',
-      connectParticles: false,
-      responsive: null
-    });
+  Particles.init({
+    selector: ".background",
+    maxParticles: 1000,
+    sizeVariations: 1.5,
+    speed: .50,
+    color: "#838383",
+    connectParticles: false,
+    responsive: null,
+    height: 100
+  });
 };
 
-// this doesn't wokr
-const canvasFunction = function() {
-    let htmlCanvas = $("#canvas");
-    function resizeCanvas() {
-        htmlCanvas.width = window.innerWidth;
-        htmlCanvas.height = window.innerHeight;
-    };
-    function initialize() {
-       window.addEventListener('resize', resizeCanvas, false);
-       resizeCanvas();
-    };
-   initialize();
-};
-canvasFunction();
 
-
-
-$(document).ready(function() {
-
+document.addEventListener("DOMContentLoaded", function() {
+  var elems = document.querySelectorAll(".collapsible");
+  var instances = M.Collapsible.init(elems, options);
 });
 
+// Or with jQuery
 
+$(document).ready(function(){
+  $(".collapsible").collapsible();
+});
+// // this doesn't wokr
+// const canvasFunction = function() {
+//     let htmlCanvas = $("#canvas");
+//     function resizeCanvas() {
+//         htmlCanvas.width = window.innerWidth;
+//         htmlCanvas.height = window.innerHeight;
+//     };
+//     function initialize() {
+//        window.addEventListener('resize', resizeCanvas, false);
+//        resizeCanvas();
+//     };
+//    initialize();
+// };
+// canvasFunction();
 
+// ========================================================================== //
+// ========================================================================== //
+// ========================================================================== //
+// ========================================================================== //
+// ========================================================================== //
+// ========================================================================== //
+// ========================================================================== //
+// ========================================================================== //
+// ========================================================================== //
+// ========================================================================== //
+// ========================================================================== //
 
-
-
-
-// CAME WITH THE HOME INSTALL 
-
+// CAME WITH THE HOME INSTALL
 
 // // Get references to page elements
 // var $exampleText = $("#example-text");
