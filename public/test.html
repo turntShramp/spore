@@ -4,56 +4,60 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>spore</title>
+    <title>spōr/test</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="description" content="">
     <meta name="author" content="">
     <!-- FAVICON -->
-    <link rel="icon" type="image/png" href="./img/tempSpore.png" />
+    <link rel="icon" type="image/png" href="./img/spor_logo.png" />
     <!-- MATERIALIZE CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">            
     <!-- GOOGLE FONTS -->
-    <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Work+Sans|ZCOOL+QingKe+HuangYou" rel="stylesheet">
-    <!-- FONT AWESOME -->
+    <link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond|Playfair+Display:400,400i|Work+Sans:300" rel="stylesheet">
+    <!-- FONTAWESOME -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <!-- CUSTOM CSS -->
-    <link rel="stylesheet" type="text/css" href="./styles.css"/>
+    <link rel="stylesheet" type="text/css" href="./css/test_styles.css"/>
 </head>
 
 <body>
     <!-- CANVAS -->
-    <div class="frame">
-        <canvas class="background"></canvas>
-    </div>
-    
+    <canvas id="canvas" class="background"></canvas>
 
     <!-- NAVBAR
     --------------------------------------------------------------------------->
-    <nav class="navbar z-depth-0">
+    <header class="navbar z-depth-0">
         <div class="navbar_arrow">
             <!-- back, appears when applicable, moves you back a page -->
             <i id="back" class="fas fa-chevron-left fa-2x"></i>
-        </div>
-        <div class="navbar_icon">
-            <!-- spore icon(logo), gets you to acct page -->
-            <i class="fas fa-dot-circle fa-2x"></i>
         </div>
         <div class="navbar_icon">
             <!-- basket icon, gets you to index(home) page -->
             <i class="fas fa-shopping-basket fa-2x"></i>
         </div>
         <div class="navbar_icon">
-            <!-- mushroom icon, gets you to guide page -->
-            <i class="fas fa-seedling fa-2x"></i>
+            <!-- spore icon(logo), gets you to acct page -->
+            <i class="fas fa-dot-circle fa-2x"></i>
+        </div>
+        <div class="navbar_icon">
+            <!-- map icon, gets you to collected pins map page -->
+            <i class="fas fa-map-marked-alt fa-2x"></i>
         </div>
         <div class="navbar_arrow">
             <!-- forward, appears when applicable, moves you forward a page -->
             <i id="forward" class="fas fa-chevron-right fa-2x"></i>
         </div>
-    </nav>
+    </header>
 
+    <!-- HEADER 
+    --------------------------------------------------------------------------->
+    <div class="guide_info">
+        <h1 class="word" style="margin-bottom: 0;"><strong>characteristic</strong><span class="word_type">   adjective</span></h1>
+        <h5 class="pronunciation">/ker(ə)ktəˈristik/</h5>
+        <h6 class="text">use the choices below to narrow down your search. Click on an attribute to be shown a list of options, check off the ones that apply to what you're looking for, then click the back button. Any species that fit your criteria will be found below. The attributes will stack until you uncheck them or click the `restart` button. </h6>
+    </div>
 
-   <!-- SEARCH  
+    <!-- SEARCH  
     --------------------------------------------------------------------------->
         <!-- these should be added dynamically -->
     <div class="search_body">
@@ -68,9 +72,9 @@
                 <i class="fas fa-chevron-right"></i>
             </div>
         </div>
-        <div class="divider">
+        <!-- <div class="divider">
             <hr>
-        </div>
+        </div> -->
         <div class="selection">
             <div class="title">
                 <h6><strong>Gill Characteristics</strong></h6>         
@@ -82,9 +86,9 @@
                 <i class="fas fa-chevron-right"></i>
             </div>
         </div>
-        <div class="divider">
+        <!-- <div class="divider">
             <hr>
-        </div>
+        </div> -->
         <div class="selection">
             <div class="title">
                 <h6><strong>Gill Attachment</strong></h6>         
@@ -96,12 +100,12 @@
                 <i class="fas fa-chevron-right"></i>
             </div>
         </div>
-        <div class="divider">
+        <!-- <div class="divider">
             <hr>
-        </div>
+        </div> -->
         <div class="selection">
             <div class="title">
-                <h6><strong>Spore Color</strong></h6>         
+                <h6><strong>Spore Print</strong></h6>         
             </div>
             <div class="text">
                 <h7>white, brown, ...</h7>
@@ -110,9 +114,9 @@
                 <i class="fas fa-chevron-right"></i>
             </div>
         </div>
-        <div class="divider">
+        <!-- <div class="divider">
             <hr>
-        </div>
+        </div> -->
         <div class="selection">
             <div class="title">
                 <h6><strong>Smell</strong></h6>         
@@ -124,9 +128,9 @@
                 <i class="fas fa-chevron-right"></i>
             </div>
         </div>
-        <div class="divider">
+        <!-- <div class="divider">
             <hr>
-        </div>
+        </div> -->
         <div class="selection">
             <div class="title">
                 <h6><strong>Stipe (Stem)</strong></h6>         
@@ -138,9 +142,9 @@
                 <i class="fas fa-chevron-right"></i>
             </div>
         </div>
-        <div class="divider">
+        <!-- <div class="divider">
             <hr>
-        </div>
+        </div> -->
         <div class="selection">
             <div class="title">
                 <h6><strong>Annulus (Veil/Ring)</strong></h6>         
@@ -152,9 +156,9 @@
                 <i class="fas fa-chevron-right"></i>
             </div>
         </div>
-        <div class="divider">
+        <!-- <div class="divider">
             <hr>
-        </div>
+        </div> -->
         <div class="selection">
             <div class="title">
                 <h6><strong>Pileus (Cap)</strong></h6>         
@@ -166,12 +170,12 @@
                 <i class="fas fa-chevron-right"></i>
             </div>
         </div>
-        <div class="divider">
+        <!-- <div class="divider">
             <hr>
-        </div>
+        </div> -->
         <div class="selection">
             <div class="title">
-                <h6><strong>Flesh</strong></h6>         
+                <h6><strong>Flesh Color</strong></h6>         
             </div>
             <div class="text">
                 <h7>bluing, blackening, etc...</h7>
@@ -180,12 +184,12 @@
                 <i class="fas fa-chevron-right"></i>
             </div>
         </div>
-        <div class="divider">
+        <!-- <div class="divider">
             <hr>
-        </div>
+        </div> -->
         <div class="selection">
             <div class="title">
-                <h6><strong>Fluid</strong></h6>         
+                <h6><strong>Fluid Color</strong></h6>         
             </div>
             <div class="text">
                 <h7>white, red, etc...</h7>
@@ -194,9 +198,9 @@
                 <i class="fas fa-chevron-right"></i>
             </div>
         </div>
-        <div class="divider">
+        <!-- <div class="divider">
             <hr>
-        </div>
+        </div> -->
         <div class="selection">
             <div class="title">
                 <h6><strong>Volva (Bulb)</strong></h6>         
@@ -208,9 +212,9 @@
                 <i class="fas fa-chevron-right"></i>
             </div>
         </div>
-        <div class="divider">
+        <!-- <div class="divider">
             <hr>
-        </div>
+        </div> -->
         <div class="selection">
             <div class="title">
                 <h6><strong>Pores</strong></h6>         
@@ -222,8 +226,19 @@
                 <i class="fas fa-chevron-right"></i>
             </div>
         </div>
-    </div> <!-- remove this to put the slider back in search_body -->
         <!-- SLIDER -->
+        <!-- <div id="slider">
+            <div class="slider_icon_up">
+                <i class="fas fa-chevron-up"></i>
+            </div>
+            <div class="slider_icon_down">
+                <i class="fas fa-chevron-down"></i>
+            </div>
+        </div> -->
+    </div> 
+
+    <!-- SLIDER -->
+    <div class="slider_body">
         <div id="slider">
             <div class="slider_icon_up">
                 <i class="fas fa-chevron-up"></i>
@@ -232,7 +247,7 @@
                 <i class="fas fa-chevron-down"></i>
             </div>
         </div>
-    <!-- </div> add this to put the slider back in the search_body-->
+    </div>
     
     <!-- RESULTS
     --------------------------------------------------------------------------->
@@ -314,7 +329,6 @@
         </div>
     </div>  
 
-
     <!-- FOOTER
     --------------------------------------------------------------------------->
     <footer class="page-footer">
@@ -335,29 +349,24 @@
                 <div class="col l4 offset-l2 m4 l3">
                     <h5 class="white-text">About </h5>
                     <ul>
-                        <li><a class="grey-text text-lighten-3" href="#!">About the Company</a></li>
-                        <li><a class="grey-text text-lighten-3" href="#!">Contact Support</a></li>
-                        <li><a class="grey-text text-lighten-3" href="#!">Contact Sales</a></li>
+                        <li><a class="grey-text text-lighten-3" 
+                        href="#!">The Team</a></li>
+                        <li><a class="grey-text text-lighten-3" href="#!">Support</a></li>
+                        <li><a class="grey-text text-lighten-3" href="#!">Donate</a></li>
                     </ul>
                 </div>     
             </div>
         </div>
         <div class="footer-copyright">
             <div class="container">
-            Open Source - Free for the taking
+             Open Source - Free for the taking
             </div>
         </div>
     </footer>
 
-     <!-- CANVAS -->
-     <!-- <div>
-        <canvas class="background">
-            <h1>canvas</h1>
-        </canvas>
-    </div> -->
-
     <!-- LOGIC   --------------------------------------------------------------------------->
     <!-- PARTICLES -->
+    <script type="text/javascript" src="./js/particles.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.3/particles.min.js"></script> 
     <!-- MATERIALIZE -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>

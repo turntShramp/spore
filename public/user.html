@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>spōr/user</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- FAVICON -->
+    <link rel="icon" type="image/png" href="./img/spor_logo.png" />
+    <!-- MATERIALIZE CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">            
+    <!-- GOOGLE FONTS -->
+    <link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond|Playfair+Display:400,400i|Work+Sans:300" rel="stylesheet">
+    <!-- FONTAWESOME -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <!-- CUSTOM CSS -->
+    <link rel="stylesheet" type="text/css" href="./css/user_styles.css"/>
+</head>
+
+<body>
+    <!-- CANVAS -->
+    <canvas id="canvas" class="background"></canvas>
+
+    <!-- NAVBAR
+    --------------------------------------------------------------------------->
+    <header class="navbar z-depth-0">
+        <div class="navbar_arrow">
+            <!-- back, appears when applicable, moves you back a page -->
+            <i id="back" class="fas fa-chevron-left fa-2x"></i>
+        </div>
+        <div class="navbar_icon">
+            <!-- spore icon(logo), gets you to acct page -->
+            <i class="fas fa-dot-circle fa-2x"></i>
+        </div>
+        <div class="navbar_icon">
+            <!-- basket icon, gets you to index(home) page -->
+            <i class="fas fa-shopping-basket fa-2x"></i>
+        </div>
+        <div class="navbar_icon">
+            <!-- mushroom icon, gets you to guide page -->
+            <i class="fas fa-seedling fa-2x"></i>
+        </div>
+        <div class="navbar_arrow">
+            <!-- forward, appears when applicable, moves you forward a page -->
+            <i id="forward" class="fas fa-chevron-right fa-2x"></i>
+        </div>
+    </header>
+
+    <div class="spor_container">
+        <div class="spor_image">
+            <h6><img class="image" src="./img/spor_logo.png" style="width:300; height:400px;" alt=""></h6>
+        </div>
+    </div>
+
+    <div class="user_container">
+        <h1 class="user_info"><strong>user name:</strong><span id="user_name" class="user_style"> turntShramp</span></h1>
+        <!-- <h5 class="button">/change user name/</h5> -->
+
+        <h1 class="user_info"><strong>user email:</strong><span id="user_email" class="user_style"> seamusmurchadh@gmail.com</span></h1>
+        <!-- <h5 class="button">/change user email/</h5> -->
+
+        <h1 class="user_info"><strong>user password:</strong><span id="user_password" class="user_style"> ************</span></h1>
+        <!-- <h5 class="button">/change user password/</h5> -->
+
+        <a id="logout" class="waves-effect waves-dark btn">LOG OUT</a>
+    </div>
+
+    <div id="found_container">
+        <!-- DIVIDER -->
+        <div id="divider">
+            <div class="divider_text">
+                <i class="fas fa-chevron-up"></i>
+            </div>
+        </div>
+        <!-- FOUND MUSHROOMS -->
+        <div id="results" class="results_body">
+            <div class="shroom_selection">
+                <div class="shroom_photo">
+                    <img src="./img/golden_chanterelle.jpg" alt="chanterelle">
+                </div>
+                <div class="shroom_title">
+                    <h6><strong>Golden Chanterelle</strong></h6> 
+                </div>
+                <div class="space"></div>
+                <div class="shroom_arrow">
+                    <i class="fas fa-chevron-right"></i>
+                </div>
+            </div>
+            <div class="divider">
+                <hr>
+            </div>
+            <div class="shroom_selection">
+                <div class="shroom_photo">
+                    <img src="./img/golden_chanterelle.jpg" alt="chanterelle">
+                </div>
+                <div class="shroom_title">
+                    <h6><strong>Golden Chanterelle</strong></h6> 
+                </div>
+                <div class="space"></div>
+                <div class="shroom_arrow">
+                    <i class="fas fa-chevron-right"></i>
+                </div>
+            </div>
+            <div class="divider">
+                <hr>
+            </div>
+            <div class="shroom_selection">
+                <div class="shroom_photo">
+                    <img src="./img/golden_chanterelle.jpg" alt="chanterelle">
+                </div>
+                <div class="shroom_title">
+                    <h6><strong>Golden Chanterelle</strong></h6> 
+                </div>
+                <div class="space"></div>
+                <div class="shroom_arrow">
+                    <i class="fas fa-chevron-right"></i>
+                </div>
+            </div>
+            <div class="divider">
+                <hr>
+            </div>
+            <div class="shroom_selection">
+                <div class="shroom_photo">
+                    <img src="./img/golden_chanterelle.jpg" alt="chanterelle">
+                </div>
+                <div class="shroom_title">
+                    <h6><strong>Golden Chanterelle</strong></h6> 
+                </div>
+                <div class="space"></div>
+                <div class="shroom_arrow">
+                    <i class="fas fa-chevron-right"></i>
+                </div>
+            </div>
+            <div class="divider">
+                <hr>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    
+
+
+        <!-- FOOTER
+    --------------------------------------------------------------------------->
+    <footer class="page_footer">
+        <div class="who">
+            <h5 class="white-text">Who we are?</h5>
+            <p class="grey-text text-lighten-4">Small time mushroom enthusiasts looking to give back to the community.</p>
+        </div>
+        <div class="catagories">
+            <h5 class="white-text">Categories</h5>
+            <ul>
+                <li><a class="grey-text text-lighten-3" href="#!">Account</a></li>
+                <li><a class="grey-text text-lighten-3" href="#!">Home</a></li>
+                <li><a class="grey-text text-lighten-3" href="#!">Mushroom Guide</a></li>
+            </ul>
+        </div>
+        <div class="about">
+            <h5 class="white-text">About </h5>
+            <ul>
+                <li><a class="grey-text text-lighten-3" href="#!">About the Company</a></li>
+                <li><a class="grey-text text-lighten-3" href="#!">Contact Support</a></li>
+                <li><a class="grey-text text-lighten-3" href="#!">Contact Sales</a></li>
+            </ul>
+        </div>
+    </footer>
+    
+    
+<!--     
+    <footer class="page-footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col l6 m4 l6">
+                        <h5 class="white-text">Who we are?</h5>
+                        <p class="grey-text text-lighten-4">Mushroom enthusiasts looking to give back to the community.</p>
+                    </div>
+                    <div class="col l4 offset-l2 m4 l3">
+                        <h5 class="white-text">Categories</h5>
+                        <ul>
+                            <li><a class="grey-text text-lighten-3" href="#!">Account</a></li>
+                            <li><a class="grey-text text-lighten-3" href="#!">Home</a></li>
+                            <li><a class="grey-text text-lighten-3" href="#!">Mushroom Guide</a></li>
+                        </ul>
+                    </div>
+                    <div class="col l4 offset-l2 m4 l3">
+                        <h5 class="white-text">About </h5>
+                        <ul>
+                            <li><a class="grey-text text-lighten-3" href="#!">About the Company</a></li>
+                            <li><a class="grey-text text-lighten-3" href="#!">Contact Support</a></li>
+                            <li><a class="grey-text text-lighten-3" href="#!">Contact Sales</a></li>
+                        </ul>
+                    </div>     
+                </div>
+            </div>
+            <div class="footer-copyright">
+                <div class="container">
+                Open Source - Free for the taking
+                </div>
+            </div>
+        </footer> -->
+    
+        <!-- LOGIC   --------------------------------------------------------------------------->
+        <!-- PARTICLES -->
+        <script type="text/javascript" src="./js/particles.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.3/particles.min.js"></script> 
+        <!-- MATERIALIZE -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+        <!-- BOOTSTRAP -->
+        <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script> -->
+        <!-- jQUERY -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <!-- CUSTOM -->
+        <script type="text/javascript" src="./js/logic.js"></script>
+    </body>
+    </html>
