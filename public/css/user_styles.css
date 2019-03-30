@@ -85,9 +85,10 @@ body {
 .button {
   margin-top: 10px;
 }
-.btn {
+#logout_btn {
   background-color: black;
   margin-top: 10px;
+  margin-bottom: 20px;
 }
 /* FOUND MUSHROOMS */
 .window{
@@ -97,13 +98,27 @@ body {
   padding: 0 10px;
   background: white;
 }
-.shroom_selection {
-  margin-left: 30px;
-  margin-right: 30px;
+.found_shroom_selection {
+  background: #1980ef4f;
+  margin: 5px 10px 5px 10px;
+  padding-right: 20px;
+  padding-left: 20px;
+  border: solid rgb(113, 113, 113) 2px;
+  border-radius: 25px;
+  /* margin-left: 30px;
+  margin-right: 30px; */
   display: flex;
+  color: white;
+  /* margin-left: 30px;
+  margin-right: 30px;
+  display: flex; */
 }
 .divider {
   margin: 0 30px;
+  text-align: center;
+}
+#divider_text {
+  color: white !important;
 }
 .mushroom {
   display: flex;
@@ -146,9 +161,16 @@ h7 {
 
 /* FOOTER
 ==================================================*/
+/* .page-footer {
+  background-color: black;
+  color: black !important;
+  margin-top: 13px;
+  padding-top: 0;
+} */
 .page_footer {
   background-color: black;
   color: black !important;
+  margin-top: 13px;
   padding-top: 0;
   display: flex;
 }

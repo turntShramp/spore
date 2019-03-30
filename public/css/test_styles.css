@@ -83,6 +83,15 @@
     font-size: 15px;
   }
 
+  /* CLEAR ATTRIBUTES BUTTON */
+  .button_body {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .btn {
+    background-color: black;
+  }
+
   /* SEARCH BODY */
   .search_body {
     padding: 0 10px;
@@ -120,8 +129,11 @@
   h7 {
     color: rgb(172, 172, 172) !important;
   }
+
   /* SLIDER */
   .slider_body {
+    margin-top: 10px;
+    margin-bottom: 3px;
     padding: 0 10px;
     background: transparent;
   }
@@ -143,6 +155,21 @@
     font-size: 20px;
   }
   
+/* MUSHROOM CARDS */
+.card_container {
+    display: column;
+}
+.card_one {
+    flex: 20;
+    margin-left: 30px;
+    margin-right: 2.5px;
+}
+.card_two {
+    flex: 20;
+    margin-left: 2.5px;
+    margin-right: 30px;
+}
+
   /* RESULTS BODY */
   .window{
     background-color: white;
@@ -180,6 +207,7 @@
   h7 {
     color: rgb(167, 166, 166);
   }
+
   /* FOOTER
   ==================================================*/
   .page-footer {
@@ -198,11 +226,8 @@
     z-index: 0;
   }
   
-  
   /* TEST
   ==================================================*/
-  
-  
   
   /* MEDIA QUERIES
   ==================================================*/
