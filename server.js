@@ -9,6 +9,8 @@ let session = require('express-session');
 let bodyParser = require('body-parser');
 let PORT = process.env.PORT || 3000;
 
+console.log(process.env.NODE_ENV);
+
 // Middleware
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
