@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>spōr/mushroom</title>
+    <title>id</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="description" content="">
     <meta name="author" content="">
     <!-- FAVICON -->
-    <link rel="icon" type="image/png" href="./img/spor_logo.png" />
+    <link rel="icon" type="image/png" href="./img/logo/spor_logo.png" />
     <!-- MATERIALIZE CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">            
     <!-- GOOGLE FONTS -->
@@ -17,11 +17,12 @@
     <!-- FONTAWESOME -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <!-- CUSTOM CSS -->
-    <link rel="stylesheet" type="text/css" href="./css/mushroom_styles.css"/>
+    <link rel="stylesheet" type="text/css" href="./css/master.css"/>
 </head>
 
 <body>
     <!-- CANVAS -->
+    <section class="canvasExpander"></section>
     <canvas id="canvas" class="background"></canvas>
 
     <!-- NAVBAR
@@ -32,16 +33,16 @@
             <i id="back" class="fas fa-chevron-left fa-2x"></i>
         </div>
         <div class="navbar_icon">
-            <!-- spore icon(logo), gets you to acct page -->
-            <i class="fas fa-dot-circle fa-2x"></i>
-        </div>
-        <div class="navbar_icon">
             <!-- basket icon, gets you to index(home) page -->
             <i class="fas fa-shopping-basket fa-2x"></i>
         </div>
         <div class="navbar_icon">
-            <!-- mushroom icon, gets you to guide page -->
-            <i class="fas fa-seedling fa-2x"></i>
+            <!-- spore icon(logo), gets you to acct page -->
+            <i class="fab fa-hubspot fa-2x  "></i>
+        </div>
+        <div class="navbar_icon">
+            <!-- map icon, gets you to collected pins map page -->
+            <i class="fas fa-map-marked-alt fa-2x"></i>
         </div>
         <div class="navbar_arrow">
             <!-- forward, appears when applicable, moves you forward a page -->
@@ -49,61 +50,47 @@
         </div>
     </header>
 
-
-
-    <main class="id_container">
-        <div class="id_image">
-            <img src="./img/golden_chanterelle_large.jpg" alt="mushroom">
-        </div>
-        <div id="id_title">
-            <h3>Golden Chanterelle</h3>
-        </div>
-        <div id="id_text">
-            <p>Chanterelle is the common name of several species of fungi in the genera Cantharellus, Craterellus, Gomphus, and Polyozellus. They are the among the most popular of wild edible mushrooms. They are orange, yellow or white, meaty and funnel-shaped. On the lower surface, underneath the smooth cap, most species have gill-like ridges that run almost all the way down its stipe, which tapers down seamlessly from the cap</p>
-        </div>
-        <div id="id_facts">
-
-        </div>
-        <div id="id_button">
-            <button>there's a button here</button>
-        </div>
-    </main>
-    
-
-
-        <!-- FOOTER
+   
+     <!-- FOOTER
     --------------------------------------------------------------------------->
     <footer class="page-footer">
-        <div class="container">
-            <div class="row">
-                <div class="col l6 m4 l6">
+        <div class="footer_container">
+            <div class="footer_top">
+                <div class="footer_who">
                     <h5 class="white-text">Who we are?</h5>
-                    <p class="grey-text text-lighten-4">Mushroom enthusiasts looking to give back to the community.</p>
+                    <p class="grey-text text-lighten-4">Mushroom enthusiasts looking to give back to the foraging community.</p>
                 </div>
-                <div class="col l4 offset-l2 m4 l3">
-                    <h5 class="white-text">Categories</h5>
-                    <ul>
-                        <li><a class="grey-text text-lighten-3" href="#!">Account</a></li>
-                        <li><a class="grey-text text-lighten-3" href="#!">Home</a></li>
-                        <li><a class="grey-text text-lighten-3" href="#!">Mushroom Guide</a></li>
-                    </ul>
-                </div>
-                <div class="col l4 offset-l2 m4 l3">
-                    <h5 class="white-text">About </h5>
-                    <ul>
-                        <li><a class="grey-text text-lighten-3" href="#!">About the Company</a></li>
-                        <li><a class="grey-text text-lighten-3" href="#!">Contact Support</a></li>
-                        <li><a class="grey-text text-lighten-3" href="#!">Contact Sales</a></li>
-                    </ul>
-                </div>     
             </div>
-        </div>
-        <div class="footer-copyright">
-            <div class="container">
-            Open Source - Free for the taking
+            <div class="footer_middle">
+                <div class="footer_about">
+                    <h5 class="white-text">Pages</h5>
+                    <ul>
+                        <li><a class="grey-text text-lighten-3" href="#!">My Account</a></li>
+                        <li><a class="grey-text text-lighten-3" href="#!">Identification</a></li>
+                        <li><a class="grey-text text-lighten-3" href="#!"><span class="blueText">Found!</span> Map</a></li>
+                    </ul>
+                </div>
+                <div class="footer_pages">
+                    <h5 class="white-text"><span class="blueText">SPŌR</span></h5>
+                    <ul>
+                        <li><a class="grey-text text-lighten-3" 
+                        href="#!">The Team</a></li>
+                        <li><a class="grey-text text-lighten-3" href="#!">Support</a></li>
+                        <li><a class="grey-text text-lighten-3" href="#!">Donate</a></li>
+                    </ul>
+                </div>
+                <div class="footer_space"></div>
+            </div>
+            <div class="footer_bottom">
+                <div class="footer-copyright">
+                    <div class="opensource">
+                        Open Source - Free for the taking
+                    </div>
+                </div>
             </div>
         </div>
     </footer>
+    </section> <!-- CANVAS -->
 
     <!-- LOGIC   --------------------------------------------------------------------------->
     <!-- PARTICLES -->
@@ -111,8 +98,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.3/particles.min.js"></script> 
     <!-- MATERIALIZE -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <!-- BOOTSTRAP -->
-    <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script> -->
     <!-- jQUERY -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <!-- CUSTOM -->

@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>spōr/guide</title>
+    <title>guide</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="description" content="">
     <meta name="author" content="">
     <!-- FAVICON -->
-    <link rel="icon" type="image/png" href="./img/spor_logo.png" />
+    <link rel="icon" type="image/png" href="./img/logo/spor_logo.png" />
     <!-- MATERIALIZE CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">            
     <!-- GOOGLE FONTS -->
@@ -17,11 +17,12 @@
     <!-- FONTAWESOME -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <!-- CUSTOM CSS -->
-    <link rel="stylesheet" type="text/css" href="./css/guide_styles.css"/>
+    <link rel="stylesheet" type="text/css" href="./css/master.css"/>
 </head>
 
 <body>
     <!-- CANVAS -->
+    <section class="canvasExpander">
     <canvas id="canvas" class="background"></canvas>
 
     <!-- NAVBAR
@@ -48,25 +49,30 @@
             <i id="forward" class="fas fa-chevron-right fa-2x"></i>
         </div>
     </header>
+     <!-- LOGO -->
+     <div class="spor_container">
+        <div class="spor_image">
+            <h6><img class="image" src="./img/logo/spor_logo.png" style="width:300; height:400px;" alt=""></h6>
+        </div>
+    </div>
 
-    <!-- HEADER 
+    <!-- GUIDE INFO 
     --------------------------------------------------------------------------->
     <div class="guide_info">
-        <h1 class="word" style="margin-bottom: 0;"><strong>characteristic</strong><span class="word_type">   adjective</span></h1>
-        <h5 class="pronunciation">/ker(ə)ktəˈristik/</h5>
-        <h6 class="text">synonyms: attribute, features, quality, property, trait, aspect, element, facet...;</h6>
-        <h6 class="text">use the choices below to narrow down your search. Click on an attribute to be shown a list of traits and check all that apply. Any species that fit your criteria will be found below. The attributes will stack until you uncheck them or click the `Clear Attributes` button. </h6>
+        <h1 class="guide_word"><strong>characteristic</strong><span class="guide_word_type">   adjective</span></h1>
+        <h5 class="guide_pronunciation">/ker(ə)ktəˈristik/</h5>
+        <h6 class="guide_text_block">synonyms: attribute, features, quality, property, trait, aspect, element, facet...;</h6>
+        <h6 class="attribute_text">use the choices below to narrow down your search. Click on an attribute to be shown a list of traits and check all that apply. Any species that fit your criteria will be found below. The attributes will stack until you uncheck them or click the `Clear Attributes` button. </h6>
     </div>
 
     <!-- CLEAR ATTRIBUTES BUTTON 
     --------------------------------------------------------------------------->
-    <div class="button_body">
-        <a id="clear_attributes" class="waves-effect waves-dark btn">Clear Attributes</a>
+    <div class="clear_att_button_body">
+        <a id="clear_att_btn" class="waves-effect waves-dark btn">Clear Attributes</a>
     </div>
 
     <!-- SEARCH  
     --------------------------------------------------------------------------->
-
         <!-- expandable -->
         <!-- <ul class="collapsible">
             <li>
@@ -74,185 +80,141 @@
                 <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
             </li>
         </ul> -->
-
         <!-- these should be added dynamically -->
-    <div class="search_body">
-        <div class="selection">
-            <div class="title">
+    <div class="guide_search_body">
+        <div class="guide_selection">
+            <div class="attribute_title">
                 <h6><strong>Hymenium</strong></h6>         
             </div>
-            <div class="text">
-                <h7>gills, teeth, ...</h7>
+            <div class="attribute_text">
+                <h7 class="att_text_color">gills, teeth, ...</h7>
             </div>
-            <div class="arrow">
+            <div class="attribute_arrow">
                 <i class="fas fa-chevron-right"></i>
             </div>
         </div>
-        <!-- <div class="divider">
-            <hr>
-        </div> -->
-        <div class="selection">
-            <div class="title">
+        <div class="guide_selection">
+            <div class="attribute_title">
                 <h6><strong>Gill Characteristics</strong></h6>         
             </div>
-            <div class="text">
-                <h7>reduced, split, ...</h7>
+            <div class="attribute_text">
+                <h7 class="att_text_color">reduced, split, ...</h7>
             </div>
-            <div class="arrow">
+            <div class="attribute_arrow">
                 <i class="fas fa-chevron-right"></i>
             </div>
         </div>
-        <!-- <div class="divider">
-            <hr>
-        </div> -->
-        <div class="selection">
-            <div class="title">
+        <div class="guide_selection">
+            <div class="attribute_title">
                 <h6><strong>Gill Attachment</strong></h6>         
             </div>
-            <div class="text">
-                <h7>decurrent, attached, ...</h7>
+            <div class="attribute_text">
+                <h7 class="att_text_color">decurrent, attached, ...</h7>
             </div>
-            <div class="arrow">
+            <div class="attribute_arrow">
                 <i class="fas fa-chevron-right"></i>
             </div>
         </div>
-        <!-- <div class="divider">
-            <hr>
-        </div> -->
-        <div class="selection">
-            <div class="title">
+        <div class="guide_selection">
+            <div class="attribute_title">
                 <h6><strong>Spore Print</strong></h6>         
             </div>
-            <div class="text">
-                <h7>white, brown, ...</h7>
+            <div class="attribute_text">
+                <h7 class="att_text_color">white, brown, ...</h7>
             </div>
-            <div class="arrow">
+            <div class="attribute_arrow">
                 <i class="fas fa-chevron-right"></i>
             </div>
         </div>
-        <!-- <div class="divider">
-            <hr>
-        </div> -->
-        <div class="selection">
-            <div class="title">
+        <div class="guide_selection">
+            <div class="attribute_title">
                 <h6><strong>Smell</strong></h6>         
             </div>
-            <div class="text">
-                <h7>apricot, aniseed, ...</h7>
+            <div class="attribute_text">
+                <h7 class="att_text_color">apricot, aniseed, ...</h7>
             </div>
-            <div class="arrow">
+            <div class="attribute_arrow">
                 <i class="fas fa-chevron-right"></i>
             </div>
         </div>
-        <!-- <div class="divider">
-            <hr>
-        </div> -->
-        <div class="selection">
-            <div class="title">
+        <div class="guide_selection">
+            <div class="attribute_title">
                 <h6><strong>Stipe (Stem)</strong></h6>         
             </div>
-            <div class="text">
-                <h7>velvety, hollow, ...</h7>
+            <div class="attribute_text">
+                <h7 class="att_text_color">velvety, hollow, ...</h7>
             </div>
-            <div class="arrow">
+            <div class="attribute_arrow">
                 <i class="fas fa-chevron-right"></i>
             </div>
         </div>
-        <!-- <div class="divider">
-            <hr>
-        </div> -->
-        <div class="selection">
-            <div class="title">
+        <div class="guide_selection">
+            <div class="attribute_title">
                 <h6><strong>Annulus (Veil/Ring)</strong></h6>         
             </div>
-            <div class="text">
-                <h7>without, hanging, ...</h7>
+            <div class="attribute_text">
+                <h7 class="att_text_color">without, hanging, ...</h7>
             </div>
-            <div class="arrow">
+            <div class="attribute_arrow">
                 <i class="fas fa-chevron-right"></i>
             </div>
         </div>
-        <!-- <div class="divider">
-            <hr>
-        </div> -->
-        <div class="selection">
-            <div class="title">
+        <div class="guide_selection">
+            <div class="attribute_title">
                 <h6><strong>Pileus (Cap)</strong></h6>         
             </div>
-            <div class="text">
-                <h7>scaly, slimy, etc...</h7>
+            <div class="attribute_text">
+                <h7 class="att_text_color">scaly, slimy, etc...</h7>
             </div>
-            <div class="arrow">
+            <div class="attribute_arrow">
                 <i class="fas fa-chevron-right"></i>
             </div>
         </div>
-        <!-- <div class="divider">
-            <hr>
-        </div> -->
-        <div class="selection">
-            <div class="title">
+        <div class="guide_selection">
+            <div class="attribute_title">
                 <h6><strong>Flesh Color</strong></h6>         
             </div>
-            <div class="text">
-                <h7>bluing, blackening, etc...</h7>
+            <div class="attribute_text">
+                <h7 class="att_text_color">bluing, blackening, etc...</h7>
             </div>
-            <div class="arrow">
+            <div class="attribute_arrow">
                 <i class="fas fa-chevron-right"></i>
             </div>
         </div>
-        <!-- <div class="divider">
-            <hr>
-        </div> -->
-        <div class="selection">
-            <div class="title">
+        <div class="guide_selection">
+            <div class="attribute_title">
                 <h6><strong>Fluid Color</strong></h6>         
             </div>
-            <div class="text">
-                <h7>white, red, etc...</h7>
+            <div class="attribute_text">
+                <h7 class="att_text_color">white, red, etc...</h7>
             </div>
-            <div class="arrow">
+            <div class="attribute_arrow">
                 <i class="fas fa-chevron-right"></i>
             </div>
         </div>
-        <!-- <div class="divider">
-            <hr>
-        </div> -->
-        <div class="selection">
-            <div class="title">
+        <div class="guide_selection">
+            <div class="attribute_title">
                 <h6><strong>Volva (Bulb)</strong></h6>         
             </div>
-            <div class="text">
-                <h7>covered with skin, ...</h7>
+            <div class="attribute_text">
+                <h7 class="att_text_color">covered with skin, ...</h7>
             </div>
-            <div class="arrow">
+            <div class="attribute_arrow">
                 <i class="fas fa-chevron-right"></i>
             </div>
         </div>
-        <!-- <div class="divider">
-            <hr>
-        </div> -->
-        <div class="selection">
-            <div class="title">
+        <div class="guide_selection">
+            <div class="attribute_title">
                 <h6><strong>Pores</strong></h6>         
             </div>
-            <div class="text">
-                <h7>elongated, watery, etc...</h7>
+            <div class="attribute_text">
+                <h7 class="att_text_color">elongated, watery, etc...</h7>
             </div>
-            <div class="arrow">
+            <div class="attribute_arrow">
                 <i class="fas fa-chevron-right"></i>
             </div>
         </div>
-        <!-- SLIDER -->
-        <!-- <div id="slider">
-            <div class="slider_icon_up">
-                <i class="fas fa-chevron-up"></i>
-            </div>
-            <div class="slider_icon_down">
-                <i class="fas fa-chevron-down"></i>
-            </div>
-        </div> -->
     </div> 
-
     <!-- SLIDER -->
     <div class="slider_body">
         <div id="slider">
@@ -265,80 +227,58 @@
         </div>
     </div>
     
-    <!-- RESULTS
+    <!-- RESULTS BODY
     --------------------------------------------------------------------------->
     <!-- these should be added dynamically -->
-    <div class="window"> 
-        <div id="results" class="results_body">
-            <div class="shroom_selection">
-                <div class="shroom_photo">
-                    <img class="image_border" src="./img/golden_chanterelle.jpg" alt="chanterelle">
+    <div id="guide_container">
+        <!-- GUIDE MUSHROOMS -->
+        <div id="guide_results" class="guide_results_body">
+
+            <div class="guide_mushroom">
+                <div class="guide_mushroom_photo">
+                    <img class="guide_image_border" src="./img/thumbnail/chanterelle_thumbnail.jpg" alt="chanterelle">
                 </div>
-                <div class="shroom_title">
-                    <h6><strong>Golden Chanterelle</strong></h6> 
+                <div class="guide_mushroom_title">
+                    <h6><strong>Chanterelle</strong></h6> 
                 </div>
                 <div class="space"></div>
-                <div class="shroom_arrow">
+                <div class="guide_mushroom_arrow">
                     <i class="fas fa-chevron-right"></i>
                 </div>
             </div>
-            <!-- <div class="divider">
-                <hr>
-            </div> -->
-            <div class="shroom_selection">
-                <div class="shroom_photo">
-                    <img class="image_border" src="./img/black_trumpet.jpg" alt="chanterelle">
+            <div class="guide_mushroom">
+                <div class="guide_mushroom_photo">
+                    <img class="guide_image_border" src="./img/thumbnail/blackTrumpet_thumbnail.jpg" alt="chanterelle">
                 </div>
-                <div class="shroom_title">
+                <div class="guide_mushroom_title">
                     <h6><strong>Black Trumpet</strong></h6> 
                 </div>
                 <div class="space"></div>
-                <div class="shroom_arrow">
+                <div class="guide_mushroom_arrow">
                     <i class="fas fa-chevron-right"></i>
                 </div>
             </div>
-            <!-- <div class="divider">
-                <hr>
-            </div> -->
-            <div class="shroom_selection">
-                <div class="shroom_photo">
-                    <img class="image_border" src="./img/golden_chanterelle.jpg" alt="chanterelle">
+            <div class="guide_mushroom">
+                <div class="guide_mushroom_photo">
+                    <img class="guide_image_border" src="./img/thumbnail/blewit_thumbnail.jpg" alt="chanterelle">
                 </div>
-                <div class="shroom_title">
-                    <h6><strong>Golden Chanterelle</strong></h6> 
+                <div class="guide_mushroom_title">
+                    <h6><strong>Blewit</strong></h6> 
                 </div>
                 <div class="space"></div>
-                <div class="shroom_arrow">
+                <div class="guide_mushroom_arrow">
                     <i class="fas fa-chevron-right"></i>
                 </div>
             </div>
-            <!-- <div class="divider">
-                <hr>
-            </div> -->
-            <div class="shroom_selection">
-                <div class="shroom_photo">
-                    <img class="image_border" src="./img/black_trumpet.jpg" alt="chanterelle">
+            <div class="guide_mushroom">
+                <div class="guide_mushroom_photo">
+                    <img class="guide_image_border" src="./img/thumbnail/lionsMane_thumbnail.jpg" alt="chanterelle">
                 </div>
-                <div class="shroom_title">
-                    <h6><strong>Black Trumpet</strong></h6> 
+                <div class="guide_mushroom_title">
+                    <h6><strong>Lion's Mane</strong></h6> 
                 </div>
                 <div class="space"></div>
-                <div class="shroom_arrow">
-                    <i class="fas fa-chevron-right"></i>
-                </div>
-            </div>
-            <!-- <div class="divider">
-                <hr>
-            </div> -->
-            <div class="shroom_selection">
-                <div class="shroom_photo">
-                    <img class="image_border" src="./img/golden_chanterelle.jpg" alt="chanterelle">
-                </div>
-                <div class="shroom_title">
-                    <h6><strong>Golden Chanterelle</strong></h6> 
-                </div>
-                <div class="space"></div>
-                <div class="shroom_arrow">
+                <div class="guide_mushroom_arrow">
                     <i class="fas fa-chevron-right"></i>
                 </div>
             </div>
@@ -348,37 +288,43 @@
     <!-- FOOTER
     --------------------------------------------------------------------------->
     <footer class="page-footer">
-        <div class="container">
-            <div class="row">
-                <div class="col l6 m4 l6">
+        <div class="footer_container">
+            <div class="footer_top">
+                <div class="footer_who">
                     <h5 class="white-text">Who we are?</h5>
-                    <p class="grey-text text-lighten-4">Mushroom enthusiasts looking to give back to the community.</p>
+                    <p class="grey-text text-lighten-4">Mushroom enthusiasts looking to give back to the foraging community.</p>
                 </div>
-                <div class="col l4 offset-l2 m4 l3">
-                    <h5 class="white-text">Categories</h5>
+            </div>
+            <div class="footer_middle">
+                <div class="footer_about">
+                    <h5 class="white-text">Pages</h5>
                     <ul>
-                        <li><a class="grey-text text-lighten-3" href="#!">Account</a></li>
-                        <li><a class="grey-text text-lighten-3" href="#!">Home</a></li>
-                        <li><a class="grey-text text-lighten-3" href="#!">Mushroom Guide</a></li>
+                        <li><a class="grey-text text-lighten-3" href="#!">My Account</a></li>
+                        <li><a class="grey-text text-lighten-3" href="#!">Identification</a></li>
+                        <li><a class="grey-text text-lighten-3" href="#!"><span class="blueText">Found!</span> Map</a></li>
                     </ul>
                 </div>
-                <div class="col l4 offset-l2 m4 l3">
-                    <h5 class="white-text">About </h5>
+                <div class="footer_pages">
+                    <h5 class="white-text"><span class="blueText">SPŌR</span></h5>
                     <ul>
                         <li><a class="grey-text text-lighten-3" 
                         href="#!">The Team</a></li>
                         <li><a class="grey-text text-lighten-3" href="#!">Support</a></li>
                         <li><a class="grey-text text-lighten-3" href="#!">Donate</a></li>
                     </ul>
-                </div>     
+                </div>
+                <div class="footer_space"></div>
             </div>
-        </div>
-        <div class="footer-copyright">
-            <div class="container">
-             Open Source - Free for the taking
+            <div class="footer_bottom">
+                <div class="footer-copyright">
+                    <div class="opensource">
+                        Open Source - Free for the taking
+                    </div>
+                </div>
             </div>
         </div>
     </footer>
+    </section>
 
     <!-- LOGIC   --------------------------------------------------------------------------->
     <!-- PARTICLES -->
