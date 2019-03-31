@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>spōr/login</title>
+    <title>login</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="description" content="">
     <meta name="author" content="">
     <!-- FAVICON -->
-    <link rel="icon" type="image/png" href="./img/spor_logo.png" />
+    <link rel="icon" type="image/png" href="./img/logo/spor_logo.png" />
     <!-- MATERIALIZE CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">            
     <!-- GOOGLE FONTS -->
@@ -17,37 +17,44 @@
     <!-- FONTAWESOME -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <!-- CUSTOM CSS -->
-    <link rel="stylesheet" type="text/css" href="./css/login_styles.css"/>
+    <link rel="stylesheet" type="text/css" href="./css/master.css"/>
 </head>
 
 <body>
     <!-- CANVAS -->
+    <section class="canvasExpander">
     <canvas id="canvas" class="background"></canvas>
 
     <!-- LOGO -->
     <div class="spor_container">
         <div class="spor_image">
-            <h6><img class="image" src="./img/spor_logo.png" style="width:300; height:400px;" alt=""></h6>
+            <h6><img class="image" src="./img/logo/spor_logo.png" style="width:300; height:400px;" alt=""></h6>
         </div>
-       
+
+<!-- RED LINE -->
+<div id="redLine"><hr></div>
+
         <!-- LOGIN BODY-->
-        <div class="login_body">
+        <div class="login_user_body">
             <input placeholder="turntShramp" id="user_name" type="text" class="validate">
             <label for="user_name">User Name</label>
             <input placeholder="*************" id="user_password" type="password" class="validate">
             <label for="user_password">User Password</label>  
             <!-- LOGIN BUTTON -->      
             <div class="button_body">
-                <a id="login_btn" class="waves-effect waves-dark btn">Log In</a>
+                <a id="login_user_btn" class="waves-effect waves-dark btn">Log In</a>
             </div>
              <!-- CREATE BUTTON -->      
              <div class="button_body">
-                <a id="create_btn" class="waves-effect waves-dark btn">Create Account</a>
+                <a id="create_user_btn" class="waves-effect waves-dark btn">Create Account</a>
             </div>
         </div>
 
+<!-- RED LINE -->
+<div id="redLine"><hr></div>
+
         <!-- CREATE BODY-->
-        <div class="create_body">
+        <div class="create_user_body">
             <input placeholder="turntShramp" id="create_user_name" type="text" class="validate">
             <label for="create_user_name">Create User Name</label>
             <input placeholder="seamusmurchadh@gmail.com" id="create_user_email" type="email" class="validate">
@@ -58,67 +65,28 @@
             <label for="confirm_user_password">Confirm User Password</label>  
             <!-- LOGIN BUTTON -->      
             <div class="button_body">
-                <a id="login_btn" class="waves-effect waves-dark btn">Log In</a>
+                <a id="login_user_btn" class="waves-effect waves-dark btn">Log In</a>
             </div>
         </div>
        
-
-        <!-- OLD FORM -->
-        <!-- <div class="row">
-            <form class="col s12">
-                <div class="row">
-                    <div class="input-field col s6">
-                    <input placeholder="Placeholder" id="user_name" type="text" class="validate">
-                    <label for="user_name">User Name</label>
-                    </div>
-                    <div class="input-field col s6">
-                    <input id="last_name" type="text" class="validate">
-                    <label for="last_name">Last Name</label>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="input-field col s12">
-                    <input disabled value="I am not editable" id="disabled" type="text" class="validate">
-                    <label for="disabled">Disabled</label>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="input-field col s12">
-                    <input id="password" type="password" class="validate">
-                    <label for="password">Password</label>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="input-field col s12">
-                    <input id="email" type="email" class="validate">
-                    <label for="email">Email</label>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col s12">
-                    This is an inline input field:
-                    <div class="input-field inline">
-                        <input id="email_inline" type="email" class="validate">
-                        <label for="email_inline">Email</label>
-                        <span class="helper-text" data-error="wrong" data-success="right">Helper text</span>
-                    </div>
-                    </div>
-                </div>
-            </form>
-        </div> -->
+<!-- RED LINE -->
+<div id="redLine"><hr></div>
 
         <!-- SPŌR -->
         <div class="spor_noun">
-            <h1 class="word" style="margin-bottom: 0;"><strong>spore</strong><span class="word_type">   noun</span></h1>
-            <h5 class="pronunciation">/spōr/</h5>
-            <h6 class="text">a primitive, typically unicellular, often environmentally resistant, reproductive body capable of giving rise to a new individual without sexual fusion.</h6>
+            <h1 class="spor_word" style="margin-bottom: 0;"><strong>spore</strong><span class="spor_word_type">   noun</span></h1>
+            <h5 class="spor_pronunciation">/spōr/</h5>
+            <h6 class="spor_text_block">a primitive, typically unicellular, often environmentally resistant, reproductive body capable of giving rise to a new individual without sexual fusion.</h6>
         </div>
+
+        <!-- SPŌR -->
         <div class="spor_app">
-            <h1 class="word" style="margin-bottom: 0;"><strong>spōr</strong><span class="word_type">   app</span></h1>
-            <h5 class="pronunciation">/spore/</h5>
-            <h6 class="text">a modern, light weight, environmentally friendly, foraging tool capable of managing all your found locations and identification needs, also without sexual fusion.</h6>
+            <h1 class="spor_word" style="margin-bottom: 0;"><strong>spōr</strong><span class="spor_word_type">   app</span></h1>
+            <h5 class="spor_pronunciation">/spore/</h5>
+            <h6 class="spor_text_block">a modern, light weight, environmentally friendly, foraging tool capable of managing all your found locations and identification needs, also without sexual fusion.</h6>
         </div>
     </div>
+    </section>
     <!-- LOGIC   ------------------------------------------------------------------------>
     <!-- PARTICLES -->
     <script type="text/javascript" src="./js/particles.js"></script>
