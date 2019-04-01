@@ -5,9 +5,12 @@ var passport = require("passport");
 
 module.exports = function(app) {
 
-  app.get("/signup", authController.signup)
 
-  app.get("/signin", authController.signin)
+  app.get("/signup", authController.signup);
+
+  app.get("/signin", authController.signin);
+
+  app.get("/logout",authController.logout);
 
   // Load index(home) page
   app.get("/", function(req, res) {
@@ -29,11 +32,17 @@ module.exports = function(app) {
   }
   ));
 
+  app.post("/signin", passport.authenticate("local-signin",{
+    successRedirect: "/dashboard",
+    failureRedirect: "/signin"
+  }));
+
   // Load mushroom guide page
   app.get("/guide", function(req, res) {
     res.sendFile(path.join(__dirname, "../public/guide.html"));
   });
 
+  app.get("/dashboard", isLoggedIn, authController.dashboard);
   // app.get("/", function(req, res) {
   //   db.Example.findAll({}).then(function(dbExamples) {
   //     res.render("index", {
@@ -56,4 +65,10 @@ module.exports = function(app) {
   app.get("*", function(req, res) {
     res.render("404");
   });
+
+  function isLoggedIn(req,res,next){
+    if (req.isAuthenticated())
+    return next();
+    res.redirect("/signin");
+  }
 };
