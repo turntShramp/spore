@@ -8,6 +8,8 @@ let passport = require('passport');
 let session = require('express-session');
 let bodyParser = require('body-parser');
 let PORT = process.env.PORT || 3000;
+require("./config/passport/passport.js")(passport,db.user);
+var authRoute = require("./routes/apiRoutes.js")(app,passport);
 
 // Middleware
 app.use(express.urlencoded({ extended: false }));

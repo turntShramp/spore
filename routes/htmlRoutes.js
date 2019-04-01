@@ -1,6 +1,7 @@
 const db = require("../models");
 const path = require("path");
 const authController = require("../controllers/authcontroller.js")
+var passport = require("passport");
 
 module.exports = function(app) {
 
@@ -21,6 +22,12 @@ module.exports = function(app) {
   app.get("/acct", function(req, res) {
     res.sendFile(path.join(__dirname, "../public/acct.html"));
   });
+
+  app.post("/signup", passport.authenticate("local-signup", {
+    successRedirect: "/dashboard",
+    failureRedirect: "/signup"
+  }
+  ));
 
   // Load mushroom guide page
   app.get("/guide", function(req, res) {
