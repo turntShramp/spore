@@ -109,6 +109,7 @@
     margin-top: 20px;
     margin-left: 50px;
     margin-right: 50px;
+    padding-bottom: 30px;
   }
   #login_user_btn {
     margin-top: 20px;
@@ -120,12 +121,23 @@
     margin-top: 20px;
     margin-left: 50px;
     margin-right: 50px;
+    padding-bottom: 30px;
   }
   #create_user_btn {
     margin-top: 10px;
     background-color: black;
   }
   /* SPŌR BODY */
+  .grow {
+    max-height: 2000px;
+  }
+  .hidden {
+    display: none;
+  }
+  #spor_image {
+    max-width: 400px;
+    max-height: 500px;
+  }
   .spor_noun {
     margin-top: 30px;
     margin-left: 40px;
@@ -136,7 +148,8 @@
     margin-top: 30px;
     margin-left: 40px;
     margin-right: 30px;
-    margin-bottom: 20px;
+    padding-bottom: 20px;
+    /* margin-bottom: 20px; */
   }
   .spor_word {
     margin-bottom: 0;
@@ -380,7 +393,7 @@
   }
   /* FOUND MUSHROOMS */
   .found_mushroom {
-    background: #ec6f75b1;
+    background: #ec6f7584;
     margin: 5px 10px 5px 10px;
     padding-right: 20px;
     padding-left: 20px;
@@ -495,31 +508,37 @@
   #found_btn {
     margin-top: 40px;
     margin-bottom: 40px;
-    background-color: #ec6f75b1;
+    background-color: #ee565db1;
   }
   .quick_icons {
     background-color: #f0efef;
     border: solid 2px black;
     border-radius: 25px;
     display: flex;
-  }
-  .icon_div {
-    background-color: #f0efef;
-    display: flex;
-    border-radius: 25px;
+    flex-wrap: wrap;
   }
   .icon_block {
     text-align: center;
     color: black;
-    /* flex: 5; */
-    margin: 20px 20px;
-    flex-wrap: wrap;
+    margin: 10px 10px;
+    min-width: 100px;
+    flex: 5;
   }
-  .icon {
-    font-size: 40px;
+  .icon_image {
+    font-size: 50px;
+    margin-bottom: 0;
   }
   .icon_text {
-    font-size: 8px;
+    margin-top: 0px !important;
+    font-size: 20px;
+  }
+  .do_not {
+      color: #ee565db1;
+      font-weight: bold !important;
+  }
+  .do {
+    color: #56a7eeb1;
+    font-weight: bold !important;
   }
 
 
@@ -529,21 +548,6 @@
 
 
 
- .icon_card {
-    background-color: #f0efef;
-    border: solid 2px black;
-    border-radius: 25px;
-    text-align: center;
-    color: black;
-    flex: 5;
-    margin: 0 20px;
- }
- .icon {
-     font-size: 40px;
- }
- .icon_text {
-     font-size: 8px;
- }
 
 
 
