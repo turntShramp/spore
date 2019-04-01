@@ -109,6 +109,7 @@
     margin-top: 20px;
     margin-left: 50px;
     margin-right: 50px;
+    padding-bottom: 30px;
   }
   #login_user_btn {
     margin-top: 20px;
@@ -120,12 +121,23 @@
     margin-top: 20px;
     margin-left: 50px;
     margin-right: 50px;
+    padding-bottom: 30px;
   }
   #create_user_btn {
     margin-top: 10px;
     background-color: black;
   }
   /* SPŌR BODY */
+  .grow {
+    max-height: 2000px;
+  }
+  .hidden {
+    display: none;
+  }
+  #spor_image {
+    max-width: 400px;
+    max-height: 500px;
+  }
   .spor_noun {
     margin-top: 30px;
     margin-left: 40px;
@@ -136,7 +148,8 @@
     margin-top: 30px;
     margin-left: 40px;
     margin-right: 30px;
-    margin-bottom: 20px;
+    padding-bottom: 20px;
+    /* margin-bottom: 20px; */
   }
   .spor_word {
     margin-bottom: 0;
