@@ -380,7 +380,7 @@
   }
   /* FOUND MUSHROOMS */
   .found_mushroom {
-    background: #ec6f75b1;
+    background: #ec6f7584;
     margin: 5px 10px 5px 10px;
     padding-right: 20px;
     padding-left: 20px;
@@ -495,7 +495,7 @@
   #found_btn {
     margin-top: 40px;
     margin-bottom: 40px;
-    background-color: #ec6f75b1;
+    background-color: #ee565db1;
   }
   .quick_icons {
     background-color: #f0efef;
@@ -507,7 +507,7 @@
   .icon_block {
     text-align: center;
     color: black;
-    margin: 20px 20px;
+    margin: 10px 10px;
     min-width: 100px;
     flex: 5;
   }
@@ -519,6 +519,14 @@
     margin-top: 0px !important;
     font-size: 20px;
   }
+  .do_not {
+      color: #ee565db1;
+      font-weight: bold !important;
+  }
+  .do {
+    color: #56a7eeb1;
+    font-weight: bold !important;
+  }
 
 
 
@@ -532,7 +540,13 @@
 
 
 
-  
+
+
+
+
+
+
+
 
 
 
