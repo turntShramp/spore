@@ -48,6 +48,10 @@
   .welcome_text_wrapper {
       text-align: center;
   }
+  input[type=checkbox]
+{
+  -webkit-appearance:checkbox;
+}
   
   /* NAVBAR
 ==================================================*/

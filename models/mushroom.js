@@ -1,10 +1,9 @@
 module.exports = function(sequelize, DataTypes) {
     let Mushroom = sequelize.define("Mushroom", {
-        nameLatin: DataTypes.STRING,
-        nameCommon: DataTypes.STRING,
-        toxic: DataTypes.BOOLEAN,
-        medicinal: DataTypes.BOOLEAN,
-        neutral: DataTypes.BOOLEAN
+        latinName: DataTypes.STRING,
+        commonName: DataTypes.STRING,
+        pronunciation: DataTypes.STRING,
+        content: DataTypes.TEXT,
     });
 
     Mushroom.associate = function(models) {

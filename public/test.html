@@ -20,60 +20,193 @@
     <link rel="stylesheet" type="text/css" href="./css/master.css"/>
 </head>
 
-<body>
-    <!-- CANVAS -->
-    <section class="canvasExpander">
-    <canvas id="canvas" class="background"></canvas>
-
-       <!-- LOGO -->
-    <div id="spor_container" class="spor_container">
-        <h6><img id="spor_image" class="image hidden" src="./img/logo/spor_logo.png"  alt=""></h6>
- 
-        <!-- SPŌR -->
-        <div id="spor_noun" class="spor_noun hidden">
-            <h1 class="spor_word" style="margin-bottom: 0;"><strong>spore</strong><span class="spor_word_type">   noun</span></h1>
-            <h5 class="spor_pronunciation">/spōr/</h5>
-            <h6 class="spor_text_block">a primitive, typically unicellular, often environmentally resistant, reproductive body capable of giving rise to a new individual, without sexual fusion.</h6>
+<body> 
+    <form action="#new_mushroom">
+        <!-- model info -->
+        <h1>model info</h1>
+        <div class="model_info">
+            <!-- latinName: DataTypes.STRING, -->
+            <p><label>
+                <input id="latinName" type="string" class="validate">
+                <label for="latinName">Latin Name</label>
+            </label></p>
+            <!-- commonName: DataTypes.STRING, -->
+            <p><label>
+                <input id="commonName" type="string" class="validate">
+                <label for="commonName">Common Name</label>
+            </label></p>
+            <!-- pronunciation: DataTypes.STRING, -->
+            <p><label>
+                <input id="pronunciation" type="string" class="validate">
+                <label for="pronunciation">Pronunciation</label>
+            </label></p>
+            <!-- content: DataTypes.TEXT, -->
+            <p><label>
+                <input id="content" type="text" class="validate">
+                <label for="content">Content</label>
+            </label></p>
         </div>
 
-        <!-- SPŌR -->
-        <div id="spor_app" class="spor_app hidden">
-            <h1 class="spor_word" style="margin-bottom: 0;"><strong>spōr</strong><span class="spor_word_type">   app</span></h1>
-            <h5 class="spor_pronunciation">/spore/</h5>
-            <h6 class="spor_text_block">a modern, light weight, environmentally friendly, foraging identification tool capable of managing all your found species and locations, all without sexual fusion.</h6>
+        <!-- icons -->
+        <h1>icons</h1>
+        <div class="icon_boxes">
+            <p><label>
+                <input type="checkbox" id="bacon" />
+                <span>delicious</span>
+            </label></p>
+            <p><label>
+                <input type="checkbox" id="carrot" />
+                <span>edible as is</span>
+            </label></p>
+            <p><label>
+                <input type="checkbox" id="utensils" />
+                <span>edible with preparation</span>
+            </label></p>
+            <p><label>
+                <input type="checkbox" id="tp" />
+                <span>causes gastrointestinal problems</span>
+            </label></p>
+            <p><label>
+                <input type="checkbox" id="caution" />
+                <span>caution, can cause serious illness</span>
+            </label></p>
+            <p><label>
+                <input type="checkbox" id="danger" />
+                <span>danger, can cause serious illness or death</span>
+            </label></p>
+            <p><label>
+                <input type="checkbox" id="unknown"  />
+                <span>unknown</span>
+            </label></p>
+            <p><label>
+                <input type="checkbox" id="bottle" />
+                <span>medicinal as is</span>
+            </label></p>
+            <p><label>
+                <input type="checkbox" id="mortar" />
+                <span>medicinal with preparation</span>
+            </label></p>
+            <p><label>
+                <input type="checkbox" id="summer" />
+                <span>summer months</span>
+            </label></p>
+            <p><label>
+                <input type="checkbox" id="winter" />
+                <span>winter months</span>
+            </label></p>
+            <p><label>
+                <input type="checkbox" id="fall" />
+                <span>fall months</span>
+            </label></p>
+            <p><label>
+                <input type="checkbox" id="spring" />
+                <span>spring months</span>
+            </label></p>
+            <p><label>
+                <input type="checkbox" id="tree" />
+                <span>prefers coniferous forests</span>
+            </label></p>
+            <p><label>
+                <input type="checkbox" id="branch" />
+                <span>prefers deciduous forests</span>
+            </label></p>
+            <p><label>
+                    <input type="checkbox" id="cloud" />
+                    <span>prefers moist conditions</span>
+            </label></p>
         </div>
-        <!-- LOGIN BODY-->
-        <div id="login_user_body" class="login_user_body hidden">
-            <input placeholder="turntShramp" id="user_name" type="text" class="validate">
-            <label for="user_name">User Name</label>
-            <input placeholder="*************" id="user_password" type="password" class="validate">
-            <label for="user_password">User Password</label>  
-            <!-- LOGIN BUTTON -->      
-            <div class="button_body">
-                <a id="login_user_btn" class="waves-effect waves-dark btn">Log In</a>
+
+        <!-- attributes -->
+        <h1>attributes</h1>
+        <div class="attribute_boxes">
+            <div class="gill_type">
+                <h2>hymenium (gill type)</h2>
+                <p><label>
+                        <input type="checkbox" id="hymenium_gills" />
+                        <span>gills</span>
+                </label></p>
+                <p><label>
+                        <input type="checkbox" id="hymenium_false_gills" />
+                        <span>false gills</span>
+                </label></p>
+                <p><label>
+                        <input type="checkbox" id="hymenium_teeth" />
+                        <span>teeth</span>
+                </label></p>
+                <p><label>
+                        <input type="checkbox" id="hymenium_sponge" />
+                        <span>sponge/pores</span>
+                </label></p>
+                <p><label>
+                        <input type="checkbox" id="hymenium_na" />
+                        <span>not applicable</span>
+                </label></p>
             </div>
-             <!-- CREATE BUTTON -->      
-             <div class="button_body">
-                <a id="create_user_btn" class="waves-effect waves-dark btn">Create Account</a>
-            </div>
+            <div class="gill_type">
+                <h2>gill characteristics</h2>
+                <p><label>
+                        <input type="checkbox" id="gill_chars_" />
+                        <span>ink-like deliquesense</span>
+                </label></p>
+                <p><label>
+                        <input type="checkbox" id="gill_chars_" />
+                        <span>ink-like deliquesense</span>
+                </label></p>
+                <p><label>
+                        <input type="checkbox" id="gill_chars_" />
+                        <span>ink-like deliquesense</span>
+                </label></p>
+                <p><label>
+                        <input type="checkbox" id="gill_chars_" />
+                        <span>ink-like deliquesense</span>
+                </label></p>
+                <p><label>
+                        <input type="checkbox" id="gill_chars_" />
+                        <span>ink-like deliquesense</span>
+                </label></p>
+                <p><label>
+                        <input type="checkbox" id="gill_chars_" />
+                        <span>ink-like deliquesense</span>
+                </label></p>
+                <p><label>
+                        <input type="checkbox" id="gill_chars_" />
+                        <span>ink-like deliquesense</span>
+                </label></p>
+                <p><label>
+                        <input type="checkbox" id="gill_chars_" />
+                        <span>ink-like deliquesense</span>
+                </label></p>
+                <p><label>
+                        <input type="checkbox" id="gill_chars_" />
+                        <span>ink-like deliquesense</span>
+                </label></p>
         </div>
-        <!-- CREATE BODY-->
-        <div id="create_user_body" class="create_user_body hidden">
-            <input placeholder="turntShramp" id="create_user_name" type="text" class="validate">
-            <label for="create_user_name">Create User Name</label>
-            <input placeholder="seamusmurchadh@gmail.com" id="create_user_email" type="email" class="validate">
-            <label for="create_user_email">Enter Your Preffered Email</label>
-            <input placeholder="*************" id="create_user_password" type="password" class="validate">
-            <label for="create_user_password">Create User Password</label>  
-            <input placeholder="*************" id="confirm_user_password" type="password" class="validate">
-            <label for="confirm_user_password">Confirm User Password</label>  
-            <!-- LOGIN BUTTON -->      
-            <div class="button_body">
-                <a id="login_user_btn" class="waves-effect waves-dark btn">Log In</a>
-            </div>
-        </div>
-    </div>
-    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <p>
+              <label>
+                <input type="checkbox" />
+                <span>Red</span>
+              </label>
+            </p>
+          
+    </form>
 
     <!-- LOGIC   ------------------------------------------------------------------------>
     <!-- PARTICLES -->
