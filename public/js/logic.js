@@ -63,7 +63,9 @@ $(document).ready(function(){
   // NAVBAR LOGIC 
   //---------------------------------------------------------//
   $("#basket_btn").on('click', function () {
-
+    window.open("./user.html", function() {
+      console.log('worked');
+    });
   });
 }); //document.ready
 
