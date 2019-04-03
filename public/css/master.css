@@ -626,3 +626,11 @@
   .canvasExpander {
     position: relative;
   }
+
+
+  /* ADMIN
+==================================================*/
+   .new_mushroom_body {
+     margin: 0 20px;
+   }
+  

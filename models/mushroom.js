@@ -4,6 +4,8 @@ module.exports = function(sequelize, DataTypes) {
         commonName: DataTypes.STRING,
         pronunciation: DataTypes.STRING,
         content: DataTypes.TEXT,
+        mushroom_photo: DataTypes.STRING,
+        thumbnail_photo: DataTypes.STRING
     });
 
     Mushroom.associate = function(models) {
