@@ -172,7 +172,15 @@
   .spor_text_block {
     font-family: 'Work Sans', sans-serif;
   }
-
+  .middle_layer {
+    height: 100%;
+    width: 100%;
+  }
+  .canvas_cover {
+    background-color: white;
+    height: 700px;
+    width: 400px;
+  }
 
 
 
