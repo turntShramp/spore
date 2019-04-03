@@ -16,6 +16,14 @@ window.onload = function() {
 $(document).ready(function(){
   console.log("divs be loadin");
 
+  //initialize all modals           
+  $('.modal').modal();
+
+  //now you can open modal from code
+  $('#modal1').modal('open');
+
+  //or by click on trigger
+  $('.trigger-modal').modal();
 
   // LOGIN FADE
   // $("#spor_image").fadeIn(3000, function() {

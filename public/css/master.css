@@ -416,6 +416,7 @@
     flex: 0 0 auto;
     padding-left: 10px;
     padding-top: 5px;
+    /* styling with the 
     /* padding-top: 40px !important;
     padding-left: 10px;
     padding-top: 20px; */
@@ -633,6 +634,24 @@
   .opensource {
       flex: 10;
   }
+  .team_ {
+    color: black;
+  }
+  .modal-open {
+    background-color: transparent;
+    color: white;
+    padding: 0 3px;
+  }
+  .modal-close {
+    background-color: black;
+    color: white;
+  }
+  .footer_btn {
+    background-color: transparent;
+    color: white;
+    padding: 0 3px;
+  }
+
 
 
   /* CANVAS
