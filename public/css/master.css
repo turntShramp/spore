@@ -461,6 +461,7 @@
   /* ID BODY */
   .mushroom_image {
     text-align: center;
+    margin-top: 40px;
   }
   .mushroom_image_border {
     border-radius: 75px; 

@@ -5,7 +5,9 @@ module.exports = function(sequelize, DataTypes) {
         pronunciation: DataTypes.STRING,
         content: DataTypes.TEXT,
         mushroom_photo: DataTypes.STRING,
-        thumbnail_photo: DataTypes.STRING
+        thumbnail_photo: DataTypes.STRING,
+        dateFound: DataTypes.STRING,
+        gpsCoordinates: DataTypes.STRING
     });
 
     Mushroom.associate = function(models) {
