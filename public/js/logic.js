@@ -1,7 +1,5 @@
-
-
-$(document).ready(function(){
-  // PARTICLES
+  // PARTICLES LOGIC
+  //---------------------------------------------------------//
   window.onload = function() {
     Particles.init({
       selector: ".background",
@@ -13,19 +11,24 @@ $(document).ready(function(){
       responsive: null,
       height: 100
     });
-    console.log("particles be up");
+    console.log("particles up");
   };
-  console.log("divs be loadin");
 
-  //initialize all modals           
+$(document).ready(function(){
+  console.log("divs up");
+
+  // FOOTER LOGIC
+  //---------------------------------------------------------//
+  // initialize all modals           
   $('.modal').modal();
-
-  //now you can open modal from code
+  // now you can open modal from code
   $('#modal1').modal('open');
-
-  //or by click on trigger
+  // or by click on trigger
   $('.trigger-modal').modal();
 
+
+  // LOGIN PAGE LOGIC
+  //---------------------------------------------------------//
   // LOGIN FADE
   $("#spor_image").delay(3000).fadeIn(5000, function() {
     $("#spor_noun").fadeIn(5000, function() {
@@ -56,6 +59,14 @@ $(document).ready(function(){
     });
   });
 
+
+  // NAVBAR LOGIC 
+  //---------------------------------------------------------//
+  $("#basket_btn").on('click', function () {
+    window.open("./user.html", function() {
+      console.log('worked');
+    });
+  });
 }); //document.ready
 
 

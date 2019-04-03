@@ -16,7 +16,7 @@ module.exports = function(app) {
     res.sendFile(path.join(__dirname, "../public/user.html"));
   });
 
-  // Load mushroom guide page
+  // Load mushroom page
   app.get("/mushroom", function(req, res) {
     res.sendFile(path.join(__dirname, "../public/mushroom.html"));
   });
@@ -29,6 +29,11 @@ module.exports = function(app) {
   // Load admin page
   app.get("/admin", function(req, res) {
     res.sendFile(path.join(__dirname, "../public/admin.html"));
+  });
+
+  // Load guide page
+  app.get("/guide", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/guide.html"));
   });
 
   // app.get("/", function(req, res) {
