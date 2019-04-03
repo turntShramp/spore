@@ -4,7 +4,7 @@ const path = require("path");
 module.exports = function(app) {
   // Load index(home) page
   app.get("/", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/index.html"));
+    res.sendFile(path.join(__dirname, "../public/login.html"));
   });
   // Load login page (default landing page)
   app.get("/login", function(req, res) {
@@ -12,13 +12,23 @@ module.exports = function(app) {
   });
   
   // Load account page
-  app.get("/acct", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/acct.html"));
+  app.get("/user", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/user.html"));
   });
 
   // Load mushroom guide page
-  app.get("/guide", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/guide.html"));
+  app.get("/mushroom", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/mushroom.html"));
+  });
+
+  // Load map page
+  app.get("/map", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/map.html"));
+  });
+
+  // Load admin page
+  app.get("/admin", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/admin.html"));
   });
 
   // app.get("/", function(req, res) {

@@ -48,6 +48,10 @@
   .welcome_text_wrapper {
       text-align: center;
   }
+  input[type=checkbox]
+{
+  -webkit-appearance:checkbox;
+}
   
   /* NAVBAR
 ==================================================*/
@@ -168,7 +172,15 @@
   .spor_text_block {
     font-family: 'Work Sans', sans-serif;
   }
-
+  .middle_layer {
+    height: 100%;
+    width: 100%;
+  }
+  .canvas_cover {
+    background-color: white;
+    height: 700px;
+    width: 400px;
+  }
 
 
 
@@ -393,7 +405,7 @@
   }
   /* FOUND MUSHROOMS */
   .found_mushroom {
-    background: #ec6f7584;
+    background: #eeecec;
     margin: 5px 10px 5px 10px;
     padding-right: 20px;
     padding-left: 20px;
@@ -410,9 +422,19 @@
   }
   .found_mushroom_title {
     flex: 0 0 auto;
-    padding-top: 40px !important;
     padding-left: 10px;
-    padding-top: 20px;
+    padding-top: 5px;
+    /* styling with the 
+    /* padding-top: 40px !important;
+    padding-left: 10px;
+    padding-top: 20px; */
+  }
+  .found_date {
+    color: white;
+    padding-left: 10px;
+  }
+  .found_location {
+    color: #1980ef;
   }
   .space {
     flex: 99;
@@ -420,7 +442,7 @@
   .found_mushroom_arrow {
     padding-top: 29px !important;
     flex: 1;
-    color: #1d8bf1;
+    color: black;
   }
 
 
@@ -457,6 +479,7 @@
   /* ID BODY */
   .mushroom_image {
     text-align: center;
+    margin-top: 40px;
   }
   .mushroom_image_border {
     border-radius: 75px; 
@@ -552,8 +575,19 @@
 
 
 
-
-
+  /* MAP
+==================================================*/
+  .map_body {
+    text-align: center;
+    margin: 0 30px;
+  }
+  .map_border {
+    border: solid 2px black;
+    border-radius: 25px;
+  }
+  #google_map {
+    border-radius: 25px;
+  }
 
 
 
@@ -608,6 +642,24 @@
   .opensource {
       flex: 10;
   }
+  .team_ {
+    color: black;
+  }
+  .modal-open {
+    background-color: transparent;
+    color: white;
+    padding: 0 3px;
+  }
+  .modal-close {
+    background-color: black;
+    color: white;
+  }
+  .footer_btn {
+    background-color: transparent;
+    color: white;
+    padding: 0 3px;
+  }
+
 
 
   /* CANVAS
@@ -622,3 +674,11 @@
   .canvasExpander {
     position: relative;
   }
+
+
+  /* ADMIN
+==================================================*/
+   .new_mushroom_body {
+     margin: 0 20px;
+   }
+  

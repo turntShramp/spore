@@ -58,10 +58,11 @@
 
     <!-- GUIDE INFO 
     --------------------------------------------------------------------------->
-    <div class="guide_info">
-        <h1 class="guide_word"><strong>characteristic</strong><span class="guide_word_type">   adjective</span></h1>
-        <h5 class="guide_pronunciation">/ker(ə)ktəˈristik/</h5>
-        <h6 class="guide_text_block">synonyms: attribute, features, quality, property, trait, aspect, element, facet...;</h6>
+     <!-- SPŌR NOUN -->
+     <div id="spor_noun" class="spor_noun">
+        <h1 class="spor_word" style="margin-bottom: 0;"><strong>attribute</strong><span class="spor_word_type">   noun</span></h1>
+        <h5 class="spor_pronunciation">/ˈatrəˌbyo͞ot/</h5>
+        <h6 class="spor_text_block">a quality or feature regarded as a characteristic or inherent part of someone or something.</h6>
         <div class="welcome_text_wrapper">
             <h6 class="welcome_text">Use the list of attributes below to narrow down your species search. Click on an attribute to be shown a list of traits and check all that apply. Any species that fit your criteria will be appended below. The attributes will stack until you uncheck them or click the `Clear Attributes` button. You'll find the `Found!` button on the mushroom cards appended below. </h6>
         </div>
@@ -75,21 +76,13 @@
 
     <!-- SEARCH  
     --------------------------------------------------------------------------->
-        <!-- expandable -->
-        <!-- <ul class="collapsible">
-            <li>
-                <div class="collapsible-header"><i class="material-icons">filter_drama</i>First</div>
-                <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-            </li>
-        </ul> -->
-        <!-- these should be added dynamically -->
     <div class="guide_search_body">
         <div class="guide_selection">
             <div class="attribute_title">
                 <h6><strong>Hymenium</strong></h6>         
             </div>
             <div class="attribute_text">
-                <h7 class="att_text_color">gills, teeth, ...</h7>
+                <h7 class="att_text_color"> gill type...</h7>
             </div>
             <div class="attribute_arrow">
                 <i class="fas fa-chevron-right"></i>
@@ -100,7 +93,7 @@
                 <h6><strong>Gill Characteristics</strong></h6>         
             </div>
             <div class="attribute_text">
-                <h7 class="att_text_color">reduced, split, ...</h7>
+                <h7 class="att_text_color"> if present...</h7>
             </div>
             <div class="attribute_arrow">
                 <i class="fas fa-chevron-right"></i>
@@ -111,7 +104,7 @@
                 <h6><strong>Gill Attachment</strong></h6>         
             </div>
             <div class="attribute_text">
-                <h7 class="att_text_color">decurrent, attached, ...</h7>
+                <h7 class="att_text_color"> if present...</h7>
             </div>
             <div class="attribute_arrow">
                 <i class="fas fa-chevron-right"></i>
@@ -122,7 +115,7 @@
                 <h6><strong>Spore Print</strong></h6>         
             </div>
             <div class="attribute_text">
-                <h7 class="att_text_color">white, brown, ...</h7>
+                <h7 class="att_text_color"> white, brown, ...</h7>
             </div>
             <div class="attribute_arrow">
                 <i class="fas fa-chevron-right"></i>
@@ -133,7 +126,7 @@
                 <h6><strong>Smell</strong></h6>         
             </div>
             <div class="attribute_text">
-                <h7 class="att_text_color">apricot, aniseed, ...</h7>
+                <h7 class="att_text_color"> apricot, aniseed, ...</h7>
             </div>
             <div class="attribute_arrow">
                 <i class="fas fa-chevron-right"></i>
@@ -141,10 +134,10 @@
         </div>
         <div class="guide_selection">
             <div class="attribute_title">
-                <h6><strong>Stipe (Stem)</strong></h6>         
+                <h6><strong>Stipe</strong></h6>         
             </div>
             <div class="attribute_text">
-                <h7 class="att_text_color">velvety, hollow, ...</h7>
+                <h7 class="att_text_color"> stem characteristics...</h7>
             </div>
             <div class="attribute_arrow">
                 <i class="fas fa-chevron-right"></i>
@@ -152,10 +145,10 @@
         </div>
         <div class="guide_selection">
             <div class="attribute_title">
-                <h6><strong>Annulus (Veil/Ring)</strong></h6>         
+                <h6><strong>Annulus</strong></h6>         
             </div>
             <div class="attribute_text">
-                <h7 class="att_text_color">without, hanging, ...</h7>
+                <h7 class="att_text_color"> veil/ring characteristics...</h7>
             </div>
             <div class="attribute_arrow">
                 <i class="fas fa-chevron-right"></i>
@@ -163,10 +156,10 @@
         </div>
         <div class="guide_selection">
             <div class="attribute_title">
-                <h6><strong>Pileus (Cap)</strong></h6>         
+                <h6><strong>Pileus</strong></h6>         
             </div>
             <div class="attribute_text">
-                <h7 class="att_text_color">scaly, slimy, etc...</h7>
+                <h7 class="att_text_color"> cap characteristics...</h7>
             </div>
             <div class="attribute_arrow">
                 <i class="fas fa-chevron-right"></i>
@@ -196,10 +189,10 @@
         </div>
         <div class="guide_selection">
             <div class="attribute_title">
-                <h6><strong>Volva (Bulb)</strong></h6>         
+                <h6><strong>Volva</strong></h6>         
             </div>
             <div class="attribute_text">
-                <h7 class="att_text_color">covered with skin, ...</h7>
+                <h7 class="att_text_color"> stem bulb characteristics...</h7>
             </div>
             <div class="attribute_arrow">
                 <i class="fas fa-chevron-right"></i>
@@ -287,9 +280,9 @@
         </div>
     </div>  
 
-    <!-- FOOTER
-    --------------------------------------------------------------------------->
-    <footer class="page-footer">
+ <!-- FOOTER
+--------------------------------------------------------------------------->
+<footer class="page-footer">
         <div class="footer_container">
             <div class="footer_top">
                 <div class="footer_who">
@@ -301,18 +294,49 @@
                 <div class="footer_about">
                     <h5 class="white-text">Pages</h5>
                     <ul>
-                        <li><a class="grey-text text-lighten-3" href="#!">My Account</a></li>
-                        <li><a class="grey-text text-lighten-3" href="#!">Identification</a></li>
-                        <li><a class="grey-text text-lighten-3" href="#!"><span class="blueText">Found!</span> Map</a></li>
+                        <!-- Page Links -->
+                        <a data-target="./user.html" class="footer_btn waves-effect waves-light btn modal-trigger" href="./user.html">My Basket</a>
+                        <a data-target="./guide.html" class="footer_btn waves-effect waves-light btn modal-trigger" href="./guide.html">Guide</a>
+                        <a data-target="./map.html" class="footer_btn waves-effect waves-light btn modal-trigger" href="./map.html">Found! Map</a>
                     </ul>
                 </div>
                 <div class="footer_pages">
                     <h5 class="white-text"><span class="blueText">SPŌR</span></h5>
                     <ul>
-                        <li><a class="grey-text text-lighten-3" 
-                        href="#!">The Team</a></li>
-                        <li><a class="grey-text text-lighten-3" href="#!">Support</a></li>
-                        <li><a class="grey-text text-lighten-3" href="#!">Donate</a></li>
+                        <!-- The Team -->
+                        <!-- Modal Trigger -->
+                        <a data-target="the_team" class="modal-open waves-effect waves-light btn modal-trigger" href="#the_team">The Team</a>
+                        <!-- Modal Structure -->
+                        <div id="the_team" class="modal">
+                            <div class="modal-content team_">
+                                <h2 class="team_">The Team</h2>
+                                <h5 class="team_">Bill</h5>
+                                <p class="team_">Need a map? I know a guy.</p>
+                                <h5 class="team_">Michael</h5>
+                                <p class="team_">His laptop doubles as a shield.</p>
+                                <h5 class="team_">Jason</h5>
+                                <p class="team_">"But why?"</p>
+                                <h5 class="team_">Seamus</h5>
+                                <p class="team_">100% human trash.</p>
+                            </div>
+                            <div class="modal-footer">
+                            <a href="#the_team" class="modal-close waves-effect waves-green btn-flat">X</a>
+                            </div>
+                        </div>
+
+                        <!-- The Team -->
+                        <!-- Modal Trigger -->
+                        <a data-target="user_support" class="modal-open waves-effect waves-light btn modal-trigger" href="#user_support">Support</a>
+                        <!-- Modal Structure -->
+                        <div id="user_support" class="modal">
+                            <div class="modal-content team_">
+                                <h5 class="team_">User Support</h5>
+                                <h2 class="team_">Doesn't exist BYE</h2>
+                            </div>
+                            <div class="modal-footer">
+                            <a href="#user_support" class="modal-close waves-effect waves-green btn-flat">X</a>
+                            </div>
+                        </div>
                     </ul>
                 </div>
                 <div class="footer_space"></div>
@@ -320,24 +344,21 @@
             <div class="footer_bottom">
                 <div class="footer-copyright">
                     <div class="opensource">
-                        Open Source - Free for the taking
-                    </div>
+                        Eating wild mushrooms is ridiculous. We assume no responsibility for your childish behavior. Stop being a hippie and get a job.                    </div>
                 </div>
             </div>
         </div>
     </footer>
-    </section>
+    </section> <!-- CANVAS -->
 
     <!-- LOGIC   --------------------------------------------------------------------------->
+    <!-- jQUERY -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <!-- PARTICLES -->
     <script type="text/javascript" src="./js/particles.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.3/particles.min.js"></script> 
     <!-- MATERIALIZE -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <!-- BOOTSTRAP -->
-    <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script> -->
-    <!-- jQUERY -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <!-- CUSTOM -->
     <script type="text/javascript" src="./js/logic.js"></script>
 </body>
