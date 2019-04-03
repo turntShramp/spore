@@ -557,8 +557,19 @@
 
 
 
-
-
+  /* MAP
+==================================================*/
+  .map_body {
+    text-align: center;
+    margin: 0 30px;
+  }
+  .map_border {
+    border: solid 2px black;
+    border-radius: 25px;
+  }
+  #google_map {
+    border-radius: 25px;
+  }
 
 
 
