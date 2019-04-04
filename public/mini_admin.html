@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mini admin</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- FAVICON -->
+    <link rel="icon" type="image/png" href="./img/logo/spor_logo.png" />
+    <!-- MATERIALIZE CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">            
+    <!-- GOOGLE FONTS -->
+    <link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond|Playfair+Display:400,400i|Work+Sans:300" rel="stylesheet">
+    <!-- FONTAWESOME -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <!-- CUSTOM CSS -->
+    <link rel="stylesheet" type="text/css" href="./css/master.css"/>
+</head>
+
+<body> 
+         <!-- CANVAS -->
+    <section class="canvasExpander">
+                <canvas id="canvas" class="background"></canvas>
+                    
+    <form action="#new_mushroom" class="new_mushroom_body">
+        <!-- model info -->
+        <h1>database model info</h1>
+        <div class="model_info">
+            <p><label>
+                <input id="latin_name" name="model_info" type="string" class="validate">
+                <label for="latin_name">latin_name: DataTypes.STRING</label>
+            </label></p>
+            <p><label>
+                <input id="content" name="model_info" type="text" class="validate" placeholder="descriptive paragraph">
+                <label for="content">content: DataTypes.TEXT</label>
+            </label></p>
+            <p><label>
+                <input id="mushroom_photo" name="model_info" type="string" class="validate">
+                <label for="mushroom_photo">mushroom_photo: DataTypes.STRING</label>
+            </label></p>
+        </div> <!-- database info -->
+        <!-- icons -->
+        <div class="icon_boxes">
+            <p><label>
+                <input type="checkbox" id="bacon" />
+                <span>delicious</span>
+            </label></p>
+        </div> <!-- quick icons -->
+
+        <h1>attributes</h1>
+        <div class="attribute_boxes">
+
+                <p><label>
+                        <input type="checkbox" id="hymenium_gills" />
+                        <span>gills (fan like)</span>
+                </label></p>
+                <p><label>
+                        <input type="checkbox" id="pore_characteristics_watery" />
+                        <span>watery</span>
+                </label></p>
+        </div> <!-- attributes -->
+    </div> <!-- new mushroom form -->
+
+
+    <!-- SAVE BUTTON -->
+     <div class="save_btn">
+        <a id="save_btn" type="submit" class="waves-effect waves-dark btn">save mushroom</a>
+    </div>
