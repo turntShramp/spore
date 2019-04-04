@@ -1,26 +1,23 @@
-const fs = require('fs');
-require('dotenv');
-
 module.exports = {
-  development: {
-    username: developement_USERNAME,
-    password: developement_PASSWORD,
-    database: developement_DATABASE,
-    host: developement_HOST,
-    dialect: developement_DIALECT
+  "development": {
+    "username": process.env.dev_USERNAME,
+    "password": process.env.dev_PASSWORD,
+    "database": process.env.dev_DATABASE,
+    "host": "127.0.0.1",
+    "dialect": "mysql",
   },
-  test: {
-    username: test_USERNAME,
-    password: test_PASSWORD,
-    database: test_DATABASE,
-    host: test_HOST,
-    dialect: test_DIALECT
+  "test": {
+    "username": "root",
+    "password": null,
+    "database": "database_test",
+    "host": "127.0.0.1",
+    "dialect": "mysql",
   },
-  production: {
-    username: process.env.production_USERNAME,
-    password: process.env.production_PASSWORD,
-    database: process.env.production_DATABASE,
-    host: process.env.production_HOST,
-    dialect: production_DIALECT
+  "production": {
+    "username": process.env.prod_USERNAME,
+    "password": process.env.prod_PASSWORD,
+    "database": process.env.prod_DATABASE,
+    "host": process.env.prod_HOST,
+    "dialect": "mysql",
   }
-};
+}

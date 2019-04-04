@@ -9,8 +9,23 @@ module.exports = function (app) {
   });
 
   // Create a new example
+<<<<<<< HEAD
   app.post("/api/examples", function (req, res) {
     db.Example.create(req.body).then(function (dbExample) {
+=======
+  app.post("/api/admin", function(req, res) {
+    const postMushroom = req.body;
+    let newMushroom = {
+      latinName: postMushroom.latinName,
+      commonName: postMushroom.commonName,
+      pronunciation: postMushroom.pronunciation,
+      content: postMushroom.content,
+      mushroom_photo: postMushroom.mushroom_photo,
+      thumbnail_photo: postMushroom.thumbnail_photo
+    }
+    db.Mushroom.create(newMushroom).then(function(mushroom) {
+      mushroom.addAllIcon
+>>>>>>> master
       res.json(dbExample);
     });
   });

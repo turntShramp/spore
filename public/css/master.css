@@ -1,0 +1,689 @@
+ /* REFERENCES
+==================================================*/
+/* 
+#fffbf9 (white)
+#ec6f75b1 (pink)
+#6feccbb1 (green)
+#rgb(167, 166, 166);
+*/
+
+ /* TOOLS
+==================================================*/
+  .box {
+    border: solid 1px black;
+  }
+  .boxgreen {
+    border: solid 1px green;
+  }
+  .b {
+    background: blue;
+  }
+  .r {
+    background: red;
+  }
+  .g {
+    background: green;
+  }
+  .lift {
+    margin-top: 0;
+  }
+  .lower {
+      margin-bottom: 0;
+  }
+  
+  /* GLOBAL 
+==================================================*/
+  body {
+    background: transparent;
+    height: auto;
+    margin: 0 auto;
+    max-width: 1060px;
+  }
+  html {
+    height: auto;
+  }
+  .blueText {
+      color: #1d8bf1;
+  }
+  .welcome_text_wrapper {
+      text-align: center;
+  }
+  input[type=checkbox]
+{
+  -webkit-appearance:checkbox;
+}
+  
+  /* NAVBAR
+==================================================*/
+  .navbar {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-top: 5px;
+    background-color:  transparent !important;
+    color: black !important;
+    display: flex;
+  }
+  .navbar_icon {
+    flex: 25;
+    text-align: center;
+    color: black !important;
+  }
+  .navbar_arrow {
+    flex: 12.5;
+    text-align: center;
+  }
+
+  .z-forward {
+    z-index: 1;
+ }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /* LOGIN PAGE
+==================================================*/
+  /* BIG RED LINE */
+  #redLine {
+    background-color: red;
+    border: solid 1px red;
+  }
+  /* LOGO */
+  .spor_image {
+    text-align: center;
+  }
+  /* LOGIN BODY */
+  .login_user_body {
+    text-align: center;
+    margin-top: 20px;
+    margin-left: 50px;
+    margin-right: 50px;
+    padding-bottom: 30px;
+  }
+  #login_user_btn {
+    margin-top: 20px;
+    background-color: black;
+  }
+  /* CREATE BODY */
+  .create_user_body {
+    text-align: center;
+    margin-top: 20px;
+    margin-left: 50px;
+    margin-right: 50px;
+    padding-bottom: 30px;
+  }
+  #create_user_btn {
+    margin-top: 10px;
+    background-color: black;
+  }
+  /* SPŌR BODY */
+  .grow {
+    max-height: 2000px;
+  }
+  .hidden {
+    display: none;
+  }
+  #spor_image {
+    max-width: 400px;
+    max-height: 500px;
+  }
+  .spor_noun {
+    margin-top: 30px;
+    margin-left: 40px;
+    margin-right: 30px;
+    margin-bottom: 10px;
+  }
+  .spor_app {
+    margin-top: 30px;
+    margin-left: 40px;
+    margin-right: 30px;
+    padding-bottom: 20px;
+    /* margin-bottom: 20px; */
+  }
+  .spor_word {
+    margin-bottom: 0;
+    font-family: 'Cormorant Garamond', serif;
+  }
+  .spor_word_type {
+    color: #1d8bf1;
+    font-size: 30px;
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+  }
+  .spor_pronunciation {
+    margin-top: 0;
+    font-family: 'Playfair Display', serif;
+  }
+  .spor_text_block {
+    font-family: 'Work Sans', sans-serif;
+  }
+  .middle_layer {
+    height: 100%;
+    width: 100%;
+  }
+  .canvas_cover {
+    background-color: white;
+    height: 700px;
+    width: 400px;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /* GUIDE PAGE
+==================================================*/
+  /* GUIDE INFO */
+  .guide_info {
+    margin-top: 30px;
+    margin-left: 40px;
+    margin-right: 30px;
+    margin-bottom: 20px;
+  }
+  .guide_word {
+    margin-bottom: 0;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 35px;
+  }
+  .guide_word_type {
+    color: #1d8bf1;
+    font-size: 20px;
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+  }
+  .guide_pronunciation {
+    margin-top: 0;
+    font-size: 15px;
+  }
+  .guide_text_block {
+    font-family: 'Work Sans', sans-serif;
+    font-size: 15px;
+  }
+  /* CLEAR ATTRIBUTES BUTTON */
+  .clear_att_button_body {
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  #clear_att_btn {
+    background-color: black;
+  }
+  /* SEARCH BODY */
+  .guide_search_body {
+    padding: 0 10px;
+    background: transparent;
+  }
+  .guide_selection {
+    background: rgb(240, 239, 239);
+    margin: 5px 10px 5px 10px;
+    padding-right: 20px;
+    padding-left: 20px;
+    border: solid rgb(113, 113, 113) 2px;
+    border-radius: 15px;
+    /* margin-left: 30px;
+    margin-right: 30px; */
+    display: flex;
+    color: white;
+  }
+  .attribute_title {
+    flex: 0 0 auto;
+    margin-right: 7px;
+    color: black !important;
+  }
+  .attribute_text {
+    padding-top: 10px;
+    flex: 99;
+  }
+  .attribute_arrow {
+    padding-top: 6px;
+    flex: 1;
+    color: #1980ef;
+  }
+  .att_text_color {
+    color: rgb(172, 172, 172) !important;
+  }
+  /* SLIDER */
+  .slider_body {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 0 10px;
+    background: transparent;
+  }
+  #slider /*ID*/{
+    background-color:  black !important;
+    color: white !important;
+    border: solid lightgray 2px;
+    display: flex;
+    margin-top: 5px;
+  }
+  .slider_icon_up {
+    flex: 50;
+    text-align: right;
+    font-size: 20px;
+  }
+  .slider_icon_down {
+    flex: 50;
+    text-align: left;
+    font-size: 20px;
+  }
+  /* RESULTS BODY */
+  .guide_results_body {
+    padding: 0 10px;
+    background: white;
+  }
+  .guide_mushroom {
+    background: rgb(240, 239, 239);
+    margin: 5px 10px 5px 10px;
+    padding-right: 20px;
+    padding-left: 20px;
+    border: solid rgb(113, 113, 113) 2px;
+    border-radius: 25px;
+    display: flex;
+    color: black;
+  }
+  .guide_mushroom_photo {
+    margin-top: 5px;
+  }
+  .guide_image_border {
+    border-radius: 10px; 
+  }
+  .guide_mushroom_title {
+    flex: 0 0 auto;
+    padding-top: 40px !important;
+    padding-left: 10px;
+    padding-top: 20px;
+  }
+  .space {
+    flex: 99;
+  }
+  .guide_mushroom_arrow {
+    padding-top: 29px !important;
+    flex: 1;
+    color: #1d8bf1;
+  }
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /* USER PAGE
+==================================================*/
+.user_info {
+    margin-top: 30px;
+    margin-left: 40px;
+    margin-right: 30px;
+    margin-bottom: 20px;
+  }
+  .user_val {
+    color: #1d8bf1;
+    font-size: 25px;
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    margin-bottom: 0;
+  } 
+  .wrapper {
+      display: flex;
+  }
+  .lift {
+      margin-top: 0;
+  }
+  .lower {
+      margin-bottom: 0;
+  }
+  .user_tag {
+    margin-top: 0;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+  }
+  .up-arrow {
+    text-indent: 1em;
+      color: gray;
+      padding-top: 8px;
+  }
+  .btn_wrapper {
+      text-align: center;
+  }
+  #logout_btn {
+    background-color: black;
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+  /* FOUND MUSHROOMS */
+  .found_mushroom {
+    background: #eeecec;
+    margin: 5px 10px 5px 10px;
+    padding-right: 20px;
+    padding-left: 20px;
+    border: solid rgb(113, 113, 113) 2px;
+    border-radius: 25px;
+    display: flex;
+    color: black;
+  }
+  .found_mushroom_photo {
+    margin-top: 5px;
+  }
+  .found_image_border {
+    border-radius: 10px; 
+  }
+  .found_mushroom_title {
+    flex: 0 0 auto;
+    padding-left: 10px;
+    padding-top: 5px;
+    /* styling with the 
+    /* padding-top: 40px !important;
+    padding-left: 10px;
+    padding-top: 20px; */
+  }
+  .found_date {
+    color: white;
+    padding-left: 10px;
+  }
+  .found_location {
+    color: #1980ef;
+  }
+  .space {
+    flex: 99;
+  }
+  .found_mushroom_arrow {
+    padding-top: 29px !important;
+    flex: 1;
+    color: black;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /* MUSHROOM PAGE
+==================================================*/
+  /* ID BODY */
+  .mushroom_image {
+    text-align: center;
+    margin-top: 40px;
+  }
+  .mushroom_image_border {
+    border-radius: 75px; 
+  }
+  .mushroom_header {
+    margin-left: 40px;
+    margin-right: 30px;
+    margin-bottom: 10px;
+  }
+  .mushroom_name_latin {
+    font-size: 33px;
+    font-family: 'Cormorant Garamond', serif;
+    margin-top: 10px;
+    margin-bottom: 0;
+  } 
+  .mushroom_name_common {
+    font-size: 28px;
+    font-family: 'Cormorant Garamond', serif;
+    margin-bottom: 0;
+  } 
+  .wrapper {
+      display: flex;
+  }
+  .mushroom_name_type {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 20px;
+    color: #1d8bf1;
+  }
+  .up-arrow {
+    text-indent: 1em;
+      color: gray;
+      padding-top: 8px;
+  }
+  .common_pronunciation {
+    margin-top: 0;
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+  }
+  .mushroom_header_text {
+    font-family: 'Work Sans', sans-serif;
+  }
+  .mushroom_header_instructions {
+    flex: 99;
+    padding-top: 10px;
+  }
+  #found_btn {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    background-color: #ee565db1;
+  }
+  .quick_icons {
+    background-color: #f0efef;
+    border: solid 2px black;
+    border-radius: 25px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .icon_block {
+    text-align: center;
+    color: black;
+    margin: 10px 10px;
+    min-width: 100px;
+    flex: 5;
+  }
+  .icon_image {
+    font-size: 50px;
+    margin-bottom: 0;
+  }
+  .icon_text {
+    margin-top: 0px !important;
+    font-size: 20px;
+  }
+  .do_not {
+      color: #ee565db1;
+      font-weight: bold !important;
+  }
+  .do {
+    color: #56a7eeb1;
+    font-weight: bold !important;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+  /* MAP PAGE
+==================================================*/
+  .map_body {
+    text-align: center;
+    margin: 0 30px;
+  }
+  .map_border {
+    border: solid 2px black;
+    border-radius: 25px;
+  }
+  #google_map {
+    border-radius: 25px;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /* FOOTER
+==================================================*/
+  .page-footer {
+    background-color: black;
+    margin-top: 13px;
+    padding-top: 0;
+  }
+  .footer_container {
+      margin-left: 40px;
+  }
+  .footer_top {
+      display: flex;
+  }
+  .footer_who {
+      flex: 10;
+  }
+  .footer_middle {
+      display: flex;
+  }
+  .footer_pages {
+      
+      flex: 3;
+  }
+  .footer_about {
+      flex: 3;
+  }
+  .footer_space {
+      flex: 4;
+  }
+  .footer_bottom {
+      display: flex;
+  }
+  .opensource {
+      flex: 10;
+  }
+  .team_ {
+    color: black;
+  }
+  .modal-open {
+    background-color: transparent;
+    color: white;
+    padding: 0 3px;
+  }
+  .modal-close {
+    background-color: black;
+    color: white;
+  }
+  .footer_btn {
+    background-color: transparent;
+    color: white;
+    padding: 0 3px;
+  }
+
+
+
+  /* CANVAS
+==================================================*/
+  .background {
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    z-index: 0;
+  }
+  .canvasExpander {
+    position: relative;
+  }
+
+
+  /* ADMIN
+==================================================*/
+   .new_mushroom_body {
+     margin: 0 20px;
+   }
+  

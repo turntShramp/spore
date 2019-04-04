@@ -1,45 +1,113 @@
-// PARTICLES
-window.onload = function() {
+  // PARTICLES LOGIC
+  //---------------------------------------------------------//
+  window.onload = function() {
     Particles.init({
-      selector: '.background',
+      selector: ".background",
       maxParticles: 1000,
-      sizeVariations: 1,
+      sizeVariations: 1.5,
       speed: .50,
-      color: '#838383',
+      color: "#838383",
       connectParticles: false,
-      responsive: null
+      responsive: null,
+      height: 100
     });
-};
+    console.log("particles up");
+  };
 
-// this doesn't wokr
-const canvasFunction = function() {
-    let htmlCanvas = $("#canvas");
-    function resizeCanvas() {
-        htmlCanvas.width = window.innerWidth;
-        htmlCanvas.height = window.innerHeight;
-    };
-    function initialize() {
-       window.addEventListener('resize', resizeCanvas, false);
-       resizeCanvas();
-    };
-   initialize();
-};
-canvasFunction();
+$(document).ready(function(){
+  console.log("divs up");
+
+  // FOOTER LOGIC
+  //---------------------------------------------------------//
+  // initialize all modals           
+  $('.modal').modal();
+  // now you can open modal from code
+  $('#modal1').modal('open');
+  // or by click on trigger
+  $('.trigger-modal').modal();
 
 
+  // LOGIN PAGE LOGIC
+  //---------------------------------------------------------//
+  // LOGIN FADE
+  $("#spor_image").delay(3000).fadeIn(5000, function() {
+    $("#spor_noun").fadeIn(5000, function() {
+      $("#spor_noun").fadeOut(5000, function() {
+        $("#spor_app").fadeIn(3000, function() {
+          $("#spor_app").fadeOut(5000, function() {
+            $("#login_user_body").fadeIn(2000, function() {
+              $("#login_user_btn").on('click', function() {
+                // check if user account exists
+                // if not, clear inputs and any stored values
+                // if yes route to guide.html
+              });
+              $("#create_user_btn").on('click', function() {
+                $("#login_user_body").fadeOut(2000, function() {
+                  $("#create_user_body").fadeIn(2000, function() {
+                    $("#login_user_btn").on('click', function() {
+                      // check if user account exists
+                      // if yes, notify name exists, clear inputs and any stored values
+                      // if no, create user in db and route to guide.html      
+                    });
+                  });
+                });
+              });
+            });
+          });
+        });
+      });
+    });
+  });
 
-$(document).ready(function() {
 
-});
+  // NAVBAR LOGIC 
+  //---------------------------------------------------------//
 
-
-
-
-
+  // TEST LOGIC 
+  //---------------------------------------------------------//
 
 
-// CAME WITH THE HOME INSTALL 
 
+
+
+
+
+
+
+
+}); //document.ready
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// CAME WITH THE HOMEWORK INSTALL
 
 // // Get references to page elements
 // var $exampleText = $("#example-text");

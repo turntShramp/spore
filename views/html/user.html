@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>user</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- FAVICON -->
+    <link rel="icon" type="image/png" href="./img/logo/spor_logo.png" />
+    <!-- MATERIALIZE CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">            
+    <!-- GOOGLE FONTS -->
+    <link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond|Playfair+Display:400,400i|Work+Sans:300" rel="stylesheet">
+    <!-- FONTAWESOME -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <!-- CUSTOM CSS -->
+    <link rel="stylesheet" type="text/css" href="./css/master.css"/>
+</head>
+
+<body>
+    <!-- CANVAS -->
+    <section class="canvasExpander">
+    <canvas id="canvas" class="background"></canvas>
+
+    <!-- NAVBAR
+    --------------------------------------------------------------------------->
+    <header class="navbar z-depth-0">
+        <a href="./user.html" target="_self" class="navbar_icon z-forward">
+            <div class="new_div">
+                <i id="basket_btn" class="fas fa-shopping-basket fa-3x"></i>
+            </div>
+        </a>
+        <a href="./guide.html" target="_self" class="navbar_icon z-forward">
+            <div class="new_div">
+                <i id="spore_btn" class="fab fa-hubspot fa-3x  "></i>
+            </div>
+        </a>
+        <a href="./map.html" target="_self" class="navbar_icon z-forward">
+            <div class="new_div">
+                <i id="map_btn" class="fas fa-map-marked-alt fa-3x"></i>
+            </div>
+        </a>
+    </header>
+
+        <!-- LOGO -->
+        <div class="spor_container">
+            <div class="spor_image">
+                <h6><img class="image" src="./img/logo/spor_logo.png" style="width:300; height:400px;" alt=""></h6>
+            </div>
+        </div>
+
+        <!-- USER INFO -->
+        <!-- FORAGING FACTS -->
+        <div class="spor_app">
+            <h1 class="spor_word" style="margin-bottom: 0;"><strong>Forage</strong><span class="spor_word_type">   verb</span></h1>
+            <h5 class="spor_pronunciation">/fôrij,ˈfärij/</h5>
+            <h6 class="spor_text_block">(of a person or animal) search widely for food or provisions.</h6>
+            <h6 class="spor_text_block">
+                <div class="facts_list">
+                    <p><span class="do_not">Do not</span> consume any mushroom unless you're 100 percent certain of what you’re picking.</p>
+                    <p><span class="do_not">Do not</span> rely on only one source of information for identification.</p>
+                    <p><span class="do_not">Do not</span> pull the mushrooms up by the roots; cut them.</p>
+                    <p><span class="do_not">Do not</span> take more than you plan to eat.</p>
+                    <p><span class="do_not">Do not</span> pick mushrooms that appear young or small; let them grow and spread spores to populate for future seasons.</p>
+                    <p><span class="do_not">Do not</span> assume your body will react as other's do. Ease your way into consuming wild edibles.</p>
+                    <p><span class="do">Do</span> be 100 percent certain of what you’re picking.</p>
+                    <p><span class="do">Do</span>  take pictures of mushrooms that you cannot identify to ask others and to gain knowledge.</p>
+                    <p><span class="do">Do</span> make sure to enjoy being in the forest even if you do not find any mushrooms.</p>
+                    <p><span class="do">Do</span> keep track of where you wonder to avoid getting lost. Let someone know where you're going and for how long.</p>
+                    <p><span class="do">Do</span> follow all of these guidelines every time you forage for wild edibles.</p>
+                </div>
+            </h6>
+        </div>
+        <div class="user_info">
+            <h1 class="user_val">turntShramp</h1>
+            <div class="wrapper">
+                <h1 class="user_tag lower">user name </h1>
+                <i class="up-arrow fas fa-sort-up"></i>
+            </div>
+            <h1 class="user_val lift">seamusmurchadh@gmail.com</h1>
+            <div class="wrapper">
+                <h1 class="user_tag">email </h1>
+                <i class="up-arrow fas fa-sort-up"></i>
+            </div>
+            <div class="welcome_text_wrapper">
+                <h6 class="welcome_text">Welcome to your basket. Here you'll find all the species you've found along with the date, geographic coordinates, and a map snap shot associated with that pin. To remove a species from your basket, you'll find a `Trash` button inside of each expandable species card. Happy hunting!</h6>
+            </div>
+        </div>
+
+        <div class="btn_wrapper">
+            <a id="logout_btn" class="waves-effect waves-dark btn">LOG OUT</a>
+        </div>
+     
+
+        <!-- FOUND BODY -->
+        <div id="found_container">
+            <!-- FOUND MUSHROOMS -->
+            <div id="found_results" class="found_results_body">
+                <div class="found_mushroom">
+                    <div class="found_mushroom_photo">
+                        <img class="found_image_border" src="./img/thumbnail/chanterelle_thumbnail.jpg" alt="chanterelle">
+                    </div>
+                    <div class="found_mushroom_title">
+                        <h6><strong>Chanterelle</strong><span class="found_date"> 06/13/2019</span></h6> 
+                        <h6 class="found_location">-70.799729 || 43.072127</h6>
+                    </div>
+                    <div class="space"></div>
+                    <div class="found_mushroom_arrow">
+                        <i class="fas fa-chevron-right"></i>
+                    </div>
+                </div>
+                <div class="found_mushroom">
+                    <div class="found_mushroom_photo">
+                        <img class="found_image_border" src="./img/thumbnail/blackTrumpet_thumbnail.jpg" alt="chanterelle">
+                    </div>
+                    <div class="found_mushroom_title">
+                            <h6><strong>Black Trumpet</strong><span class="found_date"> 06/13/2019</span></h6> 
+                            <h6 class="found_location">-70.799729 || 43.072127</h6>
+                    </div>
+                    <div class="space"></div>
+                    <div class="found_mushroom_arrow">
+                        <i class="fas fa-chevron-right"></i>
+                    </div>
+                </div>
+                <div class="found_mushroom">
+                    <div class="found_mushroom_photo">
+                        <img class="found_image_border" src="./img/thumbnail/hedgehog_thumbnail.jpg" alt="chanterelle">
+                    </div>
+                    <div class="found_mushroom_title">
+                        <h6><strong>Hedgehog</strong><span class="found_date"> 06/13/2019</span></h6> 
+                        <h6 class="found_location">-70.799729 || 43.072127</h6>
+                    </div>
+                    <div class="space"></div>
+                    <div class="found_mushroom_arrow">
+                        <i class="fas fa-chevron-right"></i>
+                    </div>
+                </div>
+                <div class="found_mushroom">
+                    <div class="found_mushroom_photo">
+                        <img class="found_image_border" src="./img/thumbnail/porcini_thumbnail.jpg" alt="chanterelle">
+                    </div>
+                    <div class="found_mushroom_title">
+                        <h6><strong>Porcini</strong><span class="found_date"> 06/13/2019</span></h6> 
+                        <h6 class="found_location">-70.799729 || 43.072127</h6>
+                    </div>
+                    <div class="space"></div>
+                    <div class="found_mushroom_arrow">
+                        <i class="fas fa-chevron-right"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+         <!-- FOOTER
+--------------------------------------------------------------------------->
+    <footer class="page-footer">
+            <div class="footer_container">
+                <div class="footer_top">
+                    <div class="footer_who">
+                        <h5 class="white-text">Who we are?</h5>
+                        <p class="grey-text text-lighten-4">Mushroom enthusiasts looking to give back to the foraging community.</p>
+                    </div>
+                </div>
+                <div class="footer_middle">
+                    <div class="footer_about">
+                        <h5 class="white-text">Pages</h5>
+                        <ul>
+                            <!-- Page Links -->
+                            <a data-target="./user.html" class="footer_btn waves-effect waves-light btn modal-trigger" href="./user.html">My Basket</a>
+                            <a data-target="./guide.html" class="footer_btn waves-effect waves-light btn modal-trigger" href="./guide.html">Guide</a>
+                            <a data-target="./map.html" class="footer_btn waves-effect waves-light btn modal-trigger" href="./map.html">Found! Map</a>
+                        </ul>
+                    </div>
+                    <div class="footer_pages">
+                        <h5 class="white-text"><span class="blueText">SPŌR</span></h5>
+                        <ul>
+                            <!-- The Team -->
+                            <!-- Modal Trigger -->
+                            <a data-target="the_team" class="modal-open waves-effect waves-light btn modal-trigger" href="#the_team">The Team</a>
+                            <!-- Modal Structure -->
+                            <div id="the_team" class="modal">
+                                <div class="modal-content team_">
+                                    <h2 class="team_">The Team</h2>
+                                    <h5 class="team_">Bill</h5>
+                                    <p class="team_">Need a map? I know a guy.</p>
+                                    <h5 class="team_">Michael</h5>
+                                    <p class="team_">His laptop doubles as a shield.</p>
+                                    <h5 class="team_">Jason</h5>
+                                    <p class="team_">"But why?"</p>
+                                    <h5 class="team_">Seamus</h5>
+                                    <p class="team_">100% human trash.</p>
+                                </div>
+                                <div class="modal-footer">
+                                <a href="#the_team" class="modal-close waves-effect waves-green btn-flat">X</a>
+                                </div>
+                            </div>
+    
+                            <!-- The Team -->
+                            <!-- Modal Trigger -->
+                            <a data-target="user_support" class="modal-open waves-effect waves-light btn modal-trigger" href="#user_support">Support</a>
+                            <!-- Modal Structure -->
+                            <div id="user_support" class="modal">
+                                <div class="modal-content team_">
+                                    <h5 class="team_">User Support</h5>
+                                    <h2 class="team_">Doesn't exist BYE</h2>
+                                </div>
+                                <div class="modal-footer">
+                                <a href="#user_support" class="modal-close waves-effect waves-green btn-flat">X</a>
+                                </div>
+                            </div>
+                        </ul>
+                    </div>
+                    <div class="footer_space"></div>
+                </div>
+                <div class="footer_bottom">
+                    <div class="footer-copyright">
+                        <div class="opensource">
+                            Eating wild mushrooms is ridiculous. We assume no responsibility for your childish behavior. Stop being a hippie and get a job.                    </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        </section> <!-- CANVAS -->
+    
+        <!-- LOGIC   --------------------------------------------------------------------------->
+        <!-- jQUERY -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <!-- PARTICLES -->
+        <script type="text/javascript" src="./js/particles.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.3/particles.min.js"></script> 
+        <!-- MATERIALIZE -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+        <!-- CUSTOM -->
+        <script type="text/javascript" src="./js/logic.js"></script>
+    </body>
+    </html>

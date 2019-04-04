@@ -13,11 +13,20 @@
   "dependencies": {
     "bcrypt-nodejs": "0.0.3",
     "body-parser": "^1.18.3",
+<<<<<<< HEAD
     "dotenv": "^6.2.0",
     "express": "^4.16.4",
     "express-handlebars": "^3.0.2",
     "express-session": "^1.15.6",
     "mysql": "^2.16.0",
+=======
+    "connect-session-sequelize": "^6.0.0",
+    "dotenv": "^6.0.0",
+    "express": "^4.16.3",
+    "express-handlebars": "^3.0.0",
+    "express-session": "^1.15.6",
+    "moment": "^2.24.0",
+>>>>>>> master
     "mysql2": "^1.6.4",
     "nodemon": "^1.18.10",
     "particlesjs": "^2.2.3",
@@ -28,7 +37,11 @@
   "devDependencies": {
     "babel-register": "^6.26.0",
     "chai": "^4.2.0",
+<<<<<<< HEAD
     "chai-http": "^4.2.1",
+=======
+    "chai-http": "^4.0.0",
+>>>>>>> master
     "eslint": "^4.19.1",
     "eslint-config-prettier": "^2.9.0",
     "eslint-plugin-prettier": "^2.7.0",
