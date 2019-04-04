@@ -21,34 +21,32 @@
 </head>
 
 <body>
-    <!-- CANVAS -->
-    <section class="canvasExpander">
-    <canvas id="canvas" class="background"></canvas>
-        
+<!-- CANVAS -->
+<section class="canvasExpander">
+<canvas id="canvas" class="background"></canvas>
+<div id="particles">
     <!-- LOGO -->
-    <div class="canvas_cover">
-    <div class="middle_layer">
     <div class="spor_container">
         <div class="spor_image">
-            <h6><img id="spor_image" class="image hidden" src="./img/logo/spor_logo.png" style="width:300; height:400px;" alt=""></h6>
+            <h6><img id="spor_image" class="image" src="./img/logo/spor_logo.png" style="width:300; height:400px;" alt=""></h6>
         </div>
 
         <!-- SPŌR NOUN -->
-        <div id="spor_noun" class="spor_noun hidden">
+        <div id="spor_noun" class="spor_noun">
             <h1 class="spor_word" style="margin-bottom: 0;"><strong>spore</strong><span class="spor_word_type">   noun</span></h1>
             <h5 class="spor_pronunciation">/spōr/</h5>
             <h6 class="spor_text_block">a primitive, typically unicellular, often environmentally resistant, reproductive body capable of giving rise to a new individual, without sexual fusion.</h6>
         </div>
 
         <!-- SPŌR APP -->
-        <div id="spor_app" class="spor_app hidden">
+        <div id="spor_app" class="spor_app">
             <h1 class="spor_word" style="margin-bottom: 0;"><strong>spōr</strong><span class="spor_word_type">   app</span></h1>
             <h5 class="spor_pronunciation">/spore/</h5>
             <h6 class="spor_text_block">a modern, light weight, environmentally friendly, foraging identification tool capable of managing all your found species and locations, all without sexual fusion.</h6>
         </div>
 
         <!-- LOGIN BODY-->
-        <div id="login_user_body" class="login_user_body hidden">
+        <div id="login_user_body" class="login_user_body">
             <input placeholder="turntShramp" id="user_name" type="text" class="validate">
             <label for="user_name">User Name</label>
             <input placeholder="*************" id="user_password" type="password" class="validate">
@@ -64,7 +62,7 @@
         </div>
 
         <!-- CREATE BODY-->
-        <div id="create_user_body" class="create_user_body hidden">
+        <div id="create_user_body" class="create_user_body">
             <input placeholder="turntShramp" id="create_user_name" type="text" class="validate">
             <label for="create_user_name">Create User Name</label>
             <input placeholder="seamusmurchadh@gmail.com" id="create_user_email" type="email" class="validate">
@@ -78,10 +76,9 @@
                 <a id="login_user_btn" class="waves-effect waves-dark btn">Log In</a>
             </div>
         </div>
-    </div> <!-- spor container -->
-    </div> <!-- middle_layer (hidden) -->
-    </div> <!-- canvas cover -->
-    </section>
+    </div>
+</div>
+</section>
 
     <!-- LOGIC   ------------------------------------------------------------------------>
     <!-- jQUERY -->
