@@ -71,9 +71,10 @@
     flex: 12.5;
     text-align: center;
   }
-  #basket_btn {
-    cursor: pointer;
-  }
+
+  .z-forward {
+    z-index: 1;
+ }
 
 
 
