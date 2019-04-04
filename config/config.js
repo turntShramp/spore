@@ -5,7 +5,6 @@ module.exports = {
     "database": process.env.dev_DATABASE,
     "host": "127.0.0.1",
     "dialect": "mysql",
-    "storage": "./session.mysql"
   },
   "test": {
     "username": "root",
@@ -13,7 +12,6 @@ module.exports = {
     "database": "database_test",
     "host": "127.0.0.1",
     "dialect": "mysql",
-    "storage": "./session.mysql"
   },
   "production": {
     "username": process.env.prod_USERNAME,
@@ -21,6 +19,5 @@ module.exports = {
     "database": process.env.prod_DATABASE,
     "host": process.env.prod_HOST,
     "dialect": "mysql",
-    "storage": "./session.mysql"
   }
 }
