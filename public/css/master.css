@@ -183,8 +183,10 @@ input[type=checkbox]
 }
 .canvas_cover {
   background-color: white;
-  height: 700px;
+  height: 900px;
   width: 400px;
+  margin: 0 auto;
+
 }
 
 
