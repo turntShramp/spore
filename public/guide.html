@@ -194,17 +194,77 @@
                 <i class="fas fa-chevron-right"></i>
             </div>
         </div>
-        <div class="guide_selection">
-            <div class="attribute_title">
+
+
+        <div class="attribute_search_body">
+        <!-- ATTRIBUTE MODAL BTN -->
+        <a data-target="pores_attributes" class="attribute_openbtn_style modal-open waves-effect waves-light btn modal-trigger" href="#pores_attributes">
+        <div class="attribute_selection">
+            <div class="new_attribute_title">
                 <h6><strong>Pores</strong></h6>         
             </div>
-            <div class="attribute_text">
+            <div class="new_attribute_text">
                 <h7 class="att_text_color">elongated, watery, etc...</h7>
             </div>
-            <div class="attribute_arrow">
+            <div class="new_attribute_arrow">
                 <i class="fas fa-chevron-right"></i>
             </div>
         </div>
+        </a>
+        <!-- ATTRIBUTE MODAL CONTENT -->
+        <div id="pores_attributes" class="modal">
+            <div class="modal-content">
+                <div class="content_wrapper">
+                    <h3 id="attribute_modal_title">Pore Characteristics</h3>
+                    <p>
+                        <label>
+                            <input type="checkbox" id="pore_characteristics_square" />
+                            <span id="attribute_modal_choice">square, rhombic</span>
+                        </label>
+                    </p>
+                    <p>
+                        <label>
+                            <input type="checkbox" id="pore_characteristics_elongated" />
+                            <span id="attribute_modal_choice">elongated</span>
+                        </label>
+                    </p>
+                    <p>
+                        <label>
+                            <input type="checkbox" id="pore_characteristics_fine" />
+                            <span id="attribute_modal_choice">round, very fine</span>
+                        </label>
+                    </p>
+                    <p>
+                        <label>
+                            <input type="checkbox" id="pore_characteristics_labyrinthine" />
+                            <span id="attribute_modal_choice">labyrinthine</span>
+                        </label>
+                    </p>
+                    <p>
+                        <label>
+                            <input type="checkbox" id="pore_characteristics_medium" />
+                            <span id="attribute_modal_choice">round, visible without magnifyin glass</span>
+                        </label>
+                    </p>
+                    <p>
+                        <label>
+                            <input type="checkbox" id="pore_characteristics_watery" />
+                            <span id="attribute_modal_choice">watery</span>
+                        </label>
+                    </p>
+                    </div>
+                </div>
+            <div class="modal-footer">
+            <a href="#pores_attributes" class="attribute_closebtn_style modal-close waves-effect waves-green btn-flat">X</a>
+            </div>
+        </div>
+    </div><!-- .attribute_search_body -->
+
+
+
+
+
+
     </div> 
     <!-- SLIDER -->
     <div class="slider_body">
@@ -291,9 +351,9 @@
                     <h5 class="white-text">Pages</h5>
                     <ul>
                         <!-- Page Links -->
-                        <a data-target="./user.html" class="footer_btn waves-effect waves-light btn modal-trigger" href="./user.html">My Basket</a>
-                        <a data-target="./guide.html" class="footer_btn waves-effect waves-light btn modal-trigger" href="./guide.html">Guide</a>
-                        <a data-target="./map.html" class="footer_btn waves-effect waves-light btn modal-trigger" href="./map.html">Found! Map</a>
+                        <a data-target="./user.html" class="footer_openbtn_style waves-effect waves-light btn modal-trigger" href="./user.html">My Basket</a>
+                        <a data-target="./guide.html" class="footer_openbtn_style waves-effect waves-light btn modal-trigger" href="./guide.html">Guide</a>
+                        <a data-target="./map.html" class="footer_openbtn_style waves-effect waves-light btn modal-trigger" href="./map.html">Found! Map</a>
                     </ul>
                 </div>
                 <div class="footer_pages">
@@ -301,7 +361,7 @@
                     <ul>
                         <!-- The Team -->
                         <!-- Modal Trigger -->
-                        <a data-target="the_team" class="modal-open waves-effect waves-light btn modal-trigger" href="#the_team">The Team</a>
+                        <a data-target="the_team" class="footer_openbtn_style modal-open waves-effect waves-light btn modal-trigger" href="#the_team">The Team</a>
                         <!-- Modal Structure -->
                         <div id="the_team" class="modal">
                             <div class="modal-content team_">
@@ -316,13 +376,13 @@
                                 <p class="team_">100% human trash.</p>
                             </div>
                             <div class="modal-footer">
-                            <a href="#the_team" class="modal-close waves-effect waves-green btn-flat">X</a>
+                            <a href="#the_team" class="footer_closebtn_style modal-close waves-effect waves-green btn-flat">X</a>
                             </div>
                         </div>
 
                         <!-- The Team -->
                         <!-- Modal Trigger -->
-                        <a data-target="user_support" class="modal-open waves-effect waves-light btn modal-trigger" href="#user_support">Support</a>
+                        <a data-target="user_support" class="footer_openbtn_style modal-open waves-effect waves-light btn modal-trigger" href="#user_support">Support</a>
                         <!-- Modal Structure -->
                         <div id="user_support" class="modal">
                             <div class="modal-content team_">
@@ -330,7 +390,7 @@
                                 <h2 class="team_">Doesn't exist BYE</h2>
                             </div>
                             <div class="modal-footer">
-                            <a href="#user_support" class="modal-close waves-effect waves-green btn-flat">X</a>
+                            <a href="#user_support" class="footer_closebtn_style modal-close waves-effect waves-green btn-flat">X</a>
                             </div>
                         </div>
                     </ul>

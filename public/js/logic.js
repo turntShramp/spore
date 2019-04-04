@@ -1,18 +1,18 @@
   // PARTICLES LOGIC
   //---------------------------------------------------------//
-  // window.onload = function() {
-  //   Particles.init({
-  //     selector: ".background",
-  //     maxParticles: 1000,
-  //     sizeVariations: 1.5,
-  //     speed: .50,
-  //     color: "#838383",
-  //     connectParticles: false,
-  //     responsive: null,
-  //     height: 100
-  //   });
-  //   console.log("particles up");
-  // };
+  window.onload = function() {
+    Particles.init({
+      selector: ".background",
+      maxParticles: 1000,
+      sizeVariations: 1.5,
+      speed: .50,
+      color: "#838383",
+      connectParticles: false,
+      responsive: null,
+      height: 100
+    });
+    console.log("particles up");
+  };
 
 $(document).ready(function(){
   console.log("divs up");
