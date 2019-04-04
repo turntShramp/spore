@@ -27,7 +27,7 @@ module.exports = function(app) {
   });
 
   // Load admin page
-  app.get("/admin", function(req, res) {
+  app.get("api/admin", function(req, res) {
     res.sendFile(path.join(__dirname, "../views/html/admin.html"));
   });
 
