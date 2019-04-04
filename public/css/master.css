@@ -66,6 +66,7 @@
   .navbar_icon {
     flex: 25;
     text-align: center;
+    color: black !important;
   }
   .navbar_arrow {
     flex: 12.5;
