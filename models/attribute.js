@@ -15,7 +15,9 @@ module.exports = function(sequelize, DataTypes) {
     });
 
     Attribute.associate = function(models) {
-        Attribute.belongsTo(models.Mushroom);
+        Attribute.belongsToMany(models.Mushroom, {
+            through: "Mushroom_Attribute"
+        });
     }
 
     return Attribute;
