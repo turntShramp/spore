@@ -1,21 +1,45 @@
-<!-- CANVAS -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>guide</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- FAVICON -->
+    <link rel="icon" type="image/png" href="./img/logo/spor_logo.png" />
+    <!-- MATERIALIZE CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">  
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">          
+    <!-- GOOGLE FONTS -->
+    <link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond|Playfair+Display:400,400i|Work+Sans:300" rel="stylesheet">
+    <!-- FONTAWESOME -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <!-- CUSTOM CSS -->
+    <link rel="stylesheet" type="text/css" href="./css/master.css"/>
+</head>
+
+<body>
+    <!-- CANVAS -->
     <section class="canvasExpander">
     <canvas id="canvas" class="background"></canvas>
 
     <!-- NAVBAR
     --------------------------------------------------------------------------->
     <header class="navbar z-depth-0">
-        <a href="./user.html" target="_self" class="navbar_icon z-forward">
+        <a href="/user" target="_self" class="navbar_icon z-forward">
             <div class="new_div">
                 <i id="basket_btn" class="fas fa-shopping-basket fa-3x"></i>
             </div>
         </a>
-        <a href="guide" target="_self" class="navbar_icon z-forward">
+        <a href="/guide" target="_self" class="navbar_icon z-forward">
             <div class="new_div">
                 <i id="spore_btn" class="fab fa-hubspot fa-3x  "></i>
             </div>
         </a>
-        <a href="./map.html" target="_self" class="navbar_icon z-forward">
+        <a href="/map" target="_self" class="navbar_icon z-forward">
             <div class="new_div">
                 <i id="map_btn" class="fas fa-map-marked-alt fa-3x"></i>
             </div>
@@ -171,17 +195,70 @@
                 <i class="fas fa-chevron-right"></i>
             </div>
         </div>
-        <div class="guide_selection">
-            <div class="attribute_title">
-                <h6><strong>Pores</strong></h6>         
+        <!-- ATTRIBUTE MODAL -->
+        <div class="attribute_search_body">
+            <!-- ATTRIBUTE MODAL BTN -->
+            <a data-target="pores_attributes" class="attribute_openbtn_style modal-open waves-effect waves-light btn modal-trigger transparent" href="#pores_attributes">
+            <div class="attribute_selection">
+                <div class="new_attribute_title">
+                    <h6><strong>Pores</strong></h6>         
+                </div>
+                <div class="new_attribute_text">
+                    <h7 class="att_text_color">elongated, watery, etc...</h7>
+                </div>
+                <div class="new_attribute_arrow">
+                    <i class="fas fa-chevron-right"></i>
+                </div>
             </div>
-            <div class="attribute_text">
-                <h7 class="att_text_color">elongated, watery, etc...</h7>
+            </a>
+            <!-- ATTRIBUTE MODAL CONTENT -->
+            <div id="pores_attributes" class="modal">
+                <div class="modal-content">
+                    <div class="content_wrapper">
+                        <h3 id="attribute_modal_title">Pore Characteristics</h3>
+                        <p>
+                            <label>
+                                <input type="checkbox" id="pore_characteristics_square" />
+                                <span id="attribute_modal_choice">square, rhombic</span>
+                            </label>
+                        </p>
+                        <p>
+                            <label>
+                                <input type="checkbox" id="pore_characteristics_elongated" />
+                                <span id="attribute_modal_choice">elongated</span>
+                            </label>
+                        </p>
+                        <p>
+                            <label>
+                                <input type="checkbox" id="pore_characteristics_fine" />
+                                <span id="attribute_modal_choice">round, very fine</span>
+                            </label>
+                        </p>
+                        <p>
+                            <label>
+                                <input type="checkbox" id="pore_characteristics_labyrinthine" />
+                                <span id="attribute_modal_choice">labyrinthine</span>
+                            </label>
+                        </p>
+                        <p>
+                            <label>
+                                <input type="checkbox" id="pore_characteristics_medium" />
+                                <span id="attribute_modal_choice">round, visible without magnifyin glass</span>
+                            </label>
+                        </p>
+                        <p>
+                            <label>
+                                <input type="checkbox" id="pore_characteristics_watery" />
+                                <span id="attribute_modal_choice">watery</span>
+                            </label>
+                        </p>
+                        </div>
+                    </div>
+                <div class="modal-footer">
+                <a href="#pores_attributes" class="attribute_closebtn_style modal-close waves-effect waves-green btn-flat">X</a>
+                </div>
             </div>
-            <div class="attribute_arrow">
-                <i class="fas fa-chevron-right"></i>
-            </div>
-        </div>
+        </div><!-- .attribute_search_body -->
     </div> 
     <!-- SLIDER -->
     <div class="slider_body">
@@ -201,54 +278,157 @@
     <div id="guide_container">
         <!-- GUIDE MUSHROOMS -->
         <div id="guide_results" class="guide_results_body">
-
+            <!-- MUSH BODY -->
             <div class="guide_mushroom">
                 <div class="guide_mushroom_photo">
-                    <img class="guide_image_border" src="./img/thumbnail/chanterelle_thumbnail.jpg" alt="chanterelle">
-                </div>
-                <div class="guide_mushroom_title">
-                    <h6><strong>Chanterelle</strong></h6> 
-                </div>
-                <div class="space"></div>
-                <div class="guide_mushroom_arrow">
-                    <i class="fas fa-chevron-right"></i>
-                </div>
-            </div>
-            <div class="guide_mushroom">
-                <div class="guide_mushroom_photo">
-                    <img class="guide_image_border" src="./img/thumbnail/blackTrumpet_thumbnail.jpg" alt="chanterelle">
-                </div>
-                <div class="guide_mushroom_title">
-                    <h6><strong>Black Trumpet</strong></h6> 
-                </div>
-                <div class="space"></div>
-                <div class="guide_mushroom_arrow">
-                    <i class="fas fa-chevron-right"></i>
-                </div>
-            </div>
-            <div class="guide_mushroom">
-                <div class="guide_mushroom_photo">
-                    <img class="guide_image_border" src="./img/thumbnail/blewit_thumbnail.jpg" alt="chanterelle">
-                </div>
-                <div class="guide_mushroom_title">
-                    <h6><strong>Blewit</strong></h6> 
-                </div>
-                <div class="space"></div>
-                <div class="guide_mushroom_arrow">
-                    <i class="fas fa-chevron-right"></i>
-                </div>
-            </div>
-            <div class="guide_mushroom">
-                <div class="guide_mushroom_photo">
-                    <img class="guide_image_border" src="./img/thumbnail/lionsMane_thumbnail.jpg" alt="chanterelle">
+                    <img class="guide_image_border" src="./img/thumbnail/lionsMane_thumbnail.jpg" alt="mushroom">
                 </div>
                 <div class="guide_mushroom_title">
                     <h6><strong>Lion's Mane</strong></h6> 
                 </div>
                 <div class="space"></div>
-                <div class="guide_mushroom_arrow">
-                    <i class="fas fa-chevron-right"></i>
+                <!-- MUSH BTN -->
+                <div class="mushroom_page_btn_body_wrapper">
+                    <div class="mushroom_page_btn_body">
+                            <a href="/mushroom" target="_self" id="mushroom_page_btn" class="btn-floating btn-large waves-effect waves-light red gesture"><i class="material-icons" style="font-size: 40px;">forward</i></a>
+                        <a ></a>
+                    </div>
+                </div>
+            </div>
+            <!-- MUSH BODY -->
+            <div class="guide_mushroom">
+                <div class="guide_mushroom_photo">
+                    <img class="guide_image_border" src="./img/thumbnail/chanterelle_thumbnail.jpg" alt="mushroom">
+                </div>
+                <div class="guide_mushroom_title">
+                    <h6><strong>Chanterelle</strong></h6> 
+                </div>
+                <div class="space"></div>
+                <!-- MUSH BTN -->
+                <div class="mushroom_page_btn_body_wrapper">
+                    <div class="mushroom_page_btn_body">
+                            <a href="/mushroom" target="_self" id="mushroom_page_btn" class="btn-floating btn-large waves-effect waves-light red gesture"><i class="material-icons" style="font-size: 40px;">forward</i></a>
+                        <a ></a>
+                    </div>
+                </div>
+            </div>
+            <!-- MUSH BODY -->
+            <div class="guide_mushroom">
+                <div class="guide_mushroom_photo">
+                    <img class="guide_image_border" src="./img/thumbnail/porcini_thumbnail.jpg" alt="mushroom">
+                </div>
+                <div class="guide_mushroom_title">
+                    <h6><strong>Porcini</strong></h6> 
+                </div>
+                <div class="space"></div>
+                <!-- MUSH BTN -->
+                <div class="mushroom_page_btn_body_wrapper">
+                    <div class="mushroom_page_btn_body">
+                            <a href="/mushroom" target="_self" id="mushroom_page_btn" class="btn-floating btn-large waves-effect waves-light red gesture"><i class="material-icons" style="font-size: 40px;">forward</i></a>
+                        <a ></a>
+                    </div>
+                </div>
+            </div>
+            <!-- MUSH BODY -->
+            <div class="guide_mushroom">
+                <div class="guide_mushroom_photo">
+                    <img class="guide_image_border" src="./img/thumbnail/blackTrumpet_thumbnail.jpg" alt="mushroom">
+                </div>
+                <div class="guide_mushroom_title">
+                    <h6><strong>Black Trumpet</strong></h6> 
+                </div>
+                <div class="space"></div>
+                <!-- MUSH BTN -->
+                <div class="mushroom_page_btn_body_wrapper">
+                    <div class="mushroom_page_btn_body">
+                            <a href="/mushroom" target="_self" id="mushroom_page_btn" class="btn-floating btn-large waves-effect waves-light red gesture"><i class="material-icons" style="font-size: 40px;">forward</i></a>
+                        <a ></a>
+                    </div>
                 </div>
             </div>
         </div>
     </div>  
+
+<!-- FOOTER
+--------------------------------------------------------------------------->
+<footer class="page-footer">
+        <div class="footer_container">
+            <div class="footer_top">
+                <div class="footer_who">
+                    <h5 class="white-text">Who we are?</h5>
+                    <p class="grey-text text-lighten-4">Mushroom enthusiasts looking to give back to the foraging community.</p>
+                </div>
+            </div>
+            <div class="footer_middle">
+                <div class="footer_about">
+                    <h5 class="white-text">Pages</h5>
+                    <ul>
+                        <!-- Page Links -->
+                        <a data-target="./user.html" class="footer_openbtn_style footer_btn waves-effect waves-light btn modal-trigger" href="./user.html">My Basket</a>
+                        <a data-target="./guide.html" class="footer_openbtn_style footer_btn waves-effect waves-light btn modal-trigger" href="./guide.html">Guide</a>
+                        <a data-target="./map.html" class="footer_openbtn_style footer_btn waves-effect waves-light btn modal-trigger" href="./map.html">Found! Map</a>
+                    </ul>
+                </div>
+                <div class="footer_pages">
+                    <h5 class="white-text"><span class="blueText">SPŌR</span></h5>
+                    <ul>
+                        <!-- The Team -->
+                        <!-- Modal Trigger -->
+                        <a data-target="the_team" class="footer_openbtn_style modal-open waves-effect waves-light btn modal-trigger" href="#the_team">The Team</a>
+                        <!-- Modal Structure -->
+                        <div id="the_team" class="modal">
+                            <div class="modal-content team_">
+                                <h2 class="team_">The Team</h2>
+                                <h5 class="team_">Bill</h5>
+                                <p class="team_">Need a map? I know a guy.</p>
+                                <h5 class="team_">Michael</h5>
+                                <p class="team_">His laptop doubles as a shield.</p>
+                                <h5 class="team_">Jason</h5>
+                                <p class="team_">"But why?"</p>
+                                <h5 class="team_">Seamus</h5>
+                                <p class="team_">100% human trash.</p>
+                            </div>
+                            <div class="modal-footer">
+                            <a href="#the_team" class="footer_closebtn_style modal-close waves-effect waves-green btn-flat">X</a>
+                            </div>
+                        </div>
+
+                        <!-- The Team -->
+                        <!-- Modal Trigger -->
+                        <a data-target="user_support" class="footer_openbtn_style modal-open waves-effect waves-light btn modal-trigger" href="#user_support">Support</a>
+                        <!-- Modal Structure -->
+                        <div id="user_support" class="modal">
+                            <div class="modal-content team_">
+                                <h5 class="team_">User Support</h5>
+                                <h2 class="team_">Doesn't exist BYE</h2>
+                            </div>
+                            <div class="modal-footer">
+                            <a href="#user_support" class="footer_closebtn_style modal-close waves-effect waves-green btn-flat">X</a>
+                            </div>
+                        </div>
+                    </ul>
+                </div>
+                <div class="footer_space"></div>
+            </div>
+            <div class="footer_bottom">
+                <div class="footer-copyright">
+                    <div class="opensource">
+                        Eating wild mushrooms is ridiculous. We assume no responsibility for your childish behavior. Stop being a hippie and get a job.                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    </section> <!-- CANVAS -->
+
+    <!-- LOGIC   --------------------------------------------------------------------------->
+    <!-- jQUERY -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- PARTICLES -->
+    <script type="text/javascript" src="./js/particles.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.3/particles.min.js"></script> 
+    <!-- MATERIALIZE -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <!-- CUSTOM -->
+    <script type="text/javascript" src="./js/logic.js"></script>
+</body>
+</html>
