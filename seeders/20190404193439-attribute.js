@@ -12,7 +12,7 @@ module.exports = {
         isBetaMember: false
       }], {});
     */
-      return queryInterface.bulkInsert('Attribute', [
+      return queryInterface.bulkInsert('Attributes', [
         {
         description: "gills (fan like)",
         type: "hymenium"
@@ -87,59 +87,59 @@ module.exports = {
         },
         {
         description: "brown",
-        type: "spore print"
+        type: "sporePrint"
         },
         {
         description: "black",
-        type: "spore print"
+        type: "sporePrint"
         },
         {
         description: "ocher",
-        type: "spore print"
+        type: "sporePrint"
         },
         {
         description: "burnt orange",
-        type: "spore print"
+        type: "sporePrint"
         },
         {
         description: "red",
-        type: "spore print"
+        type: "sporePrint"
         },
         {
         description: "orange",
-        type: "spore print"
+        type: "sporePrint"
         },
         {
         description: "tan",
-        type: "spore print"
+        type: "sporePrint"
         },
         {
         description: "gray",
-        type: "spore print"
+        type: "sporePrint"
         },
         {
         description: "off white",
-        type: "spore print"
+        type: "sporePrint"
         },
         {
         description: "white",
-        type: "spore print"
+        type: "sporePrint"
         },
         {
         description: "pink",
-        type: "spore print"
+        type: "sporePrint"
         },
         {
         description: "yellow",
-        type: "spore print"
+        type: "sporePrint"
         },
         {
         description: "purple",
-        type: "spore print"
+        type: "sporePrint"
         },
         {
         description: "blue",
-        type: "spore print"
+        type: "sporePrint"
         },
         {
         description: "cedar",

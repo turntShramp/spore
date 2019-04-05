@@ -11,6 +11,20 @@ function createMembersArr(idArr, modelName) {
   return modelMembers;
 }
 
+function getAttributesObj(_cb) {
+  return new Promise ((resolve, reject) => {
+    db.Attribute.findAll().then((Attributes) => {
+      let mushAttributes = {};
+      Attributes.forEach((entry) => {
+        if(!mushAttributes[entry.type])
+          mushAttributes[entry.type] = [];
+        mushAttributes[entry.type].push(entry);
+      });
+      resolve(mushAttributes);
+    });
+  });
+}
+
 module.exports = function(app) {
   // Get all examples
   app.get("/api/examples", function(req, res) {
@@ -20,16 +34,16 @@ module.exports = function(app) {
   });
 
     // Load admin page
-    app.get("/api/admin", function(req, res) {
-      db.Icon.findAll({}).then((Icons) => {
-        res.render("admin", {
-          mushroom: {
-            icon: Icons,
-          }
-        });
-        
-      })
-    });
+  app.get("/api/admin", function(req, res) {
+    db.Icon.findAll({}).then(async (Icons) => {
+      let mushroom = { icons: Icons }
+          mushroom.attributes = await getAttributesObj();
+          console.log(mushroom);
+          res.render("admin", {
+            mushroom: mushroom,
+          });
+      });
+  });
 
   // Create a new mushroom
   app.post("/api/admin", function(req, res) {

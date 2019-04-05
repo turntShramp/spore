@@ -28,7 +28,7 @@ module.exports = function(app) {
 
   // Load guide page
   app.get("/guide", function(req, res) {
-    res.sendFile(path.join(__dirname, "../views/html/guide.html"));
+    res.render("guide");
   });
 
   // app.get("/", function(req, res) {

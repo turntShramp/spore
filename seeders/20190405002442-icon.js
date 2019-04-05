@@ -12,7 +12,7 @@ module.exports = {
         isBetaMember: false
       }], {});
     */
-      return queryInterface.bulkInsert('Icon', [
+      return queryInterface.bulkInsert('Icons', [
         {
           id: "bacon",
           fAwesomeClass: "fas fa-bacon",

@@ -4,7 +4,7 @@ const env = process.env.NODE_ENV || 'development';
 const path = require('path');
 
 module.exports = {
-  'config': path.resolve('config', 'config.js'),
+  'config': path.resolve('config.json'),
   'models-path': path.resolve('models'),
   'seeders-path': path.resolve('seeders'),
   'migrations-path': path.resolve('migrations')

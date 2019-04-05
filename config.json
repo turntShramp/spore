@@ -1,0 +1,16 @@
+{
+    "development": {
+        "username": "tommaroney",
+        "password": "h04$1XWgM2CFElo#",
+        "database": "sporedevdb",
+        "host": "sporedb.ce7qkn4uxc3q.us-east-1.rds.amazonaws.com",
+        "dialect": "mysql"
+    },
+    "test": {
+        "username": "root",
+        "password": null,
+        "database": "database_test",
+        "host": "127.0.0.1",
+        "dialect": "mysql"
+    }
+}
