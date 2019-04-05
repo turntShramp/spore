@@ -26,11 +26,6 @@ module.exports = function(app) {
     res.sendFile(path.join(__dirname, "../views/html/map.html"));
   });
 
-  // Load admin page
-  app.get("api/admin", function(req, res) {
-    res.sendFile(path.join(__dirname, "../views/html/admin.html"));
-  });
-
   // Load guide page
   app.get("/guide", function(req, res) {
     res.sendFile(path.join(__dirname, "../views/html/guide.html"));

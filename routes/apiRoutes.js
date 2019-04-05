@@ -1,4 +1,15 @@
 var db = require("../models");
+const path = require("path");
+
+function createMembersArr(idArr, modelName) {
+  let modelMembers = [];
+
+  idArr.forEach((memberId) => {
+    db[modelName].findOne({where: {id: memberId}})
+      .then((member) => modelMembers.push(member));
+  });
+  return modelMembers;
+}
 
 module.exports = function(app) {
   // Get all examples
@@ -8,9 +19,23 @@ module.exports = function(app) {
     });
   });
 
-  // Create a new example
+    // Load admin page
+    app.get("/api/admin", function(req, res) {
+      db.Icon.findAll({}).then((Icons) => {
+        res.render("admin", {
+          mushroom: {
+            icon: Icons,
+          }
+        });
+        
+      })
+    });
+
+  // Create a new mushroom
   app.post("/api/admin", function(req, res) {
+
     const postMushroom = req.body;
+
     let newMushroom = {
       latinName: postMushroom.latinName,
       commonName: postMushroom.commonName,
@@ -19,9 +44,20 @@ module.exports = function(app) {
       mushroom_photo: postMushroom.mushroom_photo,
       thumbnail_photo: postMushroom.thumbnail_photo
     }
-    db.Mushroom.create(newMushroom).then(function(mushroom) {
-      mushroom.addAllIcon
-      res.json(dbExample);
+
+    let iconsArr = createMembersArr(postMushroom.icons, "Icon");
+    let attributesArr = createMembersArr(postMushroom.attributes, "Attribute")
+
+    // add new mushroom to database
+    db.Mushroom.create(newMushroom).then(async function(mushroom) {
+      //add association with icons
+      let mushroomIcons = await mushroom.setIcons(iconsArr);
+      let mushroomAttributes = await mushroom.setAttributes(attributesArr);
+      res.json({
+        mushroom: mushroom,
+        icons: mushroomIcons,
+        attributes: mushroomAttributes,
+       });
     });
   });
 
