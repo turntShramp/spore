@@ -1,7 +1,8 @@
 const db = require("../models");
 const path = require("path");
+const apiRoutes = require("./apiRoutes.js");
 
-module.exports = function(app) {
+module.exports = function(app, passport) {
   // Load index(home) page
   app.get("/", function(req, res) {
     res.sendFile(path.join(__dirname, "../views/html/login.html"));
@@ -12,27 +13,27 @@ module.exports = function(app) {
   });
   
   // Load account page
-  app.get("/user", function(req, res) {
+  app.get("/user", isLoggedIn, function(req, res) {
     res.sendFile(path.join(__dirname, "../views/html/user.html"));
   });
 
   // Load mushroom page
-  app.get("/mushroom", function(req, res) {
+  app.get("/mushroom", isLoggedIn, function(req, res) {
     res.sendFile(path.join(__dirname, "../views/html/mushroom.html"));
   });
 
   // Load map page
-  app.get("/map", function(req, res) {
+  app.get("/map", isLoggedIn, function(req, res) {
     res.sendFile(path.join(__dirname, "../views/html/map.html"));
   });
 
   // Load admin page
-  app.get("api/admin", function(req, res) {
+  app.get("api/admin", isLoggedIn, function(req, res) {
     res.sendFile(path.join(__dirname, "../views/html/admin.html"));
   });
 
   // Load guide page
-  app.get("/guide", function(req, res) {
+  app.get("/guide", isLoggedIn, function(req, res) {
     res.sendFile(path.join(__dirname, "../views/html/guide.html"));
   });
 
@@ -58,4 +59,15 @@ module.exports = function(app) {
   app.get("*", function(req, res) {
     res.render("404");
   });
+
+  function isLoggedIn(req, res, next) {
+
+    if (req.isAuthenticated())
+
+      return next();
+
+    res.redirect('/login');
+
+  }
+
 };

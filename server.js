@@ -24,7 +24,7 @@ app.use(bodyParser.json());
 // For Passport
 app.use(session({ secret: 'keyboard cat', resave: false, saveUninitialized:true, store: sporeStore })); // session secret
 app.use(passport.initialize());
-app.use(passport.session({ secret: 'keyboard cat', resave: false, saveUninitialized:true, store: sporeStore })); // persistent login sessions
+app.use(passport.session()); // persistent login sessions
 
 // Handlebars
 app.engine(
@@ -36,8 +36,8 @@ app.engine(
 app.set("view engine", "handlebars");
 
 // Routes
-require("./routes/apiRoutes")(app);
-require("./routes/htmlRoutes")(app);
+require("./routes/apiRoutes")(app,passport);
+require("./routes/htmlRoutes")(app,passport);
 
 let syncOptions = { force: false };
 
@@ -46,6 +46,8 @@ let syncOptions = { force: false };
 if (process.env.NODE_ENV === "test") {
   syncOptions.force = true;
 }
+var models = require("./models");
+require('./config/passport/passport.js')(passport, models.User);
 
 sporeStore.sync();
 // Starting the server, syncing our models ------------------------------------/
