@@ -97,23 +97,29 @@ module.exports = function(app) {
         }
         else 
           while(unplaced) {
-            if(sortedArr[currentPos].tally < mushroom.tally && mushroom.tally < sortedArr[currentPos + 1].tally) {
-              sortedArr.splice(currentPos, 0, mushroom);
+            if(sortedArr[currentPos].tally < sortedArr.length) {
+              sortedArr.push(mushroom.tally)
               unplaced = false;
+             }
+             else {
+              if(sortedArr[currentPos].tally < mushroom.tally && mushroom.tally < sortedArr[currentPos + 1].tally) {
+                sortedArr.splice(currentPos, 0, mushroom);
+                unplaced = false;
+              }
+              else if(currentPos === top && mushroom.tally >= sortedArr[currentPos].tally) {
+                sortedArr.push(mushroom);
+                unplaced = false;
+              }
+              else if(currentPos === bottom && mushroom.tally <= sortedArr[currentPos].tally) {
+                sortedArr.shift(mushroom);
+                unplaced = false;
+              }
+              else if(sortedArr[currentPos].tally > mushroom.tally) {
+                top = top/2;
+              }
+              else 
+                bottom = top/2;
             }
-            else if(currentPos === top && mushroom.tally >= sortedArr[currentPos].tally) {
-              sortedArr.push(mushroom);
-              unplaced = false;
-            }
-            else if(currentPos === bottom && mushroom.tally <= sortedArr[currentPos].tally) {
-              sortedArr.shift(mushroom);
-              unplaced = false;
-            }
-            else if(sortedArr[currentPos].tally > mushroom.tally) {
-              top = top/2;
-            }
-            else 
-              bottom = top/2;
           }
       }
       
