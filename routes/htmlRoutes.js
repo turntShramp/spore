@@ -1,6 +1,22 @@
 const db = require("../models");
 const path = require("path");
 
+function getAttributesObj(_cb) {
+  return new Promise ((resolve, reject) => {
+    db.AttributeType.findAll({
+      include: [{model: db.Attribute}]
+    }).then((Attributes) => {
+      let mushAttributes = {};
+      console.log(Attributes[0]);
+      Attributes.forEach((entry) => {
+          mushAttributes[entry.dataValues.id] = entry.dataValues;
+      });
+      console.log(JSON.stringify(mushAttributes, null, 2));
+      resolve(mushAttributes);
+    });
+  });
+}
+
 module.exports = function(app) {
   // Load index(home) page
   app.get("/", function(req, res) {
@@ -28,7 +44,14 @@ module.exports = function(app) {
 
   // Load guide page
   app.get("/guide", function(req, res) {
-    res.render("guide");
+    db.Icon.findAll({}).then(async (Icons) => {
+      let mushroom = { icons: Icons }
+          mushroom.attributes = await getAttributesObj();
+          console.log(mushroom);
+          res.render("guide", {
+            mushroom: mushroom,
+          });
+      });
   });
 
   // app.get("/", function(req, res) {

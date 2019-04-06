@@ -49,185 +49,38 @@
 
     <!-- SEARCH  
     --------------------------------------------------------------------------->
-    <div class="guide_search_body">
-        <div class="guide_selection">
-            <div class="attribute_title">
-                <h6><strong>Hymenium</strong></h6>         
-            </div>
-            <div class="attribute_text">
-                <h7 class="att_text_color"> gill type...</h7>
-            </div>
-            <div class="attribute_arrow">
-                <i class="fas fa-chevron-right"></i>
-            </div>
-        </div>
-        <div class="guide_selection">
-            <div class="attribute_title">
-                <h6><strong>Gill Characteristics</strong></h6>         
-            </div>
-            <div class="attribute_text">
-                <h7 class="att_text_color"> if present...</h7>
-            </div>
-            <div class="attribute_arrow">
-                <i class="fas fa-chevron-right"></i>
-            </div>
-        </div>
-        <div class="guide_selection">
-            <div class="attribute_title">
-                <h6><strong>Gill Attachment</strong></h6>         
-            </div>
-            <div class="attribute_text">
-                <h7 class="att_text_color"> if present...</h7>
-            </div>
-            <div class="attribute_arrow">
-                <i class="fas fa-chevron-right"></i>
-            </div>
-        </div>
-        <div class="guide_selection">
-            <div class="attribute_title">
-                <h6><strong>Spore Print</strong></h6>         
-            </div>
-            <div class="attribute_text">
-                <h7 class="att_text_color"> white, brown, ...</h7>
-            </div>
-            <div class="attribute_arrow">
-                <i class="fas fa-chevron-right"></i>
-            </div>
-        </div>
-        <div class="guide_selection">
-            <div class="attribute_title">
-                <h6><strong>Smell</strong></h6>         
-            </div>
-            <div class="attribute_text">
-                <h7 class="att_text_color"> apricot, aniseed, ...</h7>
-            </div>
-            <div class="attribute_arrow">
-                <i class="fas fa-chevron-right"></i>
-            </div>
-        </div>
-        <div class="guide_selection">
-            <div class="attribute_title">
-                <h6><strong>Stipe</strong></h6>         
-            </div>
-            <div class="attribute_text">
-                <h7 class="att_text_color"> stem characteristics...</h7>
-            </div>
-            <div class="attribute_arrow">
-                <i class="fas fa-chevron-right"></i>
-            </div>
-        </div>
-        <div class="guide_selection">
-            <div class="attribute_title">
-                <h6><strong>Annulus</strong></h6>         
-            </div>
-            <div class="attribute_text">
-                <h7 class="att_text_color"> veil/ring characteristics...</h7>
-            </div>
-            <div class="attribute_arrow">
-                <i class="fas fa-chevron-right"></i>
-            </div>
-        </div>
-        <div class="guide_selection">
-            <div class="attribute_title">
-                <h6><strong>Pileus</strong></h6>         
-            </div>
-            <div class="attribute_text">
-                <h7 class="att_text_color"> cap characteristics...</h7>
-            </div>
-            <div class="attribute_arrow">
-                <i class="fas fa-chevron-right"></i>
-            </div>
-        </div>
-        <div class="guide_selection">
-            <div class="attribute_title">
-                <h6><strong>Flesh Color</strong></h6>         
-            </div>
-            <div class="attribute_text">
-                <h7 class="att_text_color">bluing, blackening, etc...</h7>
-            </div>
-            <div class="attribute_arrow">
-                <i class="fas fa-chevron-right"></i>
-            </div>
-        </div>
-        <div class="guide_selection">
-            <div class="attribute_title">
-                <h6><strong>Fluid Color</strong></h6>         
-            </div>
-            <div class="attribute_text">
-                <h7 class="att_text_color">white, red, etc...</h7>
-            </div>
-            <div class="attribute_arrow">
-                <i class="fas fa-chevron-right"></i>
-            </div>
-        </div>
-        <div class="guide_selection">
-            <div class="attribute_title">
-                <h6><strong>Volva</strong></h6>         
-            </div>
-            <div class="attribute_text">
-                <h7 class="att_text_color"> stem bulb characteristics...</h7>
-            </div>
-            <div class="attribute_arrow">
-                <i class="fas fa-chevron-right"></i>
-            </div>
-        </div>
+    <form name="mushAttributes">
+        {{#each mushroom.attributes}}
         <!-- ATTRIBUTE MODAL -->
         <div class="attribute_search_body">
             <!-- ATTRIBUTE MODAL BTN -->
-            <a data-target="pores_attributes" class="attribute_openbtn_style modal-open waves-effect waves-light btn modal-trigger transparent" href="#pores_attributes">
+            <djv data-target="{{@key}}attributes" class="attribute_openbtn_style waves-effect waves-light btn modal-trigger transparent" href="#{{@key}}_attributes">
             <div class="attribute_selection">
                 <div class="new_attribute_title">
-                    <h6><strong>Pores</strong></h6>         
+                    <h6><strong>{{this.title}}</strong></h6>         
                 </div>
                 <div class="new_attribute_text">
-                    <h7 class="att_text_color">elongated, watery, etc...</h7>
+                    <h7 class="att_text_color">{{this.subTitle}}</h7>
                 </div>
                 <div class="new_attribute_arrow">
                     <i class="fas fa-chevron-right"></i>
                 </div>
             </div>
-            </a>
+            </div>
             <!-- ATTRIBUTE MODAL CONTENT -->
-            <div id="pores_attributes" class="modal">
+            <div id="{{@key}}attributes" class="modal">
                 <div class="modal-content">
                     <div class="content_wrapper">
                         <h3 id="attribute_modal_title">Pore Characteristics</h3>
-                        <p>
-                            <label>
-                                <input type="checkbox" id="pore_characteristics_square" />
-                                <span id="attribute_modal_choice">square, rhombic</span>
-                            </label>
-                        </p>
-                        <p>
-                            <label>
-                                <input type="checkbox" id="pore_characteristics_elongated" />
-                                <span id="attribute_modal_choice">elongated</span>
-                            </label>
-                        </p>
-                        <p>
-                            <label>
-                                <input type="checkbox" id="pore_characteristics_fine" />
-                                <span id="attribute_modal_choice">round, very fine</span>
-                            </label>
-                        </p>
-                        <p>
-                            <label>
-                                <input type="checkbox" id="pore_characteristics_labyrinthine" />
-                                <span id="attribute_modal_choice">labyrinthine</span>
-                            </label>
-                        </p>
-                        <p>
-                            <label>
-                                <input type="checkbox" id="pore_characteristics_medium" />
-                                <span id="attribute_modal_choice">round, visible without magnifyin glass</span>
-                            </label>
-                        </p>
-                        <p>
-                            <label>
-                                <input type="checkbox" id="pore_characteristics_watery" />
-                                <span id="attribute_modal_choice">watery</span>
-                            </label>
-                        </p>
+                        <div class="row">
+                            {{#each this.Attributes}}
+                            <div class="col s12 m6">
+                                <label for="{{this.AttributeTypeId}}{{this.id}}">
+                                        <input type="checkbox" data-id="{{this.id}}" name="{{this.AttributeTypeId}}{{this.id}}" id="{{this.AttributeTypeId}}{{this.id}}"/>
+                                        <span>{{this.description}}</span>
+                                </label>
+                            </div>
+                            {{/each}}
                         </div>
                     </div>
                 <div class="modal-footer">
@@ -235,7 +88,8 @@
                 </div>
             </div>
         </div><!-- .attribute_search_body -->
-    </div> 
+        {{/each}}
+    </form>
     <!-- SLIDER -->
     <div class="slider_body">
         <div id="slider">

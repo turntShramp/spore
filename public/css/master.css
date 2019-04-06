@@ -291,7 +291,7 @@ input[type=checkbox]
 }
 .attribute_openbtn_style {
   padding: 0;
-  margin: 0;
+  margin-top: 1px;
   height: 100%;
   width: 100%;
   background: transparent;

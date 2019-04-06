@@ -2,9 +2,6 @@ module.exports = function(sequelize, DataTypes) {
     let Attribute = sequelize.define("Attribute", {
         description: {
             type: DataTypes.STRING
-        },
-        type: {
-            type: DataTypes.STRING
         }
     });
 

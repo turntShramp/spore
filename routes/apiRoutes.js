@@ -16,9 +16,9 @@ function getAttributesObj(_cb) {
     db.Attribute.findAll().then((Attributes) => {
       let mushAttributes = {};
       Attributes.forEach((entry) => {
-        if(!mushAttributes[entry.type])
-          mushAttributes[entry.type] = [];
-        mushAttributes[entry.type].push(entry);
+        if(!mushAttributes[entry.AttributeTypeId])
+          mushAttributes[entry.AttributeTypeId] = [];
+        mushAttributes[entry.AttributeTypeId].push(entry);
       });
       resolve(mushAttributes);
     });
