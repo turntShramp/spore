@@ -69,6 +69,8 @@ module.exports = function (app) {
     });
   });
 
+  app.get("/api/admin")
+
   // Delete an example by id
 //   app.delete("/api/examples/:id", isLoggedIn, function (req, res) {
 //     db.Example.destroy({ where: { id: req.params.id } }).then(function (dbExample) {
