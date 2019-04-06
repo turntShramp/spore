@@ -22,8 +22,8 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 // For Passport
 app.use(session({ secret: 'keyboard cat', resave: false, saveUninitialized:true, store: sporeStore })); // session secret
-app.use(passport.initialize());
-app.use(passport.session()); // persistent login sessions
+// app.use(passport.initialize());
+// app.use(passport.session()); // persistent login sessions
 
 // Handlebars
 app.engine(
