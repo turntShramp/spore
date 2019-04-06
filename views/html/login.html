@@ -67,12 +67,8 @@
                             <label for="user_password">User Password</label>
                             <!-- LOGIN BUTTON -->
                             <div class="button_body">
-                                <input id="login_user_btn" class="waves-effect waves-dark btn" value="Log In" type="submit">
-
-                                <!-- the above value attribute will not work. not sure who did that-->
-
-                                <!-- <a id="login_user_btn"  class="btn_black waves-effect waves-dark btn" type="submit" value="Log In">Log In</a> -->
-                               
+                                <input id="login_user_btn" class="waves-effect waves-dark btn" value="Log In"
+                                    type="submit">
                             </div>
                             <!-- CREATE BUTTON -->
                             <div class="button_body">
@@ -84,24 +80,22 @@
                     <!-- CREATE BODY-->
                     <div id="create_user_body" class="create_user_body hidden">
                         <form id="signup" name="signup" method="post" action="/signup">
+                            <label for="create_user_name">Create User Name</label>
                             <input placeholder="turntShramp" id="create_user_name" name="name" type="text"
                                 class="validate">
-                            <label for="create_user_name">Create User Name</label>
+                            <label for="create_user_email">Enter Your Preffered Email</label>
                             <input placeholder="seamusmurchadh@gmail.com" id="create_user_email" name="email"
                                 type="email" class="validate">
-                            <label for="create_user_email">Enter Your Preffered Email</label>
+                            <label for="create_user_password">Create User Password</label>
                             <input placeholder="*************" id="create_user_password" type="password" name="password"
                                 class="validate">
-                            <label for="create_user_password">Create User Password</label>
+                            <label for="confirm_user_password">Confirm User Password</label>
                             <input placeholder="*************" id="confirm_user_password" type="password"
                                 class="validate">
-                            <label for="confirm_user_password">Confirm User Password</label>
                             <!-- LOGIN BUTTON -->
                             <div class="button_body">
                                 <input id="create_user_submit_btn" class="waves-effect waves-dark btn"
                                     value="Create User" type="submit">
-
-                                <!-- <a id="create_user_submit_btn" class="btn_black waves-effect waves-dark btn" type="submit" value="Create User">Log In</a> -->
                             </div>
                         </form>
                     </div>
