@@ -18,7 +18,7 @@ function getAttributesObj(_cb) {
   });
 }
 
-module.exports = function(app, passport) {
+module.exports = function(app) {
   // Load index(home) page
   app.get("/", function(req, res) {
     res.sendFile(path.join(__dirname, "../views/html/login.html"));
@@ -29,22 +29,22 @@ module.exports = function(app, passport) {
   });
   
   // Load account page
-  app.get("/user", isLoggedIn, function(req, res) {
+  app.get("/user", function(req, res) {
     res.sendFile(path.join(__dirname, "../views/html/user.html"));
   });
 
   // Load mushroom page
-  app.get("/mushroom", isLoggedIn, function(req, res) {
+  app.get("/mushroom", function(req, res) {
     res.sendFile(path.join(__dirname, "../views/html/mushroom.html"));
   });
 
   // Load map page
-  app.get("/map", isLoggedIn, function(req, res) {
+  app.get("/map", function(req, res) {
     res.sendFile(path.join(__dirname, "../views/html/map.html"));
   });
 
   // Load guide page
-  app.get("/guide", isLoggedIn, function(req, res) {
+  app.get("/guide", function(req, res) {
     db.Icon.findAll({}).then(async (Icons) => {
       let mushroom = { icons: Icons }
           mushroom.attributes = await getAttributesObj();
@@ -78,14 +78,14 @@ module.exports = function(app, passport) {
     res.render("404");
   });
 
-  function isLoggedIn(req, res, next) {
+  // function isLoggedIn(req, res, next) {
 
-    if (req.isAuthenticated())
+  //   if (req.isAuthenticated())
 
-      return next();
+  //     return next();
 
-    res.redirect('/login');
+  //   res.redirect('/login');
 
-  }
+  // }
 
 };
