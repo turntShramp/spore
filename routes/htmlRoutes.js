@@ -2,18 +2,18 @@ const db = require("../models");
 const path = require("path");
 const apiRoutes = require("./apiRoutes.js");
 
-function getAttributesObj(_cb) {
+function getCharacteristicsObj(_cb) {
   return new Promise ((resolve, reject) => {
     db.AttributeType.findAll({
-      include: [{model: db.Attribute}]
-    }).then((Attributes) => {
-      let mushAttributes = {};
-      console.log(Attributes[0]);
-      Attributes.forEach((entry) => {
-          mushAttributes[entry.dataValues.id] = entry.dataValues;
+      include: [{model: db.Characteristic}]
+    }).then((Characteristics) => {
+      let mushCharacteristics = {};
+      console.log(Characteristics[0]);
+      Characteristics.forEach((entry) => {
+          mushCharacteristics[entry.dataValues.id] = entry.dataValues;
       });
-      console.log(JSON.stringify(mushAttributes, null, 2));
-      resolve(mushAttributes);
+      console.log(JSON.stringify(mushCharacteristics, null, 2));
+      resolve(mushCharacteristics);
     });
   });
 }
@@ -47,7 +47,7 @@ module.exports = function(app) {
   app.get("/guide", function(req, res) {
     db.Icon.findAll({}).then(async (Icons) => {
       let mushroom = { icons: Icons }
-          mushroom.attributes = await getAttributesObj();
+          mushroom.attributes = await getCharacteristicsObj();
           console.log(mushroom);
           res.render("guide", {
             mushroom: mushroom,
@@ -57,17 +57,68 @@ module.exports = function(app) {
 
   app.post("/guide", function(req, res) {
     console.log(req.body);
-    res.send("Thank you");
 
-    db.Attributes.findAll({
+    db.Mushroom.findAll({
       include: [{
-        model: Mushroom,
+        model: db.Characteristic,
         through: {
-          attributes: [id],
-          where: {AttributeId: req.body[0]}
+          mushroom_characteristic: {
+            where: {
+              CharacteristicId: parseInt(req.body.attributes[0])
+            }
+          }
         }
       }]
-    }).then((response) => console.log(response));
+    }).then((response) => {
+      let shroomHolder = {};
+      response.forEach((mushroom) => {
+        name = mushroom.dataValues.commonName
+        shroomHolder[name] = mushroom.dataValues;
+        shroomHolder[name].tally = 0;
+        let characteristicsArray = [];
+        shroomHolder[name].Characteristics.forEach((characteristic) => {
+          characteristicsArray.push(characteristic.dataValues.id);
+        });
+        req.body.attributes.forEach((characteristicToMatch) => {
+          if(characteristicsArray.includes(characteristicToMatch))
+          shroomHolder[name].tally++
+        });
+      });
+      let sortedArr = []
+      for(let shroom in shroomHolder) {
+        let mushroom = shroomHolder[shroom];
+        let unplaced = true;
+        let bottom = 0;
+        let top = sortedArr.length -1
+        let currentPos = top/2;
+        if(sortedArr.length === 0) {
+          sortedArr.push(mushroom);
+          unplaced = false;
+        }
+        else 
+          while(unplaced) {
+            if(sortedArr[currentPos].tally < mushroom.tally && mushroom.tally < sortedArr[currentPos + 1].tally) {
+              sortedArr.splice(currentPos, 0, mushroom);
+              unplaced = false;
+            }
+            else if(currentPos === top && mushroom.tally >= sortedArr[currentPos].tally) {
+              sortedArr.push(mushroom);
+              unplaced = false;
+            }
+            else if(currentPos === bottom && mushroom.tally <= sortedArr[currentPos].tally) {
+              sortedArr.shift(mushroom);
+              unplaced = false;
+            }
+            else if(sortedArr[currentPos].tally > mushroom.tally) {
+              top = top/2;
+            }
+            else 
+              bottom = top/2;
+          }
+      }
+      
+      res.json(sortedArr[sortedArr.length -1]);
+    });
   })
 
   // app.get("/", function(req, res) {

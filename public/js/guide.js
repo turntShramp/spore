@@ -18,5 +18,8 @@ $("#submit_att_btn").on("click", (event) => {
         data: { attributes: query}
     }).then((response) => {
         console.log(response);
+        $("#photo").attr("src", response.mushroom_photo);
+        $("#commonName").text(response.commonName);
+        $("#guide_container").attr("hidden", false);
     });
 });
