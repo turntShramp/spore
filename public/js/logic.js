@@ -30,11 +30,11 @@ $(document).ready(function(){
   // LOGIN PAGE LOGIC
   //---------------------------------------------------------//
   // LOGIN FADE
-  $("#spor_image").delay(3000).fadeIn(5000, function() {
-    $("#spor_noun").fadeIn(5000, function() {
-      $("#spor_noun").fadeOut(5000, function() {
+  $("#spor_image").delay(1000).fadeIn(1500, function() {
+    $("#spor_noun").fadeIn(2000, function() {
+      $("#spor_noun").fadeOut(3000, function() {
         $("#spor_app").fadeIn(3000, function() {
-          $("#spor_app").fadeOut(5000, function() {
+          $("#spor_app").fadeOut(3000, function() {
             $("#login_user_body").fadeIn(2000, function() {
               $("#login_user_btn").on('click', function() {
                 // check if user account exists
@@ -42,8 +42,8 @@ $(document).ready(function(){
                 // if yes route to guide.html
               });
               $("#create_user_btn").on('click', function() {
-                $("#login_user_body").fadeOut(2000, function() {
-                  $("#create_user_body").fadeIn(2000, function() {
+                $("#login_user_body").fadeOut(1000, function() {
+                  $("#create_user_body").fadeIn(1000, function() {
                     $("#login_user_btn").on('click', function() {
                       // check if user account exists
                       // if yes, notify name exists, clear inputs and any stored values

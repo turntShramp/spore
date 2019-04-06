@@ -44,7 +44,7 @@ module.exports = function(app, passport) {
   });
 
   // Load guide page
-  app.get("/guide", isLoggedIn, function(req, res) {
+  app.get("/guide", function(req, res) {
     db.Icon.findAll({}).then(async (Icons) => {
       let mushroom = { icons: Icons }
           mushroom.attributes = await getAttributesObj();
