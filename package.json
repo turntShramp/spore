@@ -19,7 +19,7 @@
     "express-handlebars": "^3.0.0",
     "express-session": "^1.15.6",
     "moment": "^2.24.0",
-    "mysql2": "^1.6.4",
+    "mysql2": "^1.6.5",
     "nodemon": "^1.18.10",
     "particlesjs": "^2.2.3",
     "passport": "^0.4.0",
@@ -27,7 +27,11 @@
     "sequelize": "^4.41.2"
   },
   "devDependencies": {
+    "babel-plugin-transform-async-to-module-method": "^6.24.1",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
     "babel-register": "^6.26.0",
+    "bluebird": "^3.5.4",
     "chai": "^4.2.0",
     "chai-http": "^4.0.0",
     "eslint": "^4.19.1",

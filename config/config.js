@@ -3,7 +3,7 @@ module.exports = {
     "username": process.env.dev_USERNAME,
     "password": process.env.dev_PASSWORD,
     "database": process.env.dev_DATABASE,
-    "host": "127.0.0.1",
+    "host": process.env.dev_HOST,
     "dialect": "mysql",
   },
   "test": {

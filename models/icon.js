@@ -1,8 +1,16 @@
 module.exports = function(sequelize, DataTypes) {
     const Icon = sequelize.define("Icon", {
-        name: {
+        id: {
             type: DataTypes.STRING,
-            length: 30
+            length: 30,
+            primaryKey: true
+        },
+        fAwesomeClass: {
+            type: DataTypes.STRING,
+            length: 16,
+        },
+        description: {
+            type:DataTypes.STRING,
         }
     });
 

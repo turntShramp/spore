@@ -2,6 +2,22 @@ const db = require("../models");
 const path = require("path");
 const apiRoutes = require("./apiRoutes.js");
 
+function getAttributesObj(_cb) {
+  return new Promise ((resolve, reject) => {
+    db.AttributeType.findAll({
+      include: [{model: db.Attribute}]
+    }).then((Attributes) => {
+      let mushAttributes = {};
+      console.log(Attributes[0]);
+      Attributes.forEach((entry) => {
+          mushAttributes[entry.dataValues.id] = entry.dataValues;
+      });
+      console.log(JSON.stringify(mushAttributes, null, 2));
+      resolve(mushAttributes);
+    });
+  });
+}
+
 module.exports = function(app, passport) {
   // Load index(home) page
   app.get("/", function(req, res) {
@@ -27,14 +43,16 @@ module.exports = function(app, passport) {
     res.sendFile(path.join(__dirname, "../views/html/map.html"));
   });
 
-  // Load admin page
-  app.get("api/admin", isLoggedIn, function(req, res) {
-    res.sendFile(path.join(__dirname, "../views/html/admin.html"));
-  });
-
   // Load guide page
   app.get("/guide", isLoggedIn, function(req, res) {
-    res.sendFile(path.join(__dirname, "../views/html/guide.html"));
+    db.Icon.findAll({}).then(async (Icons) => {
+      let mushroom = { icons: Icons }
+          mushroom.attributes = await getAttributesObj();
+          console.log(mushroom);
+          res.render("guide", {
+            mushroom: mushroom,
+          });
+      });
   });
 
   // app.get("/", function(req, res) {

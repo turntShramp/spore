@@ -1,0 +1,195 @@
+         <!-- CANVAS -->
+<section class="container">
+<div class="row">
+        <form name="mushForm" id="mushForm" class="col s12">
+                <!-- model info -->
+                <h1>database model info</h1>
+                <div class="row">
+                        <div class="input-field col s6">
+                                <label for="latinName">latin name: </label>
+                                <input id="latinName" name="latinName" type="text" class="validate">
+                        </div>
+                        <div class="input-field col s6">
+                                <label for="commonName">common name: </label>
+                                <input id="commonName" name="commonName" type="text" class="validate">
+                        </div>
+                </div>
+                <div class="row">
+                        <div class="input-field col s6">
+                                <label for="pronunciation">pronunciation: </label>
+                                <input id="pronunciation" name="pronunciation" type="text" class="validate">
+                        </div>
+                </div>
+                <div class="row">
+                        <div class="input-field col s12">
+                                <label for="content">descriptive paragraph: </label>
+                                <input id="content" name="content" type="text" class="validate">
+                        </div>
+                </div>
+                <div class="row">
+                        <div class="input-field col s6">
+                                <label for="mushPhoto">mushroom photo: </label>
+                                <input id="mushPhoto" name="mushPhoto" type="text" class="validate">
+                        </div>
+                </div>
+                <!-- database info -->
+
+                <!-- icons -->
+                <h1>icons</h1>
+                <div class="row">  
+                        {{#each mushroom.icons}}
+                        <label class="col s4" for="{{this.id}}">
+                                <input type="checkbox" data-id="{{this.id}}" name="{{this.id}}"/>
+                                <span>{{this.description}}</span>
+                        </label>
+                        {{/each}}
+                </div> <!-- quick icons -->
+
+                <h1>attributes</h1>
+                <div class="attribute_boxes">
+                <!---------------------------------------------------->
+                <h3>hymenium (gill type)</h3>
+                <div class="row">
+                {{#each mushroom.attributes.hymenium}}
+                        <label class="col s4" for="{{this.id}}">
+                                <input type="checkbox" data-id="{{this.id}}" name="{{this.id}}"/>
+                                <span>{{this.description}}</span>
+                        </label>
+                {{/each}}
+                </div>
+                <!---------------------------------------------------->
+                <h3>gill characteristics</h3>
+                <div class="row">
+                {{#each mushroom.attributes.gillCharacteristics}}
+                        <label class="col s4" for="{{this.id}}">
+                                <input type="checkbox" data-id="{{this.id}}" name="{{this.id}}"/>
+                                <span>{{this.description}}</span>
+                        </label>
+                {{/each}}
+                </div>
+                <!---------------------------------------------------->
+                <h3>gill attachment</h3>
+                <div class="row">
+                {{#each mushroom.attributes.gillAttachment}}
+                        <label class="col s4" for="{{this.id}}">
+                                <input type="checkbox" data-id="{{this.id}}" name="{{this.id}}"/>
+                                <span>{{this.description}}</span>
+                        </label>
+                {{/each}}
+                </div>
+                <!---------------------------------------------------->
+                <h3>spore print</h3>
+                <div class="row">
+                {{#each mushroom.attributes.sporePrint}}
+                        <label class="col s4" for="{{this.id}}">
+                                <input type="checkbox" data-id="{{this.id}}" name="{{this.id}}"/>
+                                <span>{{this.description}}</span>
+                        </label>
+                {{/each}}
+                </div>
+                <!---------------------------------------------------->
+                <h3>smell</h3>
+                <div class="row">
+                {{#each mushroom.attributes.smell}}
+                        <label class="col s4" for="{{this.id}}">
+                                <input type="checkbox" data-id="{{this.id}}" name="{{this.id}}"/>
+                                <span>{{this.description}}</span>
+                        </label>
+                {{/each}}
+                </div>
+                <!---------------------------------------------------->
+                <h3>stipe characteristics</h3>
+                <div class="row">
+                {{#each mushroom.attributes.sporePrint}}
+                        <label class="col s4" for="{{this.id}}">
+                                <input type="checkbox" data-id="{{this.id}}" name="{{this.id}}"/>
+                                <span>{{this.description}}</span>
+                        </label>
+                {{/each}}
+                </div>
+                <!---------------------------------------------------->
+                <h3>annulus characteristics</h3>
+                <div class="row">
+                {{#each mushroom.attributes.annulus}}
+                        <label class="col s4" for="{{this.id}}">
+                                <input type="checkbox" data-id="{{this.id}}" name="{{this.id}}"/>
+                                <span>{{this.description}}</span>
+                        </label>
+                {{/each}}
+                </div>
+                <!---------------------------------------------------->
+                <h3>pileus characteristics</h3>
+                <div class="row">
+                {{#each mushroom.attributes.pileus}}
+                        <label class="col s4" for="{{this.id}}">
+                                <input type="checkbox" data-id="{{this.id}}" name="{{this.id}}"/>
+                                <span>{{this.description}}</span>
+                        </label>
+                {{/each}}
+                </div>
+                <!---------------------------------------------------->
+                <h3>flesh color</h3>
+                <div class="row">
+                {{#each mushroom.attributes.fleshColor}}
+                        <label class="col s4" for="{{this.id}}">
+                                <input type="checkbox" data-id="{{this.id}}" name="{{this.id}}"/>
+                                <span>{{this.description}}</span>
+                        </label>
+                {{/each}}
+                </div>
+                <!---------------------------------------------------->
+                <h3>fuid color</h3>
+                <div class="row">
+                {{#each mushroom.attributes.fluidColor}}
+                        <label class="col s4" for="{{this.id}}">
+                                <input type="checkbox" data-id="{{this.id}}" name="{{this.id}}"/>
+                                <span>{{this.description}}</span>
+                        </label>
+                {{/each}}
+                </div>
+                <!---------------------------------------------------->
+                <h3>volva characteristics</h3>
+                <div class="row">
+                {{#each mushroom.attributes.volva}}
+                        <label class="col s4" for="{{this.id}}">
+                                <input type="checkbox" data-id="{{this.id}}" name="{{this.id}}"/>
+                                <span>{{this.description}}</span>
+                        </label>
+                {{/each}}
+                </div>
+                <!---------------------------------------------------->
+                <h3>pore characteristics</h3>
+                <div class="row">
+                {{#each mushroom.attributes.pore}}
+                        <label class="col s4" for="{{this.id}}">
+                                <input type="checkbox" data-id="{{this.id}}" name="{{this.id}}"/>
+                                <span>{{this.description}}</span>
+                        </label>
+                {{/each}}
+                </div>
+                </div> <!-- attributes -->
+        </div> <!-- new mushroom form -->
+
+
+        <!-- SAVE BUTTON -->
+        <div class="save_btn">
+                <a id="save_btn" type="submit" class="waves-effect waves-dark btn">save mushroom</a>
+        </div>
+
+
+
+
+
+                <!-- exmaple -->
+                <!-- <p>
+                <label>
+                        <input type="checkbox" />
+                        <span>Red</span>
+                </label>
+                </p> -->
+                
+        </form>
+</div>
+
+         <!-- FOOTER
+--------------------------------------------------------------------------->
