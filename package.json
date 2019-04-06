@@ -23,6 +23,7 @@
     "nodemon": "^1.18.10",
     "particlesjs": "^2.2.3",
     "passport": "^0.4.0",
+    "passport-auth0": "^1.1.0",
     "passport-local": "^1.0.0",
     "sequelize": "^4.41.2"
   },
