@@ -1,5 +1,6 @@
 const db = require("../models");
 const path = require("path");
+const apiRoutes = require("./apiRoutes.js");
 
 function getAttributesObj(_cb) {
   return new Promise ((resolve, reject) => {
@@ -17,7 +18,7 @@ function getAttributesObj(_cb) {
   });
 }
 
-module.exports = function(app) {
+module.exports = function(app, passport) {
   // Load index(home) page
   app.get("/", function(req, res) {
     res.sendFile(path.join(__dirname, "../views/html/login.html"));
@@ -28,22 +29,22 @@ module.exports = function(app) {
   });
   
   // Load account page
-  app.get("/user", function(req, res) {
+  app.get("/user", isLoggedIn, function(req, res) {
     res.sendFile(path.join(__dirname, "../views/html/user.html"));
   });
 
   // Load mushroom page
-  app.get("/mushroom", function(req, res) {
+  app.get("/mushroom", isLoggedIn, function(req, res) {
     res.sendFile(path.join(__dirname, "../views/html/mushroom.html"));
   });
 
   // Load map page
-  app.get("/map", function(req, res) {
+  app.get("/map", isLoggedIn, function(req, res) {
     res.sendFile(path.join(__dirname, "../views/html/map.html"));
   });
 
   // Load guide page
-  app.get("/guide", function(req, res) {
+  app.get("/guide", isLoggedIn, function(req, res) {
     db.Icon.findAll({}).then(async (Icons) => {
       let mushroom = { icons: Icons }
           mushroom.attributes = await getAttributesObj();
@@ -76,4 +77,15 @@ module.exports = function(app) {
   app.get("*", function(req, res) {
     res.render("404");
   });
+
+  function isLoggedIn(req, res, next) {
+
+    if (req.isAuthenticated())
+
+      return next();
+
+    res.redirect('/login');
+
+  }
+
 };
