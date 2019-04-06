@@ -55,6 +55,21 @@ module.exports = function(app, passport) {
       });
   });
 
+  app.post("/guide", function(req, res) {
+    console.log(req.body);
+    res.send("Thank you");
+
+    db.Attributes.findAll({
+      include: [{
+        model: Mushroom,
+        through: {
+          attributes: [id],
+          where: {AttributeId: req.body[0]}
+        }
+      }]
+    }).then((response) => console.log(response));
+  })
+
   // app.get("/", function(req, res) {
   //   db.Example.findAll({}).then(function(dbExamples) {
   //     res.render("index", {
