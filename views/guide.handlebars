@@ -70,7 +70,7 @@
                     <div class="content_wrapper">
                         <h3 id="attribute_modal_title">Pore Characteristics</h3>
                         <div class="row">
-                            {{#each this.Attributes}}
+                            {{#each this.Characteristics}}
                             <div class="col s12 m6">
                                 <label for="{{this.AttributeTypeId}}{{this.id}}">
                                         <input class="capture" type="checkbox" data-id="{{this.id}}" name="mushAttributes" id="{{this.AttributeTypeId}}{{this.id}}"/>
@@ -105,16 +105,17 @@
     
     <!-- RESULTS BODY--->
     <!-- these should be added dynamically -->
-    <div id="guide_container">
+    
+    <div id="guide_container" hidden=true>
         <!-- GUIDE MUSHROOMS -->
         <div id="guide_results" class="guide_results_body">
             <!-- MUSH BODY -->
             <div class="guide_mushroom">
                 <div class="guide_mushroom_photo">
-                    <img class="guide_image_border" src="./img/thumbnail/lionsMane_thumbnail.jpg" alt="mushroom">
+                    <img id="photo" class="guide_image_border" src="" alt="mushroom">
                 </div>
                 <div class="guide_mushroom_title">
-                    <h6><strong>Lion's Mane</strong></h6> 
+                    <h6><strong id="commonName"></strong></h6> 
                 </div>
                 <div class="space"></div>
                 <!-- MUSH BTN -->
@@ -125,58 +126,8 @@
                     </div>
                 </div>
             </div>
-            <!-- MUSH BODY -->
-            <div class="guide_mushroom">
-                <div class="guide_mushroom_photo">
-                    <img class="guide_image_border" src="./img/thumbnail/chanterelle_thumbnail.jpg" alt="mushroom">
-                </div>
-                <div class="guide_mushroom_title">
-                    <h6><strong>Chanterelle</strong></h6> 
-                </div>
-                <div class="space"></div>
-                <!-- MUSH BTN -->
-                <div class="mushroom_page_btn_body_wrapper">
-                    <div class="mushroom_page_btn_body">
-                            <a href="/mushroom" target="_self" id="mushroom_page_btn" class="btn-floating btn-large waves-effect waves-light red gesture"><i class="material-icons" style="font-size: 40px;">forward</i></a>
-                        <a ></a>
-                    </div>
-                </div>
-            </div>
-            <!-- MUSH BODY -->
-            <div class="guide_mushroom">
-                <div class="guide_mushroom_photo">
-                    <img class="guide_image_border" src="./img/thumbnail/porcini_thumbnail.jpg" alt="mushroom">
-                </div>
-                <div class="guide_mushroom_title">
-                    <h6><strong>Porcini</strong></h6> 
-                </div>
-                <div class="space"></div>
-                <!-- MUSH BTN -->
-                <div class="mushroom_page_btn_body_wrapper">
-                    <div class="mushroom_page_btn_body">
-                            <a href="/mushroom" target="_self" id="mushroom_page_btn" class="btn-floating btn-large waves-effect waves-light red gesture"><i class="material-icons" style="font-size: 40px;">forward</i></a>
-                        <a ></a>
-                    </div>
-                </div>
-            </div>
-            <!-- MUSH BODY -->
-            <div class="guide_mushroom">
-                <div class="guide_mushroom_photo">
-                    <img class="guide_image_border" src="./img/thumbnail/blackTrumpet_thumbnail.jpg" alt="mushroom">
-                </div>
-                <div class="guide_mushroom_title">
-                    <h6><strong>Black Trumpet</strong></h6> 
-                </div>
-                <div class="space"></div>
-                <!-- MUSH BTN -->
-                <div class="mushroom_page_btn_body_wrapper">
-                    <div class="mushroom_page_btn_body">
-                            <a href="/mushroom" target="_self" id="mushroom_page_btn" class="btn-floating btn-large waves-effect waves-light red gesture"><i class="material-icons" style="font-size: 40px;">forward</i></a>
-                        <a ></a>
-                    </div>
-                </div>
-            </div>
+            
         </div>
-    </div>  
+    </div>
 
     <script src="./js/guide.js" type="text/javascript"></script>

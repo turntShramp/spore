@@ -13,7 +13,7 @@ function createMembersArr(idArr, modelName) {
 
 function getAttributesObj(_cb) {
   return new Promise ((resolve, reject) => {
-    db.Attribute.findAll().then((Attributes) => {
+    db.Characteristic.findAll().then((Attributes) => {
       let mushAttributes = {};
       Attributes.forEach((entry) => {
         if(!mushAttributes[entry.AttributeTypeId])
@@ -32,7 +32,6 @@ module.exports = function (app) {
     db.Icon.findAll({}).then(async (Icons) => {
       let mushroom = { icons: Icons }
           mushroom.attributes = await getAttributesObj();
-          console.log(mushroom);
           res.render("admin", {
             mushroom: mushroom,
           });
@@ -42,7 +41,7 @@ module.exports = function (app) {
   // Create a new mushroom
   app.post("/api/admin", function(req, res) {
 
-    const postMushroom = req.body;
+    const postMushroom = req.body.mushroom;
 
     let newMushroom = {
       latinName: postMushroom.latinName,
@@ -50,17 +49,31 @@ module.exports = function (app) {
       pronunciation: postMushroom.pronunciation,
       content: postMushroom.content,
       mushroom_photo: postMushroom.mushroom_photo,
-      thumbnail_photo: postMushroom.thumbnail_photo
+      // thumbnail_photo: postMushroom.thumbnail_photo
     }
 
-    let iconsArr = createMembersArr(postMushroom.icons, "Icon");
-    let attributesArr = createMembersArr(postMushroom.attributes, "Attribute")
+    // let iconsArr = createMembersArr(postMushroom.icons, "Icon");
+    // let attributesArr = createMembersArr(postMushroom.attributes, "Attribute")
+    let iconsArr = [];
+    let attributesArr = [];
 
+    console.log(postMushroom);
+
+    postMushroom.attributes.forEach((attribute) => {
+      if(attribute.includes("icon"))
+        iconsArr.push(attribute.slice(4));
+      else {
+        console.log(attribute);
+        attributesArr.push(parseInt(attribute));
+      }
+    });
     // add new mushroom to database
+    console.log(db.Mushroom.prototype);
     db.Mushroom.create(newMushroom).then(async function(mushroom) {
       //add association with icons
+      let mushroomAttributes = await mushroom.setCharacteristics(attributesArr);
       let mushroomIcons = await mushroom.setIcons(iconsArr);
-      let mushroomAttributes = await mushroom.setAttributes(attributesArr);
+      console.log(attributesArr);
       res.json({
         mushroom: mushroom,
         icons: mushroomIcons,

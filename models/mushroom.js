@@ -10,7 +10,15 @@ module.exports = function(sequelize, DataTypes) {
 
     Mushroom.associate = function(models) {
         Mushroom.belongsToMany(models.User, {
-            through: models.Finding
+            through: models.Finding,
+        });
+
+        Mushroom.belongsToMany(models.Icon, {
+            through: "mushroom_icon"
+        });
+
+        Mushroom.belongsToMany(models.Characteristic, {
+            through: "mushroom_characteristic"
         });
     }
     return Mushroom

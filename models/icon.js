@@ -16,7 +16,7 @@ module.exports = function(sequelize, DataTypes) {
 
     Icon.associate = function(models) {
         Icon.belongsToMany(models.Mushroom, {
-            through: "Mushroom_Icon"
+            through: "mushroom_icon"
         });
     }
 

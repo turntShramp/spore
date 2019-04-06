@@ -1,21 +1,21 @@
 module.exports = function(sequelize, DataTypes) {
-    let Attribute = sequelize.define("Attribute", {
+    let Characteristic = sequelize.define("Characteristic", {
         description: {
             type: DataTypes.STRING
         }
     });
 
-    Attribute.associate = function(models) {
-        Attribute.belongsToMany(models.Mushroom, {
-            through: "Mushroom_Attribute"
+    Characteristic.associate = function(models) {
+        Characteristic.belongsToMany(models.Mushroom, {
+            through: "mushroom_characteristic"
         });
     }
 
-    return Attribute;
+    return Characteristic;
 }
 
 // hymenium: DataTypes.STRING,
-//         gill_characteristics: DataTypes.STRING,
+//         gill_characteristic: DataTypes.STRING,
 //         gill_attachment: DataTypes.STRING,
 //         spore_print: DataTypes.STRING,
 //         smell: DataTypes.STRING,

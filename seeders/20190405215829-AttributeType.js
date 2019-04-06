@@ -65,7 +65,7 @@ module.exports = {
         subTitle: "elongated, watery, etc..."
       }
     ]).then((hymenium) => {
-        return queryInterface.bulkInsert("Attributes", [
+        return queryInterface.bulkInsert("Characteristics", [
           {
             description: "gills (fan like)",
             AttributeTypeId: "hymenium"
