@@ -44,8 +44,9 @@
         <a id="clear_att_btn" class="waves-effect waves-dark btn">Clear Attributes</a>
     </div>
 
-    <!-- SEARCH  --->
-    <form name="mushAttributes">
+    <!-- SEARCH  
+    --------------------------------------------------------------------------->
+    <form name="mushAttributes" id="mushAttributes">
         {{#each mushroom.attributes}}
         <!-- ATTRIBUTE MODAL -->
         <div class="attribute_search_body">
@@ -72,7 +73,7 @@
                             {{#each this.Attributes}}
                             <div class="col s12 m6">
                                 <label for="{{this.AttributeTypeId}}{{this.id}}">
-                                        <input type="checkbox" data-id="{{this.id}}" name="{{this.AttributeTypeId}}{{this.id}}" id="{{this.AttributeTypeId}}{{this.id}}"/>
+                                        <input class="capture" type="checkbox" data-id="{{this.id}}" name="mushAttributes" id="{{this.AttributeTypeId}}{{this.id}}"/>
                                         <span>{{this.description}}</span>
                                 </label>
                             </div>
@@ -85,6 +86,10 @@
             </div>
         </div><!-- .attribute_search_body -->
         {{/each}}
+
+        <div class="clear_att_button_body">
+        <a id="submit_att_btn" class="waves-effect waves-dark btn">Submit Search</a>
+    </div>
     </form>
     <!-- SLIDER -->
     <div class="slider_body">
@@ -173,3 +178,5 @@
             </div>
         </div>
     </div>  
+
+    <script src="./js/guide.js" type="text/javascript"></script>

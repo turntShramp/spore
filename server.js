@@ -3,7 +3,7 @@ let express = require("express");
 let exphbs = require("express-handlebars");
 let db = require("./models");
 let app = express();
-let passport = require('passport');
+// let passport = require('passport');
 let session = require('express-session');
 let SequelizeStore = require("connect-session-sequelize")(session.Store);
 let bodyParser = require('body-parser');
@@ -22,8 +22,8 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 // For Passport
 app.use(session({ secret: 'keyboard cat', resave: false, saveUninitialized:true, store: sporeStore })); // session secret
-app.use(passport.initialize());
-app.use(passport.session()); // persistent login sessions
+// app.use(passport.initialize());
+// app.use(passport.session()); // persistent login sessions
 
 // Handlebars
 app.engine(
@@ -35,8 +35,8 @@ app.engine(
 app.set("view engine", "handlebars");
 
 // Routes
-require("./routes/apiRoutes")(app,passport);
-require("./routes/htmlRoutes")(app,passport);
+require("./routes/apiRoutes")(app);
+require("./routes/htmlRoutes")(app);
 
 let syncOptions = { force: false };
 
@@ -46,7 +46,7 @@ if (process.env.NODE_ENV === "test") {
   syncOptions.force = true;
 }
 var models = require("./models");
-require('./config/passport/passport.js')(passport, models.User);
+// require('./config/passport/passport.js')(passport, models.User);
 
 sporeStore.sync();
 // Starting the server, syncing our models ------------------------------------/
