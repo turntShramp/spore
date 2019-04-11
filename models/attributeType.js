@@ -9,8 +9,8 @@ module.exports = function(sequelize, DataTypes) {
         },
         subTitle: {
             type: DataTypes.STRING
-        }
-    });
+        },
+    }, {timestamps: false});
 
     AttributeType.associate = function(models) {
         AttributeType.hasMany(models.Characteristic);

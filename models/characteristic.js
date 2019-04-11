@@ -3,7 +3,7 @@ module.exports = function(sequelize, DataTypes) {
         description: {
             type: DataTypes.STRING
         }
-    });
+    }, {timestamps: false});
 
     Characteristic.associate = function(models) {
         Characteristic.belongsToMany(models.Mushroom, {

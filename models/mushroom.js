@@ -6,7 +6,7 @@ module.exports = function(sequelize, DataTypes) {
         content: DataTypes.TEXT,
         mushroom_photo: DataTypes.STRING,
         thumbnail_photo: DataTypes.STRING,
-    });
+    }, {timestamps: false});
 
     Mushroom.associate = function(models) {
         Mushroom.belongsToMany(models.User, {

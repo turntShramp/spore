@@ -11,8 +11,8 @@ module.exports = function(sequelize, DataTypes) {
         },
         description: {
             type:DataTypes.STRING,
-        }
-    });
+        },
+    }, {timestamps: false});
 
     Icon.associate = function(models) {
         Icon.belongsToMany(models.Mushroom, {
