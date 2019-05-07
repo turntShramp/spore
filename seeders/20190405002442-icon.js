@@ -90,7 +90,7 @@ module.exports = {
         },
         {
           id: "branch",
-          fAwesomeClass: "fas fa-pagelines",
+          fAwesomeClass: "fab fa-pagelines",
           description: "Prefers deciduous forests"
         },
       ])

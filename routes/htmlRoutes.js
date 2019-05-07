@@ -45,8 +45,34 @@ module.exports = function(app) {
   });
   
   // Load mushroom page
-  app.get("/mushroom", function(req, res) {
-    res.sendFile(path.join(__dirname, "../views/html/mushroom.html"));
+  app.get("/mushroom/:identity", function(req, res) {
+    db.Mushroom.findOne({
+      where: {
+        identity: req.params.identity
+      },
+      include: [
+        {
+          model: db.Characteristic
+        },
+        {
+          model: db.Icon
+      }]
+    }).then(response => {
+      
+      const dbMush = response.dataValues;
+
+      const mushroom = {
+        latinName: dbMush.latinName,
+        commonName: dbMush.commonName,
+        content: dbMush.content,
+        Icons: dbMush.Icons
+      }
+      res.render("mushroom", {
+        mushroom
+      });
+    }).catch(err => {
+      console.log(err);
+    });
   });
   
   // Load map page
