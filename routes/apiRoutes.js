@@ -49,6 +49,7 @@ module.exports = function (app) {
       pronunciation: postMushroom.pronunciation,
       content: postMushroom.content,
       mushroom_photo: postMushroom.mushroom_photo,
+      identity: postMushroom.commonName.split(' ').join('').toLowerCase()
       // thumbnail_photo: postMushroom.thumbnail_photo
     }
 

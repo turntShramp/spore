@@ -28,6 +28,8 @@ $("#submit_att_btn").on("click", (event) => {
 
             newResult.find("#photo").attr("src", match.mushroom.mushroom_photo);
             newResult.find("#commonName").text(match.mushroom.commonName);
+            newResult.find("#mushroom_page_btn").attr("href", "/mushroom/" + 
+                           match.mushroom.identity);
 
             $("#guide_container").append(newResult);
         });
