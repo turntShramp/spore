@@ -26,6 +26,10 @@ $("#submit_att_btn").on("click", (event) => {
 
             newResult = guideResults.clone();
 
+            newResult.attr("id", match.mushroom.identity);
+            newResult.find("a").attr("href", "/mushroom/" + match.mushroom.identity);
+            newResult.find("a").attr("id", match.mushroom.identity + "_btn");
+
             newResult.find("#photo").attr("src", match.mushroom.mushroom_photo);
             newResult.find("#commonName").text(match.mushroom.commonName);
             newResult.find("#mushroom_page_btn").attr("href", "/mushroom/" + 

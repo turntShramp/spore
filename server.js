@@ -1,4 +1,3 @@
-require("dotenv").config();
 let express = require("express");
 let exphbs = require("express-handlebars");
 let db = require("./models");
