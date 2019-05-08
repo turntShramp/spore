@@ -15,8 +15,6 @@
   };
 
 $(document).ready(function(){
-  console.log("divs up");
-
   // FOOTER LOGIC
   //---------------------------------------------------------//
   // initialize all modals           
