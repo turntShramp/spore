@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 let express = require("express");
 let exphbs = require("express-handlebars");
 let db = require("./models");
@@ -41,6 +43,8 @@ let syncOptions = { force: false };
 
 // If running a test, set syncOptions.force to true
 // clearing the `testdb`
+console.log("env.NODE_ENV: " + process.env.NODE_ENV);
+
 if (process.env.NODE_ENV === "test") {
   syncOptions.force = true;
 }
