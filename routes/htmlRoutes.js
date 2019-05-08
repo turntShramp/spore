@@ -46,6 +46,9 @@ module.exports = function(app) {
   
   // Load mushroom page
   app.get("/mushroom/:identity", function(req, res) {
+
+    console.log("\nNew get request " + req.params.identity + "\n\n");
+
     db.Mushroom.findOne({
       where: {
         identity: req.params.identity
@@ -59,17 +62,18 @@ module.exports = function(app) {
       }]
     }).then(response => {
       
-      const dbMush = response.dataValues;
+        const dbMush = response.dataValues;
+        
+        const mushroom = {
+          latinName: dbMush.latinName,
+          commonName: dbMush.commonName,
+          content: dbMush.content,
+          Icons: dbMush.Icons
+        }
+        res.render("mushroom", {
+          mushroom
+        });
 
-      const mushroom = {
-        latinName: dbMush.latinName,
-        commonName: dbMush.commonName,
-        content: dbMush.content,
-        Icons: dbMush.Icons
-      }
-      res.render("mushroom", {
-        mushroom
-      });
     }).catch(err => {
       console.log(err);
     });
