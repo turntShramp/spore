@@ -48,7 +48,8 @@ module.exports = function (app) {
       commonName: postMushroom.commonName,
       pronunciation: postMushroom.pronunciation,
       content: postMushroom.content,
-      mushroom_photo: postMushroom.mushroom_photo,
+      mushroom_photo: postMushroom.mushPhoto,
+      thumbnail_photo: postMushroom.mushThumb,
       identity: postMushroom.commonName.split(' ').join('').toLowerCase()
       // thumbnail_photo: postMushroom.thumbnail_photo
     }

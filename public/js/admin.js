@@ -11,6 +11,7 @@ $(document).ready((event) => {
         newMushroom.pronunciation = $("#pronunciation").val();
         newMushroom.content = $("#content").val();
         newMushroom.mushPhoto = $("#mushPhoto").val();
+        newMushroom.mushThumb = $("#mushThumbnail").val();
 
         let formData = $("input[name='mushForm']:checked");
 
