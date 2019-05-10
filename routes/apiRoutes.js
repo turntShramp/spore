@@ -1,5 +1,9 @@
-var db = require("../models");
-const path = require("path");
+const db = require("../models");
+const fs = require("fs");
+const s3 = require("../aws/s3");
+const multer = require("multer");
+
+const upload = multer({ dest: 'uploads/'})
 
 function createMembersArr(idArr, modelName) {
   let modelMembers = [];
@@ -43,6 +47,8 @@ module.exports = function (app) {
 
     const postMushroom = req.body.mushroom;
 
+    console.log(postMushroom.mushPhoto);
+
     let newMushroom = {
       latinName: postMushroom.latinName,
       commonName: postMushroom.commonName,
@@ -84,47 +90,25 @@ module.exports = function (app) {
     });
   });
 
-  app.get("/api/admin")
+  app.post("/api/storePhoto", upload.single('photo'), (req, res, next) => {
 
-  // Delete an example by id
-//   app.delete("/api/examples/:id", isLoggedIn, function (req, res) {
-//     db.Example.destroy({ where: { id: req.params.id } }).then(function (dbExample) {
-//       res.json(dbExample);
-//     });
-//   });
+    console.log(req.file.path);
 
-//   app.post('/signup', passport.authenticate('local-signup', {
-//     successRedirect: '/user',
+    fs.readFile(req.file.path, (err, data) => {
+      const params = {
+        Body: data,
+        Bucket: "spore-bucket",
+        Key: "images/" + req.body.path + "/" + req.body.name
+      }
+    
+      s3.upload(params, (err, data) => {
+        fs.unlink(req.file.path, err => console.error(err));
 
-//     failureRedirect: '/login'
-//   }
+        if(err) console.log(err, err.stack);
+        else res.send(data);
+      });
+    });
 
-//   ));
-
-//   app.post('/signin', passport.authenticate('local-signin', {
-//     successRedirect: '/user',
-
-//     failureRedirect: '/login'
-// }
-
-// ));
-
-//   app.get("/logout", function (req, res) {
-//     req.session.destroy(function (err) {
-
-//       res.redirect('/');
-
-//     });
-//   })
-
-//   function isLoggedIn(req, res, next) {
-
-//     if (req.isAuthenticated())
-
-//       return next();
-
-//     res.redirect('/login');
-
-//   }
-
+  });
+  
 };
