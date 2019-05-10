@@ -733,6 +733,7 @@ input[type=checkbox]
   top: 0;
   left: 0;
   z-index: 0;
+  pointer-events: none;
 }
 .canvasExpander {
   position: relative;
